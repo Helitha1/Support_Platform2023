@@ -62,9 +62,9 @@ function signIn() {
     var password = document.getElementById("password");
     var rememberme = document.getElementById("rememberme");
 
-    if (email.value == null) {
+    if (email.value == '') {
         showError('First Name is required');
-    } else if (password.value == null) {
+    } else if (password.value == '') {
         showError('Password is Required');
     } else {
 
