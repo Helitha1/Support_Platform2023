@@ -180,6 +180,7 @@ function addProjectTask() {
     updateTaskList();
   }
 }
+<<<<<<< HEAD
 
 
 function updateTaskList() {
@@ -230,5 +231,3 @@ function addNewProject() {
       })
       .catch((error) => console.log(error));
   }
-
-
