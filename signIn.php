@@ -129,7 +129,7 @@
 
     </div>
 
-    <script src="res/bootstrap.bundle.min.js"></script>
+    <script src="res/bootstrap.bundle.js"></script>
     <script src="script.js"></script>
 </body>
 

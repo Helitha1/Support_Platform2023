@@ -98,32 +98,28 @@ function signIn() {
 var bm;
 var email;
 function forgotPassword() {
-    alert("clicked");
-    var m = document.getElementById("forgotPasswordModal");
+    email = document.getElementById("email");
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+            if (t == "Success") {
+                alert(
+                    "Verification code has sent to your email. Please check your inbox"
+                );
+                var m = document.getElementById("forgotPasswordModal");
                 bm = new bootstrap.Modal(m);
                 bm.show();
-    // email = document.getElementById("email");
+            } else {
+                alert(t);
+            }
+        }
+    };
 
-    // var r = new XMLHttpRequest();
-
-    // r.onreadystatechange = function () {
-    //     if (r.readyState == 4) {
-    //         var t = r.responseText;
-    //         if (t == "Success") {
-    //             alert(
-    //                 "Verification code has sent to your email. Please check your inbox"
-    //             );
-    //             var m = document.getElementById("forgotPasswordModal");
-    //             bm = new bootstrap.Modal(m);
-    //             bm.show();
-    //         } else {
-    //             alert(t);
-    //         }
-    //     }
-    // };
-
-    // r.open("GET", "server/forgotPasswordProcess.php?e=" + email.value, true);
-    // r.send();
+    r.open("GET", "server/forgotPasswordProcess.php?e=" + email.value, true);
+    r.send();
 }
 
 function resetPassword() {
@@ -135,34 +131,34 @@ function resetPassword() {
     if (email == "") {
         alert("Please enter your email and try again");
     } else {
-        const arry = [
+        const arry =
             {
                 email: email,
                 password: np,
                 password2: rnp,
                 vcode: vcode,
-            },
-        ];
+            };
 
         var f = new FormData();
 
-        f.append("json", JSON.parse(arry));
+        f.append("json", JSON.stringify(arry));
 
         var r = new XMLHttpRequest();
 
         r.onreadystatechange = function () {
             if (r.readyState == 4) {
                 var t = r.responseText;
-                if (t == "Success") {
-                    bm.hide();
-                    alert("Now you can Log In using new password");
-                } else {
-                    alert(t);
-                }
+                alert(t);
+                // if (t == "Success") {
+                //     bm.hide();
+                //     alert("Now you can Log In using new password");
+                // } else {
+                //     alert(t);
+                // }
             }
         };
 
-        r.open("POST", "resetpassword.php", true);
+        r.open("POST", "server/resetpassword.php", true);
         r.send(f);
     }
 }
