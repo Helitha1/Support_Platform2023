@@ -30,7 +30,22 @@
        background-repeat: no-repeat;  
        
        
+       
    }
+   .body3{ 
+       
+    height: 100vh;
+    background-image:url("homeImg.jpg");    
+    background-attachment: fixed; 
+    overflow-y:auto; 
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    
+    
+    
+}
  
    
    .logo{ 

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Migten</title>
+    <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css" />
     <link rel="stylesheet" href="res/bootstrap.css" />
     <link rel="stylesheet" href="res/style.css" />
     <link rel="icon" href="res/logo-sm.png" />
@@ -41,8 +43,8 @@
                                     <a class="btn btn-outline-secondary" href="#">Create Projects</a>
                                     <br />
                                     <a class="btn btn-outline-secondary" href="#">Manage Profile</a>
-                           
-                                    
+
+
                                 </nav>
                             </div>
                             <!-- <div class="col-12 mt-5">
@@ -111,53 +113,52 @@
                     <div class="col-12">
                         <div class="row g-1">
 
-                            <div class="col-12 col-lg-6 px-1 py-3 shadow ">
+                            <div class="col-11  px-1 py-3 position-relative">
                                 <div class="row g-1">
-                                    <div class="col-12 bg-primary text-white text-center rounded" style="height: 100px;">
+                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
                                         <br />
                                         <span class="fs-3 text-dark fw-bold">4</span>
                                         <br />
-
                                         <span class="fs-5 text-dark">ADMINS</span>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-12 col-lg-6 px-1 py-3 shadow ">
+                           
+                            <div class="col-11  px-1 py-3 position-relative">
                                 <div class="row g-1">
-                                    <div class="col-12 bg-warning text-white text-center rounded" style="height: 100px;">
+                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
                                         <br />
-                                        <span class="fs-3 text-dark fw-bold">50</span>
+                                        <span class="fs-3 text-dark fw-bold">4</span>
                                         <br />
-
-                                        <span class="fs-5 text-dark">TEACHERS</span>
+                                        <span class="fs-5 text-dark">ADMINS</span>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-12 col-lg-6 px-1   shadow ">
+                           
+                            <div class="col-11  px-1 py-3 position-relative">
                                 <div class="row g-1">
-                                    <div class="col-12 bg-danger text-white text-center rounded" style="height: 100px;">
+                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
                                         <br />
-                                        <span class="fs-3 fw-bold  text-dark">120</span>
+                                        <span class="fs-3 text-dark fw-bold">4</span>
                                         <br />
-
-                                        <span class="fs-5 text-dark"> ACADEMIC OFFICERS</span>
+                                        <span class="fs-5 text-dark">ADMINS</span>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-12 col-lg-6 px-1 shadow ">
+                           
+                            <div class="col-11  px-1 py-3 position-relative">
                                 <div class="row g-1">
-                                    <div class="col-12 bg-info text-white text-center rounded" style="height: 100px;">
+                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
                                         <br />
-                                        <span class="fs-3 fw-bold text-dark">800</span>
+                                        <span class="fs-3 text-dark fw-bold">4</span>
                                         <br />
-
-                                        <span class="fs-5 text-dark">STUDENTS</span>
+                                        <span class="fs-5 text-dark">ADMINS</span>
                                     </div>
                                 </div>
                             </div>
+                           
+
+
 
 
                         </div>
@@ -174,8 +175,23 @@
 
         </div>
     </div>
-    <script src="bootstrap.bundle.js"></script>
+    <script src="res/bootstrap.bundle.js"></script>
+    <script src="res/jquery.min.js"></script>
+    <script src="res/tilt.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        // TILT (3D ANIMATION)
+        const tilt = $('.js-tilt').tilt({
+            scale: 1.05,
+            glare: true,
+            maxGlare: 0.2,
+            reset: true
+        });
+        tilt.methods.destroy.call(tilt);
+
+    </script>
+
 </body>
 
 </html>
