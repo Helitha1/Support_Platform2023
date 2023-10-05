@@ -127,15 +127,28 @@
 
                             <div class="col-12 my-3">
                                 <div class="row">
-                                    <div class="col-10 offset-1 my-2">
-                                        <button class="btn btn-primary form-control">Migten mobile Application</button>
-                                    </div>
-                                    <div class="col-10 offset-1 my-2">
-                                        <button class="btn btn-primary form-control">Migten mobile Application</button>
-                                    </div>
-                                    <div class="col-10 offset-1 my-2">
-                                        <button class="btn btn-primary form-control">Migten mobile Application</button>
-                                    </div>
+
+                                    <?php
+
+                                    require "server/connection.php";
+
+                                    $project_rs = Database::search("SELECT * FROM `projects`");
+                                    $project_num = $project_rs->num_rows;
+
+                                    for ($x = 0; $x < $project_num; $x++) {
+                                        $project_data = $project_rs->fetch_assoc();
+                                    ?>
+
+                                        <div class="col-10 offset-1 my-2">
+                                            <button class="btn btn-primary form-control" id="<?php echo $project_data["id"]; ?>"><?php echo $project_data["title"]; ?></button>
+                                        </div>
+
+                                    <?php
+                                    }
+
+                                    ?>
+
+
                                 </div>
                             </div>
 
@@ -160,15 +173,15 @@
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col-6">
-                                       <label class="form-label fw-bold fs-4">Start Date : &nbsp;</label> 
-                                       <span class="fs-5">2023-10-05</span>
+                                        <label class="form-label fw-bold fs-4">Start Date : &nbsp;</label>
+                                        <span class="fs-5">2023-10-05</span>
                                     </div>
                                     <div class="col-6">
-                                       <label class="form-label fw-bold fs-4">End Date : &nbsp;</label> 
-                                       <span class="fs-5">2023-12-05</span>
+                                        <label class="form-label fw-bold fs-4">End Date : &nbsp;</label>
+                                        <span class="fs-5">2023-12-05</span>
                                     </div>
                                 </div>
-                                
+
                             </div>
 
                             <div class="col-12">
