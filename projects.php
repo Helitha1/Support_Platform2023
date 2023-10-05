@@ -1,5 +1,7 @@
 <?php
 session_start();
+require_once("server/connection.php");
+
 if (!isset($_SESSION["user"])) {
     header("Location:index.php");
 }
@@ -14,7 +16,6 @@ if (!isset($_SESSION["user"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Migten</title>
     <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-    <link rel="stylesheet" href="cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css" />
     <link rel="stylesheet" href="res/bootstrap.css" />
     <link rel="stylesheet" href="res/style.css" />
     <link rel="stylesheet" href="res/animation.css" />
@@ -23,64 +24,11 @@ if (!isset($_SESSION["user"])) {
 </head>
 
 <body class=" body2">
-
-    <?php
-    // $selectedProjectId = "";
-
-    // if ($selectedProjectId != "") {
-    //     require_once "server/connection.php";
-
-    //     $project_rs = Database::search("SELECT * FROM `projects` WHERE `id` = '" . $selectedProjectId . "'");
-    //     $project_num = $project_rs->num_rows;
-
-    //     if ($project_num > 0) {
-    //         $project_data = $project_rs->fetch_assoc();
-    //     } else {
-    //         echo ("invalid project id");
-    //     }
-    // } else {
-    // }
-
-    ?>
-
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-12 col-lg-2 d-none d-lg-block">
-                <div class="row">
-                    <div class="col-12 rounded-bottom align-items-start bg-black vh-100 ">
-                        <div class="row g-1 text-center ">
-                            <div class="col-12 mt-3">
-                                <h3 class="text-white">Migten</h43>
-
-                                    <hr class="border border-1 border-body" />
-                            </div>
-                            <div class="nav flex-column nav-pills me-3 mt-3 " role="tablist" aria-orientation="vertical">
-                                <nav class="nav flex-column ">
-                                    <a class="btn btn-outline-secondary my-2" aria-current="page" href="dashboard.php">Dashboard</a>
-                                    <br />
-                                    <a class="btn btn-outline-secondary my-2" href="projects.php">Projects</a>
-                                    <br />
-                                    <a class="btn btn-outline-secondary my-2" href="#">Create Projects</a>
-                                    <br />
-                                    <a class="btn btn-outline-secondary my-2" href="#">Manage Profile</a>
-                                </nav>
-                            </div>
-
-                            <div class=" col-12  mt-3 d-grid p-2 ">
-                                <div class="row ">
-                                    <a href="#" class="btn btn-danger mt-2">Sign Out</a>
-                                </div>
-                                <hr class="border border-1 border-dark" />
-                                <hr class="border border-1 border-dark" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <?php
-            include_once("sidenav.php");
+            include('sidenav.php');
             ?>
 
             <div class=" col-12 col-lg-10">
@@ -111,11 +59,8 @@ if (!isset($_SESSION["user"])) {
                                     for ($x = 0; $x < $project_num; $x++) {
                                         $project_data = $project_rs->fetch_assoc();
                                     ?>
-                                        <!-- <div class="col-10 offset-1 my-2">
-                                            <button onclick='onselectProject(<?php echo $product_data["id"]; ?>);' class="btn btn-primary form-control" id="<?php echo $project_data["id"]; ?>"><?php echo $project_data["title"]; ?></button>
-                                        </div> -->
                                         <div class="col-10 offset-1 my-2">
-                                            <button onclick='selectProject(<?php echo $product_data["id"]; ?>);' class="btn btn-primary form-control" id="<?php echo $project_data["id"]; ?>"><?php echo $project_data["title"]; ?></button>
+                                            <button onclick='loadProject(<?php echo $project_data["id"]; ?>);' class="btn btn-primary form-control" id="project-button-<?php echo $project_data["id"]; ?>"><?php echo $project_data["title"]; ?></button>
                                         </div>
                                     <?php
                                     }
@@ -129,10 +74,7 @@ if (!isset($_SESSION["user"])) {
                     <div class="col-10 offset-1 offset-lg-0 col-lg-7 bg-secondary bg-opacity-25 m-lg-3 project flyin zoom" style="height: 600px;">
                         <div class="row">
                             <div class="col-10 text-start">
-
                                 <span class="fs-3 text-white fw-bold m-2" id="project-title">PROJECT TITLE HERE</span>
-
-
                             </div>
                             <div class="col-2 text-end ">
                                 <button onclick='window.location = `manageProject.php?pid=${$selectedProjectId}`' class="m-2 btn btn-secondary">Edit</button>
@@ -212,14 +154,14 @@ if (!isset($_SESSION["user"])) {
     <script>
         loadProject(3);
 
-        // TILT (3D ANIMATION)
-        const tilt = $('.js-tilt').tilt({
-            scale: 1.05,
-            glare: true,
-            maxGlare: 0.2,
-            reset: true
-        });
-        tilt.methods.destroy.call(tilt);
+        // // TILT (3D ANIMATION)
+        // const tilt = $('.js-tilt').tilt({
+        //     scale: 1.05,
+        //     glare: true,
+        //     maxGlare: 0.2,
+        //     reset: true
+        // });
+        // tilt.methods.destroy.call(tilt);
 
         const flyin = document.querySelectorAll(".flyin");
 

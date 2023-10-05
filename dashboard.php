@@ -8,12 +8,6 @@ $project_count = $result["count"];
 $pending_rs = Database::search("SELECT `projects`.`title` AS `title` FROM `projects` INNER JOIN `team` ON `projects`.`id`=`team`.`projects_id`  WHERE `team`.`users_email`='" . $_SESSION["user"]["email"] . "' AND (`projects`.`project_status_id`='1' OR `projects`.`project_status_id`='2')");
 // COMPLETED PROJECTS (TITLE)
 $completed_rs = Database::search("SELECT `projects`.`title` AS `title` FROM `projects` INNER JOIN `team` ON `projects`.`id`=`team`.`projects_id`  WHERE `team`.`users_email`='" . $_SESSION["user"]["email"] . "' AND `projects`.`project_status_id`='3' ");
-// ONGOING TASKS (TITLE)
-// $ongoing_tasks_rs = Database::search("SELECT `tasks`.`title` AS `title`, `maintasks`.`title` AS `maintask`, 
-// `maintasks`.`projects_id` AS `projectId` FROM `tasks` 
-// INNER JOIN `maintasks` ON `maintasks`.`id` = `tasks`.`maintasks_id`
-// WHERE`tasks`.`assigned_email`='" . $_SESSION["user"]["email"] . "' AND `tasks`.`project_status_id`='2' 
-// ORDER BY `mainTask`.`id`");
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +19,6 @@ $completed_rs = Database::search("SELECT `projects`.`title` AS `title` FROM `pro
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Migten</title>
     <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-    <link rel="stylesheet" href="cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css" />
     <link rel="stylesheet" href="res/bootstrap.css" />
     <link rel="stylesheet" href="res/style.css" />
     <link rel="stylesheet" href="res/animation.css" />
@@ -36,37 +29,6 @@ $completed_rs = Database::search("SELECT `projects`.`title` AS `title` FROM `pro
 
     <div class="container-fluid">
         <div class="row">
-
-            <div class="col-12 col-lg-2 d-none d-lg-block">
-                <div class="row">
-                    <div class="col-12 rounded-bottom align-items-start  bg-black vh-100 ">
-                        <div class="row g-1 text-center ">
-                            <div class="col-12 mt-3">
-                                <h3 class="text-white">Migten</h43>
-                                    <hr class="border border-1 border-body" />
-                            </div>
-                            <div class="nav flex-column nav-pills me-3 mt-3 " role="tablist" aria-orientation="vertical">
-                                <nav class="nav flex-column ">
-                                    <a class="btn btn-outline-secondary my-2" aria-current="page" href="#">Dashboard</a>
-                                    <br />
-                                    <a class="btn btn-outline-secondary my-2" href="projects.php">Projects</a>
-                                    <br />
-                                    <a class="btn btn-outline-secondary my-2" href="#">Create Projects</a>
-                                    <br />
-                                    <a class="btn btn-outline-secondary my-2" href="#">Manage Profile</a>
-                                </nav>
-                            </div>
-                            <div class=" col-12  mt-3 d-grid p-2 ">
-                                <div class="row ">
-                                    <a href="signout.php" class="btn btn-danger mt-2">Sign Out</a>
-                                </div>
-                                <hr class="border border-1 border-dark" />
-                                <hr class="border border-1 border-dark" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <?php
             include('sidenav.php');
