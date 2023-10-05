@@ -21,7 +21,7 @@ function signUp() {
         showError('Last Name is required');
     } else if (e == "") {
         showError('Email is Required');
-    } else if (ValidateEmail(e)) {
+    } else if (!ValidateEmail(e)) {
         showError('Invalid Email address');
     } else if (p == "") {
         showError('Password is NULL');
