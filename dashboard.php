@@ -8,7 +8,12 @@ $project_count = $result["count"];
 $pending_rs = Database::search("SELECT `projects`.`title` AS `title` FROM `projects` INNER JOIN `team` ON `projects`.`id`=`team`.`projects_id`  WHERE `team`.`users_email`='" . $_SESSION["user"]["email"] . "' AND (`projects`.`project_status_id`='1' OR `projects`.`project_status_id`='2')");
 // COMPLETED PROJECTS (TITLE)
 $completed_rs = Database::search("SELECT `projects`.`title` AS `title` FROM `projects` INNER JOIN `team` ON `projects`.`id`=`team`.`projects_id`  WHERE `team`.`users_email`='" . $_SESSION["user"]["email"] . "' AND `projects`.`project_status_id`='3' ");
-
+// ONGOING TASKS (TITLE)
+// $ongoing_tasks_rs = Database::search("SELECT `tasks`.`title` AS `title`, `maintasks`.`title` AS `maintask`, 
+// `maintasks`.`projects_id` AS `projectId` FROM `tasks` 
+// INNER JOIN `maintasks` ON `maintasks`.`id` = `tasks`.`maintasks_id`
+// WHERE`tasks`.`assigned_email`='" . $_SESSION["user"]["email"] . "' AND `tasks`.`project_status_id`='2' 
+// ORDER BY `mainTask`.`id`");
 ?>
 
 <!DOCTYPE html>
@@ -138,14 +143,11 @@ $completed_rs = Database::search("SELECT `projects`.`title` AS `title` FROM `pro
                                     <h2 class="col-12 h-100 text-center my-2 text-danger">No Any Completed Projects</h2>
                                 <?php
                                 }
-
                                 ?>
-
                             </div>
-
                         </div>
                     </div>
-
+                    <!-- LOAD PENDING TASKS -->
                     <div class="offset-1 col-10 my-3 rounded-3 flyin zoom" style="background-color: #ffffff90;">
                         <div class="row g-1">
                             <div class="col-12 text-center">
@@ -153,71 +155,88 @@ $completed_rs = Database::search("SELECT `projects`.`title` AS `title` FROM `pro
                                 <hr>
                             </div>
                             <div class=" project " style="height: 200px;">
-                                <div class="col-10 offset-1 my-3">
-                                    <span class="fs-6 text-center fw-bold">Migten web application</span><br />
-                                    <span class="fs-6">Ui Ux design</span><br />
-                                    <span class="fs-6">Backend</span><br />
-                                    <span class="fs-6">MySql Database</span><br />
-                                </div>
-                                <div class="col-10 offset-1 my-3">
-                                    <span class="fs-6 text-center fw-bold">Migten web application</span><br />
-                                    <span class="fs-6">Ui Ux design</span><br />
-                                    <span class="fs-6">Backend</span><br />
-                                    <span class="fs-6">MySql Database</span><br />
-                                </div>
-                                <div class="col-10 offset-1 my-3">
-                                    <span class="fs-6 text-center fw-bold">Migten web application</span><br />
-                                    <span class="fs-6">Ui Ux design</span><br />
-                                    <span class="fs-6">Backend</span><br />
-                                    <span class="fs-6">MySql Database</span><br />
-                                </div>
-                                <div class="col-12">
-                                    <div class="first-place"></div>
-                                </div>
+                                <?php
+                                $ongoing_tasks_rs = Database::search("SELECT `tasks`.`title` AS `title`, `maintasks`.`title` AS `maintask`, 
+                            `maintasks`.`projects_id` AS `projectId` FROM `tasks` 
+                            INNER JOIN `maintasks` ON `maintasks`.`id` = `tasks`.`maintasks_id`
+                            WHERE`tasks`.`assigned_email`='" . $_SESSION["user"]["email"] . "' AND `tasks`.`project_status_id`='2' 
+                            ORDER BY `maintasks`.`id`");
+                                if ($ongoing_tasks_rs->num_rows > 0) {
+                                    $main_array = [];
+                                    $task_array = [];
+                                    while ($task = $ongoing_tasks_rs->fetch_assoc()) {
+                                        array_push($task_array, $task);
+                                        if (!in_array($task["maintask"], $main_array)) {
+                                            array_push($main_array, $task["maintaskஃ"]);
+                                        }
+                                    }
+                                ?>
+                                    <div class="col-10 offset-1 my-3">
+                                        <?php
+                                        foreach ($main_array as $mainTask) {
+                                        ?>
+                                            <span class="fs-6 text-center fw-bold"><?php echo ($mainTask) ?></span><br />
+                                            <?php
+                                            foreach ($task_array as $task) {
+                                                if ($task["maintask"] == $mainTask) {
+                                            ?>
+                                                    <span class="fs-6"><?php echo ($task_array['title']);  ?></span><br />
+                                        <?php
+                                                }
+                                            }
+                                        }
+                                        ?>
+                                    </div><?php
+                                        } else {
+                                            ?>
+                                    <h2 class="col-12 h-100 text-center my-2 text-danger">No Any Completed Projects</h2>
+                                <?php
+                                        }
+                                ?>
                             </div>
 
                         </div>
                     </div>
 
+
                 </div>
+
             </div>
-
         </div>
-    </div>
-    <script src="res/bootstrap.bundle.js"></script>
-    <script src="res/jquery.min.js"></script>
-    <script src="res/tilt.js"></script>
-    <script src="script.js"></script>
+        <script src="res/bootstrap.bundle.js"></script>
+        <script src="res/jquery.min.js"></script>
+        <script src="res/tilt.js"></script>
+        <script src="script.js"></script>
 
-    <script>
-        // TILT (3D ANIMATION)
-        const tilt = $('.js-tilt').tilt({
-            scale: 1.05,
-            glare: true,
-            maxGlare: 0.2,
-            reset: true
-        });
-        tilt.methods.destroy.call(tilt);
-    </script>
-    <script>
-        const flyin = document.querySelectorAll(".flyin");
+        <script>
+            // TILT (3D ANIMATION)
+            const tilt = $('.js-tilt').tilt({
+                scale: 1.05,
+                glare: true,
+                maxGlare: 0.2,
+                reset: true
+            });
+            tilt.methods.destroy.call(tilt);
+        </script>
+        <script>
+            const flyin = document.querySelectorAll(".flyin");
 
-        const observe = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                entry.target.classList.toggle("show", entry.isIntersecting);
+            const observe = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    entry.target.classList.toggle("show", entry.isIntersecting);
 
-                if (entry.isIntersecting) {
-                    observe.unobserve(entry.target);
-                }
+                    if (entry.isIntersecting) {
+                        observe.unobserve(entry.target);
+                    }
+                })
+            }, {
+                threshold: 0.6
             })
-        }, {
-            threshold: 0.6
-        })
 
-        flyin.forEach((fly) => {
-            observe.observe(fly);
-        })
-    </script>
+            flyin.forEach((fly) => {
+                observe.observe(fly);
+            })
+        </script>
 </body>
 
 </html>
