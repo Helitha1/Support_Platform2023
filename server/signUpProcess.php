@@ -18,15 +18,15 @@ if (isset($_POST["json"])) {
         } else if (empty($req_object->email)) {
             $code = 4;
         } else if (strlen($req_object->email) >= 100) {
-            echo ("Email must have less than 100 characters");
+            $code = 5;
         } else if (!filter_var($ereq_object->mail, FILTER_VALIDATE_EMAIL)) {
-            echo ("Invalid Email !!!");
+            $code = 4;
         } else if (empty($req_object->password)) {
-            echo ("Please enter your Password !!!");
+            $code = 4;
         } else if (empty($req_object->addressLine1)) {
-            echo ("Please enter your address !!!");
+            $code = 4;
         } else if (strlen($req_object->password) < 5 || strlen($password) > 20) {
-            echo ("Password must be between 5 - 20 charcters");
+            $code = 4;
         } else {
             $rs = Database::search("SELECT * FROM `users` WHERE `email`='" . $email . "'");
             $n = $rs->num_rows;
