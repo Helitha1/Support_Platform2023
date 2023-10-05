@@ -39,11 +39,12 @@ if (isset($_POST["json"])) {
                 $d->setTimezone($tz);
                 $date = $d->format("Y-m-d H:i:s");
 
+                $password_hash = password_hash($req_object->password, 0);
 
 
                 Database::iud("INSERT INTO `users` 
                 (`fname`,`lname`,`email`,`password`,`gender_id`,`date_register`,`profession_id`) VALUES 
-                ('" . $req_object->fname . "','" . $req_object->lname . "','" . $req_object->email . "','" . $req_object->password . "','" . $req_object->gender . "','" . $req_object->date . "','".$req_object->profession_id."')");
+                ('" . $req_object->fname . "','" . $req_object->lname . "','" . $req_object->email . "','" . $password_hash . "','" . $req_object->gender . "','" . $req_object->date . "','" . $req_object->profession_id . "')");
 
                 $code =  100;
             }
@@ -53,15 +54,7 @@ if (isset($_POST["json"])) {
     }
 }
 
-$fname = $_POST["fname"];
-$lname = $_POST["lname"];
-$email = $_POST["email"];
-$mobile = $_POST["mobile"];
-$addressLine1 = $_POST["addressLine1"];
-$addressLine2 = $_POST["addressLine2"];
-$gender = $_POST["gender"];
-$password = $_POST["password"];
-$password2 = $_POST["password2"];
+
 
 
 echo (json_encode($response_obj));
