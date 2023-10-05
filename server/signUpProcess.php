@@ -54,9 +54,11 @@ if (isset($_POST["json"])) {
     } else {
         $code = 99;
     }
+}else{
+    $code =99;
 }
 
 
 
-
+$response_obj->code = $code;
 echo (json_encode($response_obj));
