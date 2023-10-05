@@ -20,18 +20,6 @@
     <div class="container-fluid">
         <div class="row">
 
-
-        <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-</div>
-
             <div class="col-12 col-lg-2 d-none d-lg-block">
                 <div class="row">
                     <div class="col-12 rounded-bottom align-items-start bg-black vh-100 ">
@@ -154,19 +142,37 @@
                         </div>
                     </div>
 
-                    <div class="col-10 offset-1 offset-lg-0 col-lg-7 bg-secondary bg-opacity-25 m-lg-3  flyin zoom" style="height: 600px;">
+                    <div class="col-10 offset-1 offset-lg-0 col-lg-7 bg-secondary bg-opacity-25 m-lg-3 project flyin zoom" style="height: 600px;">
                         <div class="row">
                             <div class="col-12 text-start p-2 m-2">
                                 <span class="fs-3 text-white fw-bold">Migten mobile Application</span>
                             </div>
                             <hr>
-                            <div class="col-12 mb-3">
+                            <div class="col-12">
                                 <label class="form-label fw-bold fs-4">Description</label>
                                 <p class="form-control">esetn ydxr xdru d drudrysy xt sset eesetn ydxr xdru d drudrysy xt sset eesetn ydxr xdru d drudrysy xt sset eesetn ydxr xdru d drudrysy xt sset e</p>
                             </div>
-                            <div class="col-12 mb-3">
+                            <div class="col-12">
                                 <label class="form-label fw-bold fs-4">Status</label>
                                 <i class="fa-solid fa-circle text-success"></i>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-6">
+                                       <label class="form-label fw-bold fs-4">Start Date : &nbsp;</label> 
+                                       <span class="fs-5">2023-10-05</span>
+                                    </div>
+                                    <div class="col-6">
+                                       <label class="form-label fw-bold fs-4">End Date : &nbsp;</label> 
+                                       <span class="fs-5">2023-12-05</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-bold fs-4">TimeLine</label>
                             </div>
                         </div>
                     </div>
