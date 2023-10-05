@@ -105,6 +105,7 @@
 /* timeline */
 
 .timeline-1 {
+<<<<<<< HEAD
   border-left: 3px solid #030b79;
   background-image: linear-gradient(90deg ,#ffffff, #838cfc);
   margin: 0 auto;
@@ -119,6 +120,16 @@
   .timeline-1 {
     max-width: 98%;
     padding: 25px;
+=======
+    border-left: 3px solid #030b79;
+    background-image: linear-gradient(90deg ,#ffffff, #838cfc);
+    margin: 0 auto;
+    position: relative;
+    padding: 50px;
+    list-style: none;
+    text-align: left;
+    max-width: 80%;
+>>>>>>> 19de7baaf8ebc97edccd3df0f8d69a302ae712e9
   }
 }
 

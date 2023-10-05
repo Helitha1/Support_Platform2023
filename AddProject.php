@@ -106,19 +106,23 @@
                                         <div class="col-6 mb-3 shadow">
 
                                             <div class="row g-1">
-                                                <div class="col-12  my-2 project " style="height: 280px;">
-                                                     
+                                                <div class="col-12  my-2 project " style="height: 280px;"> 
 
+ 
                                                 <div class="col-11 mb-3">  
-                                                    <div class="row"> 
 
-                                                    <ul id="taskList">
+                                                <div class="row">   
 
-                                                    </ul> 
+                                                <ul id="taskList">
 
-                                                    </div>
+                                                </ul>
+
 
                                                 </div>
+
+                                                </div>
+
+                                                    
                                                     <!-- <div class="col-12  my-2 project" style="height: 290px;">
                                                         <button type="button" class="btn btn-outline-primary  col-12 my-1">Database</button>
 
@@ -128,21 +132,20 @@
                                             </div>
 
 
-                                           
+                                        </div> 
 
+
+                                        <div class="col-12 mb-3"> 
+ 
+                                        <div class="row"> 
+ 
+                                        
+                                                <button onclick="addNewProject();" class="btn btn-outline-info fw-bold col-12 my-3" type="button">Add Project</button>
+                                        
 
                                         </div>
 
-                                    </div> 
-
-                                    <div class="col 12 mb-3">  
-
-                                    <div class="row">
-                                                <button onclick="addNewProject();" class="btn btn-outline-info fw-bold col-12 my-3" type="button">Add Project</button>
-                                            </div>
-
-
-
+                                        </div>
 
                                     </div>
 

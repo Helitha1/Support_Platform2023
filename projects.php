@@ -139,9 +139,14 @@
                                         $project_data = $project_rs->fetch_assoc();
                                     ?>
 
+                                        <!-- <div class="col-10 offset-1 my-2">
+                                            <button onclick='onselectProject(<?php echo $product_data["id"]; ?>);' class="btn btn-primary form-control" id="<?php echo $project_data["id"]; ?>"><?php echo $project_data["title"]; ?></button>
+                                        </div> -->
                                         <div class="col-10 offset-1 my-2">
-                                            <button class="btn btn-primary form-control" id="<?php echo $project_data["id"]; ?>"><?php echo $project_data["title"]; ?></button>
+                                            <button onclick='window.location = `manageProject.php?pid=${<?php echo $project_data["id"]; ?>}`' class="btn btn-primary form-control" id="<?php echo $project_data["id"]; ?>"><?php echo $project_data["title"]; ?></button>
                                         </div>
+
+
 
                                     <?php
                                     }
@@ -188,48 +193,48 @@
 
                             </div>
 
-                            </div>
-                            <hr>
-                            <div class="col-12">
-                                <label class="form-label fw-bold fs-4">TimeLine</label>
-                                <!-- timeline -->
-                                <div class="container py-5">
-                                    <div class="row">
-                                        <div class="col-10 offset-1 collg10 offset-lg-2">
-                                            <div id="content">
-                                                <ul class="timeline-1 text-black">
-                                                    <li class="event fs-3" data-date="2023-10-12">
-                                                        <h4 class="mb-3">Registration</h4>
-                                                        <p>Get here on time, it's first come first serve. Be late, get turned away.</p>
-                                                    </li>
-                                                    <li class="event fs-3" data-date="2023-10-12">
-                                                        <h4 class="mb-3 pt-3">Opening Ceremony</h4>
-                                                        <p>Get ready for an exciting event, this will kick off in amazing fashion with MOP &amp; Busta
-                                                            Rhymes as an opening show.</p>
-                                                    </li>
-                                                    <li class="event fs-3" data-date="2023-10-12">d-grid
-                                                        <h4 class="mb-3 pt-3">Main Event</h4>
-                                                        <p>This is where it all goes down. You will compete head to head with your friends and rivals. Get
-                                                            ready!</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                        </div>
+                        <hr>
+                        <div class="col-12">
+                            <label class="form-label fw-bold fs-4">TimeLine</label>
+                            <!-- timeline -->
+                            <div class="container py-5">
+                                <div class="row">
+                                    <div class="col-10 offset-1 collg10 offset-lg-2">
+                                        <div id="content">
+                                            <ul class="timeline-1 text-black">
+                                                <li class="event fs-3" data-date="2023-10-12">
+                                                    <h4 class="mb-3">Registration</h4>
+                                                    <p>Get here on time, it's first come first serve. Be late, get turned away.</p>
+                                                </li>
+                                                <li class="event fs-3" data-date="2023-10-12">
+                                                    <h4 class="mb-3 pt-3">Opening Ceremony</h4>
+                                                    <p>Get ready for an exciting event, this will kick off in amazing fashion with MOP &amp; Busta
+                                                        Rhymes as an opening show.</p>
+                                                </li>
+                                                <li class="event fs-3" data-date="2023-10-12">d-grid
+                                                    <h4 class="mb-3 pt-3">Main Event</h4>
+                                                    <p>This is where it all goes down. You will compete head to head with your friends and rivals. Get
+                                                        ready!</p>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- timeline -->
-
                             </div>
+                            <!-- timeline -->
+
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-
         </div>
+
+
+
+
+
+    </div>
     </div>
     <script src="res/bootstrap.bundle.js"></script>
     <script src="res/jquery.min.js"></script>
