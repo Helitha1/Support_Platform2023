@@ -16,7 +16,7 @@ if (isset($_POST["json"])) {
         } else if (strlen($req_object->lname) > 50) {
             $code =3;
         } else if (empty($req_object->email)) {
-            $code = 4
+            $code = 4;
         } else if (strlen($req_object->email) >= 100) {
             echo ("Email must have less than 100 characters");
         } else if (!filter_var($ereq_object->mail, FILTER_VALIDATE_EMAIL)) {
