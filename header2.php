@@ -63,6 +63,9 @@
     </div>
     </div>
 </div>
+<script src="script.js"></script>
+<script src="main.js"></script>
+<script src="res/bootstrap.bundle.js"></script>
 </body>
 
 </html>
