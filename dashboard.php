@@ -116,11 +116,11 @@
 
                             <div class="col-8 offset-2  px-1 py-3 position-relative">
                                 <div class="row g-1">
-                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
+                                    <div class="col-12 text-center rounded js-tilt " style="height: 100px; background-color: #00008099;" >
                                         <br />
-                                        <span class="fs-3 text-dark fw-bold">4</span>
+                                        <span class="fs-3 text-white fw-bold">4</span>
                                         <br />
-                                        <span class="fs-5 text-dark">PROJECT COUNT</span>
+                                        <span class="fs-5 text-white fw-bolder">PROJECT COUNT</span>
                                     </div>
                                 </div>
                             </div>
@@ -128,63 +128,98 @@
                         </div>
                     </div>
 
-                    <div class="offset-1 col-10 col-lg-4 my-3 rounded-3 bg-body flyin zoom project " style="height: 200px;">
+                    <div class="offset-1 col-10 col-lg-4 my-3 rounded-3 flyin zoom " style="background-color: #ffffff90;">
                         <div class="row g-1">
                             <div class="col-12 text-center">
                                 <label class="form-label fs-4 fw-bold">Pending Projects</label>
                                 <hr>
                             </div>
-                            <div class="col-12 text-center  my-3">
-                                <a class="fs-6 fw-bold" href="#">Migten web application</a>
+                            <div class=" project " style="height: 150px;">
+                                <div class="col-12 text-center  my-3">
+                                    <a class="fs-6 fw-bold" href="#">Migten web application</a>
+                                </div>
+                                <div class="col-12 text-center  my-3">
+                                    <a class="fs-6 fw-bold" href="#">Migten web application</a>
+                                </div>
+                                <div class="col-12 text-center  my-3">
+                                    <a class="fs-6 fw-bold" href="#">Migten web application</a>
+                                </div>
+                                <div class="col-12 text-center  my-3">
+                                    <a class="fs-6 fw-bold" href="#">Migten web application</a>
+                                </div>
+                                <div class="col-12 text-center  my-3">
+                                    <a class="fs-6 fw-bold" href="#">Migten web application</a>
+                                </div>
+                                <div class="col-12">
+                                    <div class="first-place"></div>
+                                </div>
                             </div>
-                            <div class="col-12">
-                                <div class="first-place"></div>
-                            </div>
+
                         </div>
                     </div>
 
-                    <div class="offset-1 offset-lg-2 col-10 col-lg-4 my-3 rounded-3 bg-body flyin zoom project " style="height: 200px;">
+                    <div class="offset-1 offset-lg-2 col-10 col-lg-4 my-3 rounded-3 flyin zoom " style="background-color: #ffffff90;">
                         <div class="row g-1">
                             <div class="col-12 text-center">
                                 <label class="form-label fs-4 fw-bold">Complete Projects</label>
                                 <hr>
                             </div>
-                            <div class="col-12 text-center  my-3">
-                                <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
+                            <div class=" project " style="height: 150px;">
+                                <div class="col-12 text-center  my-3">
+                                    <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
+                                </div>
+                                <div class="col-12 text-center  my-3">
+                                    <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
+                                </div>
+                                <div class="col-12 text-center  my-3">
+                                    <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
+                                </div>
+                                <div class="col-12 text-center  my-3">
+                                    <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
+                                </div>
+                                <div class="col-12 text-center  my-3">
+                                    <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
+                                </div><div class="col-12 text-center  my-3">
+                                    <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
+                                </div>
+                                <div class="col-12">
+                                    <div class="first-place"></div>
+                                </div>
                             </div>
-                            <div class="col-12">
-                                <div class="first-place"></div>
-                            </div>
+
                         </div>
                     </div>
 
-                    <div class="offset-1 col-10 my-3 rounded-3 bg-body flyin zoom project " style="height: 270px;">
+                    <div class="offset-1 col-10 my-3 rounded-3 flyin zoom" style="background-color: #ffffff90;">
                         <div class="row g-1">
                             <div class="col-12 text-center">
                                 <label class="form-label fs-4 fw-bold">Ongoin Task</label>
                                 <hr>
                             </div>
-                            <div class="col-12  my-3">
-                                <span class="fs-6 text-center fw-bold">Migten web application</span><br />
-                                <span class="fs-6">Ui Ux design</span><br />
-                                <span class="fs-6">Backend</span><br />
-                                <span class="fs-6">MySql Database</span><br />
+                            <div class=" project " style="height: 200px;">
+                                <div class="col-10 offset-1 my-3">
+                                    <span class="fs-6 text-center fw-bold">Migten web application</span><br />
+                                    <span class="fs-6">Ui Ux design</span><br />
+                                    <span class="fs-6">Backend</span><br />
+                                    <span class="fs-6">MySql Database</span><br />
+                                </div>
+                                <div class="col-10 offset-1 my-3">
+                                    <span class="fs-6 text-center fw-bold">Migten web application</span><br />
+                                    <span class="fs-6">Ui Ux design</span><br />
+                                    <span class="fs-6">Backend</span><br />
+                                    <span class="fs-6">MySql Database</span><br />
+                                </div>
+                                <div class="col-10 offset-1 my-3">
+                                    <span class="fs-6 text-center fw-bold">Migten web application</span><br />
+                                    <span class="fs-6">Ui Ux design</span><br />
+                                    <span class="fs-6">Backend</span><br />
+                                    <span class="fs-6">MySql Database</span><br />
+                                </div>
+                                <div class="col-12">
+                                    <div class="first-place"></div>
+                                </div>
                             </div>
-                            <div class="col-12  my-3">
-                                <span class="fs-6 text-center fw-bold">Migten web application</span><br />
-                                <span class="fs-6">Ui Ux design</span><br />
-                                <span class="fs-6">Backend</span><br />
-                                <span class="fs-6">MySql Database</span><br />
-                            </div>
-                            <div class="col-12  my-3">
-                                <span class="fs-6 text-center fw-bold">Migten web application</span><br />
-                                <span class="fs-6">Ui Ux design</span><br />
-                                <span class="fs-6">Backend</span><br />
-                                <span class="fs-6">MySql Database</span><br />
-                            </div>
-                            <div class="col-12">
-                                <div class="first-place"></div>
-                            </div>
+
                         </div>
                     </div>
 
