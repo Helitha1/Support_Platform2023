@@ -23,7 +23,7 @@
 
                     <div class="col-6 d-none d-lg-block logo"></div>
 
-                    <div class="col-12 col-lg-6 border-dark shadow-lg bg-transparent rounded-2">
+                    <div class="col-12 col-lg-6 border-dark shadow-lg bg-transparent rounded-4">
                         <div class="row g-2 p-4">
 
 
