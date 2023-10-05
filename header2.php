@@ -3,15 +3,16 @@
 
     if (isset($_SESSION["user"])) {
         $user_button = '
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown1" data-toggle="dropdown">
-          <i class="fa fa-user"></i>  ' . ($_SESSION["user"]["fname"]) . '
+        <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Dropdown button
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdown1" id="">
-            <a class="dropdown-item" href="dashboard.php">DASHBOARD</a>
-            <a class="dropdown-item" href="signout.php">SIGNOUT</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
         </div>
-    </div>
+      </div>
     ';
     } else {
         $user_button = '<a href="">Sign In</a>';
@@ -26,9 +27,8 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <link rel="icon" type="image/png" href="./res/logo-sm.png" />
      <link rel="stylesheet" href="res/main.css" />
-     <link rel="stylesheet" href="res/bootstrap.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-     <link rel="stylesheet" href="res/cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css" />
-     <link rel="stylesheet" href="fontawsome/css/all.css" />
+     <link rel="stylesheet" href="res/bootstrap.css" />
+     <link rel="stylesheet" href="res/fontawsome/css/all.css" />
  </head>
 
  <body>
@@ -82,8 +82,7 @@
          </div>
 
          <script src="main.js"></script>
-         <script src="res/bootstrap.bundle.js"></script>
-
+         <!-- <script src="res/bootstrap.bundle.js"></script> -->
  </body>
 
  </html>

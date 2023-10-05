@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Migten</title>
     <link rel="stylesheet" href="res/bootstrap.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->
     <link rel="stylesheet" href="res/style.css" />
     <link rel="stylesheet" href="res/animation.css" />
     <link rel="icon" href="res/logo-sm.png" />
@@ -231,6 +231,7 @@
     <?php
     include "footer.php"
     ?>
+    <script src="res/bootstrap.bundle.js"></script>
 
     <script>
         const flyin = document.querySelectorAll(".flyin");
@@ -251,6 +252,7 @@
             observe.observe(fly);
         })
     </script>
+
 </body>
 
 </html>
