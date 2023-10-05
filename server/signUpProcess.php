@@ -28,7 +28,7 @@ if (isset($_POST["json"])) {
             $code = 8;
         } else if (strlen($request_obj->password) < 5 || strlen($request_obj->password) > 20) {
             $code = 9;
-        } else if (empty($request_obj->profession_id)) {
+        } else if ($request_obj->profession_id=="") {
             $code = 10;
         } else {
             $rs = Database::search("SELECT * FROM `users` WHERE `email`='" . $email . "'");
