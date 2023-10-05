@@ -1,5 +1,10 @@
 <?php
 
+echo 'Success';
+
+
+return;
+
 require "connection.php";
 
 require "email/SMTP.php";
