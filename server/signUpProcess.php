@@ -1,16 +1,17 @@
 <?php
+// RESPONSE OBJECT
 $response_obj = new stdClass();
 $code = 0;
-
+// DATABASE CONNECTION
 require "connection.php";
-
+// CHECK REQUEST OBJECT
 if (isset($_POST["json"])) {
+    // GET JSON OBJECT FROM REQUESR
     $request_obj = json_decode($_POST["json"]);
-
+    // CHECK JSON PARAMETERS
     if (isset($request_obj->email) && isset($request_obj->fname) && isset($request_obj->lname) && isset($request_obj->password) && isset($request_obj->gender) && isset($request_obj->profession_id)) {
-
-
-        if ($request_obj->fname=="") {
+        // VALIDATION
+        if ($request_obj->fname == "") {
             $code = 1;
         } else if (empty($request_obj->lname)) {
             $code = 2;
@@ -28,7 +29,7 @@ if (isset($_POST["json"])) {
             $code = 8;
         } else if (strlen($request_obj->password) < 5 || strlen($request_obj->password) > 20) {
             $code = 9;
-        } else if ($request_obj->profession_id=="") {
+        } else if ($request_obj->profession_id == "" | $request_obj->profession_id == 0) {
             $code = 10;
         } else {
             $rs = Database::search("SELECT * FROM `users` WHERE `email`='" . $request_obj->email . "'");
@@ -54,8 +55,8 @@ if (isset($_POST["json"])) {
     } else {
         $code = 98;
     }
-}else{
-    $code =99;
+} else {
+    $code = 99;
 }
 
 
