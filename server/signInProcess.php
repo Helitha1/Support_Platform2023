@@ -36,6 +36,7 @@ if (isset($_POST["json"])) {
                     setcookie("email", "", -1);
                     setcookie("password", "", -1);
                 }
+                $code =100;
             } else {
                 $code = 13;
             }
