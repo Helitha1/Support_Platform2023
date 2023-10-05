@@ -13,7 +13,7 @@
 <section  class="d-flex align-items-center  " style="background-color:#543c4f; height: 30px;">
         <div class="container d-flex justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope d-flex align-items-center text-white "><a  href="charitydonation@gmail.com" class="text-white  mx-2">charitydonation@gmail.com</a></i>
+                <i class="bi bi-envelope d-flex align-items-center text-white "><a  href="migten@gmail.com" class="text-white  mx-2">migten@gmail.com</a></i>
                 <i class="bi bi-phone d-flex align-items-center ms-4 text-white "><span  class="text-white  mx-2">(+94)75 6985419</span></i>
             </div>
             <div class=" d-none d-md-flex align-items-center" >
