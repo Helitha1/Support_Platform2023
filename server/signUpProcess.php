@@ -22,7 +22,7 @@ if (isset($_POST["json"])) {
             $code = 5;
         } else if (strlen($request_obj->email) >= 100) {
             $code = 6;
-        } else if (!filter_var($request_obj->mail, FILTER_VALIDATE_EMAIL)) {
+        } else if (!filter_var($request_obj->email, FILTER_VALIDATE_EMAIL)) {
             $code = 7;
         } else if (empty($request_obj->password)) {
             $code = 8;
