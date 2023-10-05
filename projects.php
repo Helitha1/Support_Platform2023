@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location:index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -17,24 +24,22 @@
 
 <body class=" body2">
 
-
     <?php
+    // $selectedProjectId = "";
 
-    $selectedProjectId = "";
+    // if ($selectedProjectId != "") {
+    //     require_once "server/connection.php";
 
-    if ($selectedProjectId != "") {
-        require "server/connection.php";
+    //     $project_rs = Database::search("SELECT * FROM `projects` WHERE `id` = '" . $selectedProjectId . "'");
+    //     $project_num = $project_rs->num_rows;
 
-        $project_rs = Database::search("SELECT * FROM `projects` WHERE `id` = '" . $selectedProjectId . "'");
-        $project_num = $project_rs->num_rows;
-
-        if ($project_num > 0) {
-            $project_data = $project_rs->fetch_assoc();
-        } else {
-            echo ("invalid project id");
-        }
-    } else {
-    }
+    //     if ($project_num > 0) {
+    //         $project_data = $project_rs->fetch_assoc();
+    //     } else {
+    //         echo ("invalid project id");
+    //     }
+    // } else {
+    // }
 
     ?>
 
@@ -74,30 +79,9 @@
                 </div>
             </div>
 
-            <div class="col-12 d-block d-lg-none bg-dark">
-                <ul class="nav d-flex justify-content-center align-items-center my-3">
-                    <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
-                        <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = 'dashboard.php'">Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
-                        <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = 'projects.php'">Projects </span>
-                        </a>
-                    </li>
-                    <li class="nav-item my-1 mx-1 changeView border-end  border-bottom rounded-5 border-white border-opacity-25">
-                        <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = ''">Create Projects</span>
-                        </a>
-                    </li>
-                    <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
-                        <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = '####'">Manage Profile</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <?php
+            include_once("sidenav.php");
+            ?>
 
             <div class=" col-12 col-lg-10">
                 <div class="row">
@@ -122,7 +106,6 @@
                             <div class="col-12 my-3">
                                 <div class="row">
                                     <?php
-                                    require "server/connection.php";
                                     $project_rs = Database::search("SELECT * FROM `projects`");
                                     $project_num = $project_rs->num_rows;
                                     for ($x = 0; $x < $project_num; $x++) {
@@ -136,7 +119,6 @@
                                         </div>
                                     <?php
                                     }
-
                                     ?>
                                 </div>
                             </div>

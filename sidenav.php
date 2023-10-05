@@ -12,14 +12,13 @@
         </li>
         <li class="nav-item my-1 mx-1 changeView border-end  border-bottom rounded-5 border-white border-opacity-25">
             <a class="nav-link ">
-                <span class="fs-6 text-white" onclick="window.location = 'teachersClasses.php'">Create Projects</span>
+                <span class="fs-6 text-white" onclick="window.location = 'AddProject.php'">Create Projects</span>
             </a>
         </li>
         <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
             <a class="nav-link ">
-                <span class="fs-6 text-white" onclick="window.location = 'teacherProfile.php'">Manage Profile</span>
+                <span class="fs-6 text-white" onclick="window.location = 'UserProfile.php'">Manage Profile</span>
             </a>
         </li>
     </ul>
-
 </div>
