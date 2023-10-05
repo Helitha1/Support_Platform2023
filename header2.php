@@ -59,7 +59,6 @@
                 <i class="fa-solid fa-bars" id="navigation-toggler-icon"></i>
             </button>
         </div>
-
     </div>
     </div>
 </div>
