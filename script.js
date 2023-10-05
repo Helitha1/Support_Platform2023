@@ -153,7 +153,7 @@ resetPassword = () => {
 // FUNCTION FOR LOAD PROJECT DETAILS IN PROJECT PHP
 loadProject = (id) => {
   let projectObject;
-  fetch('loadProjectById.php?pid=' + id, { method: 'GET' })
+  fetch('server/loadProjectById.php?pid=' + id, { method: 'GET' })
     .then(res => res.json())
     .then(obj => {
       console.log(obj);
