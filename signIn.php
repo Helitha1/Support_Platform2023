@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In | Migten</title>
+    <title>Migten | Sign In</title>
     <link rel="stylesheet" href="res/bootstrap.css" />
     <link rel="stylesheet" href="res/style.css" />
     <link rel="icon" href="res/logo-sm.png" />
