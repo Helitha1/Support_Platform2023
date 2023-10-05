@@ -33,6 +33,8 @@
                 <li class="navigation-item"><a href="">About</a></li>
                 <li class="navigation-item"><a href="">Contact Us</a></li>
                 <li class="navigation-item"><a href="">Other Services</a></li>
+                <li class="navigation-item"><a href="">Sign In</a></li>
+                <!-- <li class="navigation-item"><a href="">Dashboard</a></li> -->
             </ul>
             <!-- MENU LOGOS -->
             <ul class="navigation-bar-logo">
