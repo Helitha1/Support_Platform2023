@@ -1,6 +1,10 @@
 showError = (err) => {
     alert(err)
 }
+function ValidateEmail(email) {
+    const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    return regex.test(email);
+}
 function signUp() {
     var f = document.getElementById("fname").value;
     var l = document.getElementById("lname").value;
@@ -12,15 +16,17 @@ function signUp() {
 
     if (f == "") {
         showError('First Name is required');
-    }else if(l==""){
+    } else if (l == "") {
         showError('Last Name is required');
-    }else if(e==""){
+    } else if (e == "") {
         showError('Email is Required');
-    }else if(p==""){
+    } else if (ValidateEmail(e)) {
+        showError('Invalid Email address');
+    } else if (p == "") {
         showError('Password is NULL');
-    }else if (p != p2) {
+    } else if (p != p2) {
         showError('password are not matching');
-    } else if(pr==0){
+    } else if (pr == 0) {
         showError('Please select your Profession');
     } else {
         const arry =
