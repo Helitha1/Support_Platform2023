@@ -63,7 +63,7 @@
                                
                             <div class="col-12 ">
                                 <label class="form-label fw-bold">Profession</label>
-                                <select class=" form-select " id="gender">
+                                <select class=" form-select " id="proffeshion">
                                     <option value="0">Ui/Ux</option>
                                     <option value="1">Back End Developer</option>
                                 </select>
