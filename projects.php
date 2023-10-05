@@ -157,8 +157,11 @@
 
                     <div class="col-10 offset-1 offset-lg-0 col-lg-7 bg-secondary bg-opacity-25 m-lg-3 project flyin zoom" style="height: 600px;">
                         <div class="row">
-                            <div class="col-12 text-start">
+                            <div class="col-10 text-start">
                                 <span class="fs-3 text-white fw-bold m-2">Migten mobile Application</span>
+                            </div>
+                            <div class="col-2 text-end ">
+                                <button class="m-2 btn btn-secondary">Edit</button>
                             </div>
                             <hr>
                             <div class="col-12">
@@ -192,7 +195,7 @@
                                 <!-- timeline -->
                                 <div class="container py-5">
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-10 offset-1 collg10 offset-lg-2">
                                             <div id="content">
                                                 <ul class="timeline-1 text-black">
                                                     <li class="event fs-3" data-date="2023-10-12">

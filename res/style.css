@@ -1,183 +1,183 @@
 :root{ 
 
-    --primary: hsla(291, 81%, 75%, 0.45) ; 
-    --yellow: rgba(135, 208, 245, 0.45) ; 
-    --red: hsla(0, 92%, 44%, 0.53); 
-     
+  --primary: hsla(291, 81%, 75%, 0.45) ; 
+  --yellow: rgba(135, 208, 245, 0.45) ; 
+  --red: hsla(0, 92%, 44%, 0.53); 
    
-       
-   
-   }
-
-   
-.project {
-    height: 100vh;
-    overflow-y: scroll;
-}
-
-   .body{ 
-       
-       height: 100vh;
-       background: linear-gradient(130deg , var(--primary),var(--yellow)),url("background2.jpg");    
-       background-size: cover;
-       background-position: center;
-       background-repeat: no-repeat;  
-       
-       
-   } 
-   .body2{ 
-       
-       height: 100vh;
-       background: linear-gradient(130deg , var(--primary),var(--yellow)), url("background2.jpg");    
-       background-attachment: fixed; 
-       overflow-y:auto; 
-       flex: 1;
-       background-size: cover;
-       background-position: center;
-       background-repeat: no-repeat;  
-       
-       
-       
-   }
-   .body3{ 
-       
-    height: 100vh;
-    background-image:url("homeImg.png");    
-    background-attachment: fixed; 
-    overflow-y:auto; 
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;  
-    
-    
-    
-}
  
-   
-   .logo{ 
+     
+ 
+ }
 
-    background-image: url("logo-sm.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-} 
+ 
+.project {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+ .body{ 
+     
+     height: 100vh;
+     background: linear-gradient(130deg , var(--primary),var(--yellow)),url("background2.jpg");    
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;  
+     
+     
+ } 
+ .body2{ 
+     
+     height: 100vh;
+     background: linear-gradient(130deg , var(--primary),var(--yellow)), url("background2.jpg");    
+     background-attachment: fixed; 
+     overflow-y:auto; 
+     flex: 1;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;  
+     
+     
+     
+ }
+ .body3{ 
+     
+  height: 100vh;
+  background-image:url("homeImg.png");    
+  background-attachment: fixed; 
+  overflow-y:auto; 
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;  
   
+  
+  
+}
+
+ 
+ .logo{ 
+
+  background-image: url("logo-sm.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+} 
+
 .logo2{ 
 
-    background-image: url("res/logo2.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url("res/logo2.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 } 
- 
+
 
 @font-face {
-    font-family: "Quicksand";
-    src: url("font/Quicksand-Medium.ttf");
+  font-family: "Quicksand";
+  src: url("font/Quicksand-Medium.ttf");
 }
 
 @font-face {
-    font-family: "Roboto";
-    src: url("font/Roboto-Regular.ttf");
+  font-family: "Roboto";
+  src: url("font/Roboto-Regular.ttf");
 }
 
 *{
-    font-family: "Quicksand";
-    font-size: 14px;
+  font-family: "Quicksand";
+  font-size: 14px;
 }
 
 .title01{
-    font-family: "Roboto";
-    font-size: 30px;
-    letter-spacing: 3px;
+  font-family: "Roboto";
+  font-size: 30px;
+  letter-spacing: 3px;
 }
 .title02{
-    font-size: 25px;
-    font-weight: bold;
+  font-size: 25px;
+  font-weight: bold;
 }
 .courser{
 
-   cursor: pointer;
- 
+ cursor: pointer;
+
 }   
 
 /* timeline */
 
 .timeline-1 {
-    border-left: 3px solid #030b79;
-    background-image: linear-gradient(90deg ,#ffffff, #838cfc);
-    margin: 0 auto;
-    position: relative;
-    padding: 50px;
-    list-style: none;
-    text-align: left;
-    max-width: 40%;
+  border-left: 3px solid #030b79;
+  background-image: linear-gradient(90deg ,#ffffff, #838cfc);
+  margin: 0 auto;
+  position: relative;
+  padding: 50px;
+  list-style: none;
+  text-align: left;
+  max-width: 80%;
+}
+
+@media (max-width: 767px) {
+  .timeline-1 {
+    max-width: 98%;
+    padding: 25px;
   }
-  
-  @media (max-width: 767px) {
-    .timeline-1 {
-      max-width: 98%;
-      padding: 25px;
-    }
-  }
-  
+}
+
+.timeline-1 .event {
+  border-bottom: 1px dashed #000;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
   .timeline-1 .event {
-    border-bottom: 1px dashed #000;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-    position: relative;
+    padding-top: 30px;
   }
-  
-  @media (max-width: 767px) {
-    .timeline-1 .event {
-      padding-top: 30px;
-    }
-  }
-  
-  .timeline-1 .event:last-of-type {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border: none;
-  }
-  
-  .timeline-1 .event:before,
-  .timeline-1 .event:after {
-    position: absolute;
-    display: block;
-    top: 0;
-  }
-  
+}
+
+.timeline-1 .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+.timeline-1 .event:before,
+.timeline-1 .event:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timeline-1 .event:before {
+  left: -207px;
+  content: attr(data-date);
+  text-align: right;
+  font-weight: 100;
+  font-size: 0.9em;
+  min-width: 120px;
+}
+
+@media (max-width: 767px) {
   .timeline-1 .event:before {
-    left: -207px;
-    content: attr(data-date);
-    text-align: right;
-    font-weight: 100;
-    font-size: 0.9em;
-    min-width: 120px;
+    left: 0px;
+    text-align: left;
   }
-  
-  @media (max-width: 767px) {
-    .timeline-1 .event:before {
-      left: 0px;
-      text-align: left;
-    }
-  }
-  
+}
+
+.timeline-1 .event:after {
+  -webkit-box-shadow: 0 0 0 3px #4709e4;
+  box-shadow: 0 0 0 3px #2b2ef0;
+  left: -55.8px;
+  background: #fff;
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+  content: "";
+  top: 5px;
+}
+
+@media (max-width: 767px) {
   .timeline-1 .event:after {
-    -webkit-box-shadow: 0 0 0 3px #4709e4;
-    box-shadow: 0 0 0 3px #2b2ef0;
-    left: -55.8px;
-    background: #fff;
-    border-radius: 50%;
-    height: 9px;
-    width: 9px;
-    content: "";
-    top: 5px;
+    left: -31.8px;
   }
-  
-  @media (max-width: 767px) {
-    .timeline-1 .event:after {
-      left: -31.8px;
-    }
-  }
+}
