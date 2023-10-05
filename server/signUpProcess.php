@@ -13,19 +13,19 @@ if (isset($_POST["json"])) {
         // VALIDATION
         if ($request_obj->fname == "") {
             $code = 1;
-        } else if (empty($request_obj->lname)) {
+        } else if ($request_obj->lname=="") {
             $code = 2;
         } else if (strlen($request_obj->fname) > 45) {
             $code = 3;
         } else if (strlen($request_obj->lname) > 45) {
             $code = 4;
-        } else if (empty($request_obj->email)) {
+        } else if ($request_obj->email=='') {
             $code = 5;
         } else if (strlen($request_obj->email) >= 100) {
             $code = 6;
         } else if (!filter_var($request_obj->email, FILTER_VALIDATE_EMAIL)) {
             $code = 7;
-        } else if (empty($request_obj->password)) {
+        } else if ($request_obj->password=="") {
             $code = 8;
         } else if (strlen($request_obj->password) < 5 || strlen($request_obj->password) > 20) {
             $code = 9;
@@ -58,8 +58,6 @@ if (isset($_POST["json"])) {
 } else {
     $code = 99;
 }
-
-
 
 $response_obj->code = $code;
 echo (json_encode($response_obj));

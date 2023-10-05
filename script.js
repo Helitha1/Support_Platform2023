@@ -81,10 +81,10 @@ function signIn() {
             if (r.readyState == 4) {
                 var t = r.responseText;
                 let res = JSON.parse(t);
-                if(res.code==100){
+                if (res.code == 100) {
                     alert('done');
                     window.location = 'index.php';
-                }else{
+                } else {
                     console.log(res.code);
                 }
             }
@@ -99,34 +99,56 @@ var bm;
 var email;
 function forgotPassword() {
     email = document.getElementById("email");
-    
 
-    var r = new XMLHttpRequest();
-
-    if (email.value == "") {
-        alert("Please enter your email and try again");
-    } else {
-        r.onreadystatechange = function () {
-            if (r.readyState == 4) {
-                var t = r.responseText;
-                if (t == "Success") {
-                    alert(
-                        "Verification code has sent to your email. Please check your inbox"
-                    );
-                    var m = document.getElementById("forgotPasswordModal");
-                    bm = new bootstrap.Modal(m);
-                    bm.show();
-                } else {
-                    alert(t);
-                }
+    fetch("server/forgotPasswordProcess.php", {
+        method: 'POST',
+        body: JSON.stringify({ email: document.getElementById("email").value }),
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
+        .then(res => res.json())
+        .then(obj => {
+            if(obj.code==100){
+                alert("Verification code has sent to your email. Please check your inbox"
+                );
+                var m = document.getElementById("forgotPasswordModal");
+                bm = new bootstrap.Modal(m);
+                bm.show();
+            }else{
+                alert(obj.code);
             }
-        };
-    
-        r.open("GET", "server/forgotPasswordProcess.php?e=" + email.value, true);
-        r.send();
-    }
+        })
+        .catch(error => alert(error))
 
-  
+
+
+    // var r = new XMLHttpRequest();
+
+    // if (email.value == "") {
+    //     alert("Please enter your email and try again");
+    // } else {
+    //     r.onreadystatechange = function () {
+    //         if (r.readyState == 4) {
+    //             var t = r.responseText;
+    //             if (t == "Success") {
+    //                 alert(
+    //                     "Verification code has sent to your email. Please check your inbox"
+    //                 );
+    //                 var m = document.getElementById("forgotPasswordModal");
+    //                 bm = new bootstrap.Modal(m);
+    //                 bm.show();
+    //             } else {
+    //                 alert(t);
+    //             }
+    //         }
+    //     };
+
+    //     r.open("GET", "server/forgotPasswordProcess.php?e=" + email.value, true);
+    //     r.send();
+    // }
+
+
 }
 
 function resetPassword() {
@@ -139,12 +161,12 @@ function resetPassword() {
         alert("Please enter your email and try again");
     } else {
         const arry =
-            {
-                email: email.value,
-                password: np,
-                password2: rnp,
-                vcode: vcode,
-            };
+        {
+            email: email.value,
+            password: np,
+            password2: rnp,
+            vcode: vcode,
+        };
 
         var f = new FormData();
 

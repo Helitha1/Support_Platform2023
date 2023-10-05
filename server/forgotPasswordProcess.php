@@ -7,10 +7,12 @@ require "email/PHPMailer.php";
 require "email/Exception.php";
 // USE PHP PHPMAILER FROM SMTP
 use PHPMailer\PHPMailer\PHPMailer;
+// GET RAW DATA FROM REQUEST
+$request = file_get_contents("php://input");
 
-if(isset($_POST["e"])){
+if(isset($request)){
 
-    $email = $_POST["e"];
+    $email = json_decode($request);
 
     $rs = Database::search("SELECT * FROM `users` WHERE `email`='".$email."'");
     $n = $rs->num_rows;
