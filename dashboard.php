@@ -113,74 +113,85 @@
                     <div class="col-12">
                         <div class="row g-1">
 
-
-                        </div>
-
-                        <div class="col-12 col-lg-6 px-1 py-3 shadow ">
-                            <div class="row g-1">
-                                <div class="col-12 bg-primary text-white text-center rounded" style="height: 100px;">
-                                    <br />
-                                    <span class="fs-3 text-dark fw-bold">4</span>
-                                    <br />
-
-                                    <span class="fs-5 text-dark">ADMINS</span>
+                            <div class="col-11  px-1 py-3 position-relative">
+                                <div class="row g-1">
+                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
+                                        <br />
+                                        <span class="fs-3 text-dark fw-bold">4</span>
+                                        <br />
+                                        <span class="fs-5 text-dark">ADMINS</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-12 col-lg-6 px-1 py-3 shadow ">
-                            <div class="row g-1">
-                                <div class="col-12 bg-warning text-white text-center rounded" style="height: 100px;">
-                                    <br />
-                                    <span class="fs-3 text-dark fw-bold">50</span>
-                                    <br />
-
-                                    <span class="fs-5 text-dark">TEACHERS</span>
+                           
+                            <div class="col-11  px-1 py-3 position-relative">
+                                <div class="row g-1">
+                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
+                                        <br />
+                                        <span class="fs-3 text-dark fw-bold">4</span>
+                                        <br />
+                                        <span class="fs-5 text-dark">ADMINS</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-12 col-lg-6 px-1   shadow ">
-                            <div class="row g-1">
-                                <div class="col-12 bg-danger text-white text-center rounded" style="height: 100px;">
-                                    <br />
-                                    <span class="fs-3 fw-bold  text-dark">120</span>
-                                    <br />
-
-                                    <span class="fs-5 text-dark"> ACADEMIC OFFICERS</span>
+                           
+                            <div class="col-11  px-1 py-3 position-relative">
+                                <div class="row g-1">
+                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
+                                        <br />
+                                        <span class="fs-3 text-dark fw-bold">4</span>
+                                        <br />
+                                        <span class="fs-5 text-dark">ADMINS</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-12 col-lg-6 px-1 shadow ">
-                            <div class="row g-1">
-                                <div class="col-12 bg-info text-white text-center rounded" style="height: 100px;">
-                                    <br />
-                                    <span class="fs-3 fw-bold text-dark">800</span>
-                                    <br />
-
-                                    <span class="fs-5 text-dark">STUDENTS</span>
+                           
+                            <div class="col-11  px-1 py-3 position-relative">
+                                <div class="row g-1">
+                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
+                                        <br />
+                                        <span class="fs-3 text-dark fw-bold">4</span>
+                                        <br />
+                                        <span class="fs-5 text-dark">ADMINS</span>
+                                    </div>
                                 </div>
                             </div>
+                           
+
+
+
+
                         </div>
-
-
                     </div>
+
+
+
                 </div>
-
-
-
             </div>
+
+
+
+
+
         </div>
-
-
-
-
-
     </div>
-    </div>
-    <script src="bootstrap.bundle.js"></script>
+    <script src="res/bootstrap.bundle.js"></script>
+    <script src="res/jquery.min.js"></script>
+    <script src="res/tilt.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        // TILT (3D ANIMATION)
+        const tilt = $('.js-tilt').tilt({
+            scale: 1.05,
+            glare: true,
+            maxGlare: 0.2,
+            reset: true
+        });
+        tilt.methods.destroy.call(tilt);
+
+    </script>
+
 </body>
 
 </html>
