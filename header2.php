@@ -82,6 +82,9 @@ if (isset($_SESSION["user"])) {
             </div>
         </div>
     </div>
+
+    <!-- <script src="res/bootstrap.bundle.js"></script> -->
+
 </body>
 
 </html>
