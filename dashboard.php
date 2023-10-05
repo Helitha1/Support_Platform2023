@@ -21,7 +21,7 @@
 
             <div class="col-12 col-lg-2 d-none d-lg-block">
                 <div class="row">
-                    <div class="col-12 rounded-bottom align-items-start  bg-dark vh-100 ">
+                    <div class="col-12 rounded-bottom align-items-start  bg-black vh-100 ">
 
                         <div class="row g-1 text-center ">
 
@@ -39,7 +39,7 @@
                                 <nav class="nav flex-column ">
                                     <a class="btn btn-outline-secondary my-2" aria-current="page" href="#">Dashboard</a>
                                     <br />
-                                    <a class="btn btn-outline-secondary my-2" href="#">Projects</a>
+                                    <a class="btn btn-outline-secondary my-2" href="projects.php">Projects</a>
                                     <br />
                                     <a class="btn btn-outline-secondary my-2" href="#">Create Projects</a>
                                     <br />
@@ -79,12 +79,12 @@
                 <ul class="nav d-flex justify-content-center align-items-center my-3">
                     <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
                         <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = 'teacherhome.php'">Dashboard</span>
+                            <span class="fs-6 text-white" onclick="window.location = 'dashboard.php'">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
                         <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = 'studentDetails.php'">Projects </span>
+                            <span class="fs-6 text-white" onclick="window.location = 'projects.php'">Projects </span>
                         </a>
                     </li>
                     <li class="nav-item my-1 mx-1 changeView border-end  border-bottom rounded-5 border-white border-opacity-25">

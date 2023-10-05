@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -19,17 +20,28 @@ if (isset($_SESSION["user"])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+ <?php
+    session_start();
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./res/logo-sm.png" />
-    <link rel="stylesheet" href="res/main.css" />
-    <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-    <link rel="stylesheet" href="cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./fontawsome/css/all.css" />
-</head>
+    if (isset($_SESSION["user"])) {
+        $user_button = '
+        <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+    ';
+    } else {
+        $user_button = '<a href="">Sign In</a>';
+    }
+    ?>
+ <!DOCTYPE html>
+ <html lang="en">
 
 <body>
     <div class="col-12 container-fluid">
@@ -52,7 +64,19 @@ if (isset($_SESSION["user"])) {
                         <li class="navigation-item"><a href="">About</a></li>
                         <li class="navigation-item"><a href="">Contact Us</a></li>
                         <li class="navigation-item"><a href="">Other Services</a></li>
+
                         <li class="navigation-item"><?php echo($user_button);  ?></li>
+
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sign In
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
                         <!-- <li class="navigation-item"><a href="">Dashboard</a></li> -->
                     </ul>
                     <!-- MENU LOGOS -->
@@ -74,10 +98,13 @@ if (isset($_SESSION["user"])) {
 
                 <!-- TOGGLE BUTTON -->
                 <div class="d-block d-sm-none navigation-toggler">
+
+                <div class="d-block d-md-none navigation-toggler">
                     <button class="btn btn-primary" onclick="toggleNavigation('nav-menu','navigation-toggler-icon')" id="navigation-toggler">
                         <i class="fa-solid fa-bars" id="navigation-toggler-icon"></i>
                     </button>
                 </div>
+
 
             </div>
         </div>
@@ -88,3 +115,9 @@ if (isset($_SESSION["user"])) {
 </body>
 
 </html>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="res/bootstrap.bundle.js"></script>
+</body>
