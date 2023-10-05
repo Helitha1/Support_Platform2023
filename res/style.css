@@ -18,6 +18,7 @@
        
        
    } 
+   
    .body2{ 
        
        height: 100vh;
@@ -31,6 +32,18 @@
        
        
    }
+
+   .body3{ 
+       
+    height: 100vh;
+    background: linear-gradient(130deg , var(--primary),var(--yellow));    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+    
+} 
  
    
    /* .logo{ 
