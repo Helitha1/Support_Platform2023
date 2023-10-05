@@ -84,7 +84,7 @@
                                         <div class="col-6 mb-3 rounded-3 " style="background-color: #0080ff20;"> 
                                             <br/>
 
-<<<<<<< HEAD
+<<<<<<< HEA
                                             <label class="form-label fw-bold">Title</label>
                                             <input type="text" class="form-control" id="tt" />
 
@@ -153,7 +153,7 @@
 
     
                                         <div class="col-12 mb-3">
-                                        <button class="btn btn-outline-info fw-bold col-12 my-3" type="button">Add Project</button>
+                                        <button onclick="addNewProject();" class="btn btn-outline-info fw-bold col-12 my-3" type="button">Add Project</button>
                                 </div>
                                         
 
