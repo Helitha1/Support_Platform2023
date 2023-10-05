@@ -1,15 +1,15 @@
 <?php
+session_start();
 
 if (isset($_SESSION["user"])) {
     $user_button = '
     <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Sign In
+            ' . $_SESSION["user"]["fname"] . '
         </button>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="dashboard.php">Dashboard</a></li>
+            <li><a class="dropdown-item" href="signout.php">Signout</a></li>
         </ul>
     </div>
     ';
@@ -20,11 +20,11 @@ if (isset($_SESSION["user"])) {
 <!DOCTYPE html>
 <html lang="en">
 
- <meta charset="UTF-8">
-    <link rel="stylesheet" href="res/bootstrap.css" />
-    <link rel="stylesheet" href="res/style.css" />
-    <link rel="stylesheet" href="res/animation.css" />
-    <link rel="stylesheet" href="res/main.css" />
+<meta charset="UTF-8">
+<link rel="stylesheet" href="res/bootstrap.css" />
+<link rel="stylesheet" href="res/style.css" />
+<link rel="stylesheet" href="res/animation.css" />
+<link rel="stylesheet" href="res/main.css" />
 
 <body>
     <div class="col-12 container-fluid">
@@ -81,6 +81,7 @@ if (isset($_SESSION["user"])) {
         </div>
 
 </body>
+
 </html>
 
 <script src="main.js"></script>
