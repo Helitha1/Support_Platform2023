@@ -54,15 +54,16 @@
         </div>
 
         <!-- TOGGLE BUTTON -->
-        <div class="d-block d-sm-none navigation-toggler">
+        <div class="d-block d-md-none navigation-toggler">
             <button class="btn btn-primary" onclick="toggleNavigation('nav-menu','navigation-toggler-icon')" id="navigation-toggler">
                 <i class="fa-solid fa-bars" id="navigation-toggler-icon"></i>
             </button>
         </div>
-
     </div>
     </div>
 </div>
+<script src="main.js"></script>
+<script src="res/bootstrap.bundle.js"></script>
 </body>
 
 </html>

@@ -21,7 +21,7 @@
 
             <div class="col-12 col-lg-2 d-none d-lg-block">
                 <div class="row">
-                    <div class="col-12 rounded-bottom align-items-start  bg-dark vh-100 ">
+                    <div class="col-12 rounded-bottom align-items-start  bg-black vh-100 ">
 
                         <div class="row g-1 text-center ">
 
