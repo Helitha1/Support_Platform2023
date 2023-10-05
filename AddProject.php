@@ -58,7 +58,7 @@
 
                                 <div class="col-12 mb-3">
                                     <label class="form-label fw-bold">Description</label>
-                                    <input type="text" class="form-control"  id="pd" />
+                                    <input type="text" class="form-control" id="pd" />
 
                                 </div>
 
@@ -74,110 +74,77 @@
 
                                 <div class="col-12 mb-3">
 
-                                    <hr class="border border-3 border-dark"/>
+                                    <hr class="border border-3 border-dark" />
 
                                     <h4 class="form-label fw-bold">Main Tasks</h4>
 
 
                                     <div class="row">
 
-                                        <div class="col-6 mb-3 rounded-3 " style="background-color: #0080ff20;"> 
+                                        <div class="col-6 mb-3 rounded-3 " style="background-color: #0080ff20;">
                                             <br/>
 
-<<<<<<< HEA
                                             <label class="form-label fw-bold">Title</label>
                                             <input type="text" class="form-control" id="tt" />
-
 
                                             <label class="form-label fw-bold">Description</label>
                                             <input type="text" class="form-control" id="td" />
 
-=======
-                                            <label class="form-label  fw-bold">Name</label>
-                                            <input type="text" class="form-control" />
-
-
-                                            <label class="form-label  fw-bold">Description</label>
-                                            <textarea name="Discription" class="form-control" id="" cols="20" rows="1"></textarea>
->>>>>>> d02dfb492dfb1a8a8c9607f44730b16297aa1363
-
+                                          
                                             <label class="form-label fw-bold">Start Date</label>
-                                            <input type="date" class="form-control" id="tsd"/>
+                                            <input type="date" class="form-control" id="tsd" />
 
-<<<<<<< HEAD
                                             <label class="form-label fw-bold">End Date</label>
-                                            <input type="date" class="form-control" id="ted"/>
-
+                                            <input type="date" class="form-control" id="ted" />
 
 
                                             <button onclick="addProjectTask();" class="btn btn-outline-success fw-bold col-12 my-3" type="button">Add Task</button>
-=======
-                                            <label class="form-label   fw-bold">End Date</label>
-                                            <input type="date" class="form-control" />
 
 
+                                        </div>
 
-                                            <button class="btn btn-outline-primary  fw-bold col-12 my-3" type="button">Add Main Tasks</button>
->>>>>>> d02dfb492dfb1a8a8c9607f44730b16297aa1363
-
-                                        </div> 
-
-                                        
                                         <div class="col-6 mb-3 shadow">
 
                                             <div class="row g-1">
-<<<<<<< HEAD
-                                                <div class="col-10 offset-1 my-2 project" style="height: 280px;">
+                                                <div class="col-10 offset-1 my-2 project " style="height: 280px;">
                                                     <ul id="taskList">
-                                                        
-                                                    </ul>
-=======
-                                                <div class="col-12  my-2 project" style="height: 290px;">
-                                               
-                                                    <br/>
-                                                    <button type="button" class="btn btn-outline-primary col-12  my-1">UI/UX</button> 
-                                                    <br/>
-                                                    <button type="button" class="btn btn-outline-primary col-12 my-1">Back End</button> 
-                                                    <br>
-                                                    <button type="button" class="btn btn-outline-primary  col-12 my-1">Front End</button> 
-                                                    <br>
-                                                    <button type="button" class="btn btn-outline-primary  col-12 my-1">Database</button> 
-                                                
 
-                                                    
->>>>>>> d02dfb492dfb1a8a8c9607f44730b16297aa1363
+                                                    </ul>
+                                                    <!-- <div class="col-12  my-2 project" style="height: 290px;">
+                                                        <button type="button" class="btn btn-outline-primary  col-12 my-1">Database</button>
+
+                                                    </div> -->
                                                 </div>
+
                                             </div>
 
-                                        </div> 
 
-    
-                                        <div class="col-12 mb-3">
-                                        <button onclick="addNewProject();" class="btn btn-outline-info fw-bold col-12 my-3" type="button">Add Project</button>
-                                </div>
-                                        
+                                            <div class="col-12 mb-3">
+                                                <button onclick="addNewProject();" class="btn btn-outline-info fw-bold col-12 my-3" type="button">Add Project</button>
+                                            </div>
 
 
 
+
+
+                                        </div>
 
                                     </div>
 
+
+
+
                                 </div>
-
-
-                              
-
                             </div>
+
+
+
                         </div>
-
-
-
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
-        <script src="script.js"></script>
+            <script src="script.js"></script>
 </body>
 
 </html>
