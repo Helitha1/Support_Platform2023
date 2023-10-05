@@ -49,14 +49,6 @@ function signUp() {
             if (request.readyState == 4) {
                 var text = request.responseText;
                 console.log(text);
-                // if (text == "1") {
-                //     // alert("Done!");
-                //     window.location = "signIn.php";
-                // } else if(text == "2") {
-                //     alert("User with same email already exist!");
-                // }else{
-                //     alert(text);
-                // }
             }
         };
 
@@ -70,35 +62,31 @@ function signIn() {
     var password = document.getElementById("password");
     var rememberme = document.getElementById("rememberme");
 
-    const arry = [
-        {
+    if (email.value == null) {
+        showError('First Name is required');
+    } else if (password.value == null) {
+        showError('Password is Required');
+    } else {
+
+        var f = new FormData();
+        f.append("json", JSON.stringify({
             email: email,
             password: password,
             rememberme: rememberme,
-        },
-    ];
+        }));
 
-    var f = new FormData();
-    f.append("json", JSON.parse(arry));
+        var r = new XMLHttpRequest();
 
-    var r = new XMLHttpRequest();
-
-    r.onreadystatechange = function () {
-        if (r.readyState == 4) {
-            var t = r.responseText;
-            // alert(t);
-            if (t == "1") {
-                window.location = "home.php";
-            } else if (t == "2") {
-                alert("Invalid Deatails!");
-            } else {
-                alert(t);
+        r.onreadystatechange = function () {
+            if (r.readyState == 4) {
+                var t = r.responseText;
+                console.log(t);
             }
-        }
-    };
+        };
 
-    r.open("POST", "signInProcess.php", true);
-    r.send(f);
+        r.open("POST", "signInProcess.php", true);
+        r.send(f);
+    }
 }
 
 var bm;
