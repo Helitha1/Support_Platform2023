@@ -17,7 +17,7 @@ if (isset($_POST["json"])) {
           } else if ($request_obj->password == "") {
                $code = 8;
           } else if (strlen($request_obj->password) < 5 || strlen($request_obj->password) > 20) {
-               $code = strlen($request_obj->password) ;
+               $code = strlen($request_obj->password);
           } else if ($request_obj->password2 == "") {
                $code = 14;
           } else if ($request_obj->password != $request_obj->password2) {
@@ -25,10 +25,12 @@ if (isset($_POST["json"])) {
           } else if ($request_obj->vcode == "") {
                $code = 16;
           } else {
-               echo("heheheheheh");
+               print_r($response_obj);
                // SEARCH USER FROM DATABASE
                $rs =  Database::search("SELECT * FROM `users` WHERE `email`='" . $request_obj->email . "' AND
               `verification_code`= '" . $request_obj->vcode . "'");
+               echo ("heheheheheh");
+
                // CHECK USER IN DATABASE
                if ($rs->num_rows == 1) {
                     // UPDATE NEW PASSWORD
