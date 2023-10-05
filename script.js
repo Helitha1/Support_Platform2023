@@ -249,3 +249,7 @@ function addNewProject() {
   }
   
   
+
+  function onselectProject(id){
+    window.location = `manageProject.php?pid=${id}`;
+  }
