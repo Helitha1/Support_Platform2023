@@ -154,14 +154,7 @@ if (!isset($_SESSION["user"])) {
     <script>
         loadProject(3);
 
-        // // TILT (3D ANIMATION)
-        // const tilt = $('.js-tilt').tilt({
-        //     scale: 1.05,
-        //     glare: true,
-        //     maxGlare: 0.2,
-        //     reset: true
-        // });
-        // tilt.methods.destroy.call(tilt);
+
 
         const flyin = document.querySelectorAll(".flyin");
 
@@ -180,6 +173,16 @@ if (!isset($_SESSION["user"])) {
         flyin.forEach((fly) => {
             observe.observe(fly);
         })
+
+
+        // TILT (3D ANIMATION)
+        const tilt = $('.js-tilt').tilt({
+            scale: 1.05,
+            glare: true,
+            maxGlare: 0.2,
+            reset: true
+        });
+        tilt.methods.destroy.call(tilt);
     </script>
 </body>
 

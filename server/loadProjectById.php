@@ -7,13 +7,13 @@ if (isset($_GET["pid"])) {
     // GET PROJECT DATA FROM DATABASE
     $project_rs = Database::search("SELECT * FROM `projects` WHERE `projects`.`id` = '" . $_GET["pid"] . "'");
     // CHECK PROJECT IS AVAILABLE IN DATABASE
-    if ($project_rs->num_rows ==1) {
+    if ($project_rs->num_rows == 1) {
         // RESPONSE PROJECT OBJECT
-        $project_object = new stdClass();
+        // $project_object = new stdClass();
         // FETCH PROJECT DATA
         $project_array = $project_rs->fetch_assoc();
         // SET DATA TO OBJECT
-        $project_object = $project_array;
+
         // GET MAIN TASKS USING PROJECT ID
         $main_task_rs = Database::search("SELECT * FROM `maintasks` WHERE `projects_id` = '" . $project_array["id"] . "'");
         // CHECK HAVE ANY MAIN TASKS
@@ -25,9 +25,9 @@ if (isset($_GET["pid"])) {
                 array_push($main_task_array, $main_task);
             }
             // SET MAIN TASKS TO PROJECT
-            $project_object->mainTasks = $main_task_array;
+            $project_array["tasks"] = $main_task_array;
             // ASSIGN PROJECT OBJECT TO MAIN RESPONSE OBJECT
-            $response_obj->data = $project_object;
+            $response_obj->data = $project_array["tasks"];
         } else {
             $code = 20;
         }
