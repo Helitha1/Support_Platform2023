@@ -2,28 +2,30 @@
 
 function signUp() {
 
-    var f = document.getElementById("fname");
-    var l = document.getElementById("lname");
-    var e = document.getElementById("email");
-    var p = document.getElementById("password");
-    var p2 = document.getElementById("password2");
-    var m = document.getElementById("mobile");
+    var f = document.getElementById("fname").value;
+    var l = document.getElementById("lname").value;
+    var e = document.getElementById("email").value;
+    var p = document.getElementById("password").value;
+    var p2 = document.getElementById("password2").value;
     var g = document.getElementById("gender").value;
-    var l1 = document.getElementById("line1");
-    var l2 = document.getElementById("line2");
+    var pr = document.getElementById("proffeshion").value;
+   
 
     // console.log(g.value);
 
+    const arry = [
+        {
+            email:e,
+            fname:f,
+            lname:l,
+            password:p,
+            gender:g,
+            proffeshion_id:pr
+        }
+    ]
+
     var form = new FormData;
-    form.append("fname", f.value);
-    form.append("lname", l.value);
-    form.append("email", e.value);
-    form.append("password", p.value);
-    form.append("password2", p2.value);
-    form.append("mobile", m.value);
-    form.append("gender", g);
-    form.append("addressLine1", l1.value);
-    form.append("addressLine2", l2.value);
+    form.append("json", JSON.parse(arry));
 
     var request = new XMLHttpRequest();
 
@@ -52,10 +54,16 @@ function signIn() {
     var password = document.getElementById("password");
     var rememberme = document.getElementById("rememberme");
 
+    const arry = [
+        {
+            email:email,
+            password:password,
+            rememberme:rememberme,
+        }
+    ]
+
     var f = new FormData();
-    f.append("email", email.value);
-    f.append("password", password.value);
-    f.append("remember", rememberme.checked);
+    f.append("json", JSON.parse(arry));
 
     var r = new XMLHttpRequest();
 
