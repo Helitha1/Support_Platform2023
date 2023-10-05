@@ -49,6 +49,7 @@ function signUp() {
             if (request.readyState == 4) {
                 var text = request.responseText;
                 console.log(text);
+                // if text === 100 redirect to signin page
             }
         };
 
