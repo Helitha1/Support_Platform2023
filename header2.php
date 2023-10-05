@@ -7,7 +7,7 @@ if (isset($_SESSION["user"])) {
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown1" data-toggle="dropdown">
           <i class="fa fa-user"></i>  ' . ($_SESSION["user"]["fname"]) . '
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdown1">
+        <div class="dropdown-menu" aria-labelledby="dropdown1" id="">
             <a class="dropdown-item" href="dashboard.php">DASHBOARD</a>
             <a class="dropdown-item" href="signout.php">SIGNOUT</a>
         </div>
@@ -26,13 +26,16 @@ if (isset($_SESSION["user"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="./res/logo-sm.png" />
     <link rel="stylesheet" href="res/main.css" />
-    <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-    <link rel="stylesheet" href="cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./fontawsome/css/all.css" />
+    <link rel="stylesheet" href="res/bootstrap.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="res/cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css" />
+    <link rel="stylesheet" href="fontawsome/css/all.css" />
 </head>
 
 <body>
     <div class="col-12 container-fluid">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
         <div class="row">
 
 
@@ -52,8 +55,7 @@ if (isset($_SESSION["user"])) {
                         <li class="navigation-item"><a href="">About</a></li>
                         <li class="navigation-item"><a href="">Contact Us</a></li>
                         <li class="navigation-item"><a href="">Other Services</a></li>
-                        <li class="navigation-item"><?php echo($user_button);  ?></li>
-                        <!-- <li class="navigation-item"><a href="">Dashboard</a></li> -->
+                        <li class="navigation-item"><?php echo ($user_button);  ?></li>
                     </ul>
                     <!-- MENU LOGOS -->
                     <ul class="navigation-bar-logo">
@@ -82,6 +84,8 @@ if (isset($_SESSION["user"])) {
             </div>
         </div>
 
+        <script src="main.js"></script>
+        <script src="res/bootstrap.bundle.js"></script>
 </body>
 
 </html>
