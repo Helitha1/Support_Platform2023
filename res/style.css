@@ -11,7 +11,7 @@
    .body{ 
        
        height: 100vh;
-       background: linear-gradient(130deg , var(--primary),var(--yellow)), url("resource/background2.jpg");    
+       background: linear-gradient(130deg , var(--primary),var(--yellow)), url("res/background2.jpg");    
        background-size: cover;
        background-position: center;
        background-repeat: no-repeat;  
@@ -21,7 +21,7 @@
    .body2{ 
        
        height: 100vh;
-       background: linear-gradient(130deg , var(--primary),var(--yellow)), url("resource/background2.jpg");    
+       background: linear-gradient(130deg , var(--primary),var(--yellow)), url("res/background2.jpg");    
        background-attachment: fixed; 
        overflow-y:auto; 
        flex: 1;

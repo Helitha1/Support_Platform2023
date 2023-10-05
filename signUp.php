@@ -80,12 +80,14 @@
                                 </div>
                             </div>
 
-                           
 
-                            <div class="col-6">
-                            <div class="form-check">
+
+                            <div class="col-12">
+                                <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="rememberme" />
                                     <label class="form-check-label">Remember Me</label>
+                                </div>
+
                             </div>
 
                             <div class="col-12 col-lg-6 d-grid my-3">
@@ -95,48 +97,46 @@
                                 <button class="btn text-white shadow-lg" style="background-color: #f13451;" onclick="window.location = 'SignIn.php'">if you have an account? Sign In </button>
                             </div>
 
+
+
+
                         </div>
 
-
-
-
                     </div>
+
 
                 </div>
 
 
             </div>
 
-
-        </div>
-
-        <!-- content  -->
+            <!-- content  -->
 
 
-        <!-- model1 -->
+            <!-- model1 -->
 
-        <div class="modal" tabindex="-1" id="verificationModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Sign Up Verification</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <label class="form-label">Enter Your Verification Code</label>
-                        <input type="text" class="form-control" id="vcode">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" onclick="verify();">Verify</button>
+            <div class="modal" tabindex="-1" id="verificationModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Sign Up Verification</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label class="form-label">Enter Your Verification Code</label>
+                            <input type="text" class="form-control" id="vcode">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="verify();">Verify</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- model1 -->
+
         </div>
-
-        <!-- model1 -->
-
-    </div>
 
     </div>
 
