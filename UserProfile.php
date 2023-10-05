@@ -104,6 +104,11 @@
                                 <input type="email" class="form-control" readonly value="info@gmail.com" />
                             </div>
 
+                            <div class="col-12 mb-3">
+                                <label class="form-label">Profession</label>
+                                <input type="text" class="form-control" readonly value="UI/Ux" />
+                            </div>
+
 
                             <div class="col-12 col-lg-6 mb-3">
                                 <label class="form-label">password</label>
@@ -112,19 +117,6 @@
                                     <button class="btn btn-outline-secondary" type="button"><i id="e1" class="bi bi-eye-slash-fill"></i></button>
                                 </div>
                             </div>
-
-
-                            <div class="col-12 col-lg-6 mb-3">
-                                <label class="form-label">Profession</label>
-                                <input type="text" class="form-control" readonly value="UI/Ux" />
-                            </div>
-
-
-
-
-
-
-
 
                             <div class="col-12 col-lg-6 mb-3">
 
