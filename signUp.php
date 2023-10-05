@@ -34,25 +34,20 @@
                                 <p class="title02 text-uppercase">Sign Up</p>
                             </div>
                             <hr />
-                            <div class="col-12 ">
+                            <div class="col-12 col-lg-6 ">
                                 <label class="form-label fw-bold">First Name </label>
                                 <input type="text" class="form-control" placeholder="ex:- john" id="fname" />
                             </div>
 
-                            <div class="col-12 ">
+                            <div class="col-12 col-lg-6 ">
                                 <label class="form-label fw-bold">Last Name</label>
                                 <input type="text" class="form-control" placeholder="ex:- john" id="lname" />
                             </div>
-                            <div class="col-12 ">
+                            <div class="col-12 col-lg-6 ">
                                 <label class="form-label fw-bold">Email</label>
                                 <input type="email" class="form-control" placeholder="ex:- john@" id="email" />
                             </div>
-
-                            <div class="col-12 col-lg-6">
-                                <label class="form-label fw-bold">Mobile</label>
-                                <input type="text" class="form-control" placeholder="ex:- john" id="mobile" />
-                            </div>
-
+                            
                             <div class="col-12 col-lg-6">
                                 <label class="form-label fw-bold">Gender</label>
                                 <select class=" form-select " id="gender">
