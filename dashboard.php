@@ -1,3 +1,16 @@
+<?php
+session_start();
+require_once("server/connection.php");
+$project_rs = Database::search("SELECT COUNT(*) AS `count` FROM `projects` WHERE `owner_email`='" . $_SESSION["user"]["email"] . "'");
+$result = $project_rs->fetch_assoc();
+$project_count = $result["count"];
+// PENDING PROJECTS (TITLE)
+$pending_rs = Database::search("SELECT `projects`.`title` AS `title` FROM `projects` INNER JOIN `team` ON `projects`.`id`=`team`.`projects_id`  WHERE `team`.`users_email`='" . $_SESSION["user"]["email"] . "' AND (`projects`.`project_status_id`='1' OR `projects`.`project_status_id`='2')");
+// COMPLETED PROJECTS (TITLE)
+$completed_rs = Database::search("SELECT `projects`.`title` AS `title` FROM `projects` INNER JOIN `team` ON `projects`.`id`=`team`.`projects_id`  WHERE `team`.`users_email`='" . $_SESSION["user"]["email"] . "' AND `projects`.`project_status_id`='3' ");
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -38,12 +51,6 @@
                                     <a class="btn btn-outline-secondary my-2" href="#">Manage Profile</a>
                                 </nav>
                             </div>
-                            <!-- <div class="col-12 mt-5">
-                                    <hr class="border border-1 border-dark" />
-                                    <h4 class="text-dark fw-bold">Check results</h4>
-                                    <hr class="border border-1 border-dark" />
-                                </div> -->
-
                             <div class=" col-12  mt-3 d-grid p-2 ">
                                 <div class="row ">
                                     <a href="signout.php" class="btn btn-danger mt-2">Sign Out</a>
@@ -56,31 +63,9 @@
                 </div>
             </div>
 
-            <div class="col-12 d-block d-lg-none bg-dark">
-                <ul class="nav d-flex justify-content-center align-items-center my-3">
-                    <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
-                        <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = 'dashboard.php'">Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
-                        <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = 'projects.php'">Projects </span>
-                        </a>
-                    </li>
-                    <li class="nav-item my-1 mx-1 changeView border-end  border-bottom rounded-5 border-white border-opacity-25">
-                        <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = 'teachersClasses.php'">Create Projects</span>
-                        </a>
-                    </li>
-                    <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
-                        <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = 'teacherProfile.php'">Manage Profile</span>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
+            <?php
+            include('sidenav.php');
+            ?>
 
             <div class=" col-12 col-lg-10">
                 <div class="row ">
@@ -91,9 +76,9 @@
                         <div class="row g-1">
                             <div class="col-8 offset-2  px-1 py-3 position-relative">
                                 <div class="row g-1">
-                                    <div class="col-12 text-center rounded js-tilt " style="height: 100px; background-color: #00008099;" >
+                                    <div class="col-12 text-center rounded js-tilt " style="height: 100px; background-color: #00008099;">
                                         <br />
-                                        <span class="fs-3 text-white fw-bold">4</span>
+                                        <span class="fs-3 text-white fw-bold" id="dashboard-project-count"><?php echo ($project_count) ?></span>
                                         <br />
                                         <span class="fs-5 text-white fw-bolder">PROJECT COUNT</span>
                                     </div>
@@ -101,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- PENDINGN PROJECTS (ongoing + not started) -->
                     <div class="offset-1 col-10 col-lg-4 my-3 rounded-3 flyin zoom " style="background-color: #ffffff90;">
                         <div class="row g-1">
                             <div class="col-12 text-center">
@@ -109,29 +94,28 @@
                                 <hr>
                             </div>
                             <div class=" project " style="height: 150px;">
-                                <div class="col-12 text-center  my-3">
-                                    <a class="fs-6 fw-bold" href="#">Migten web application</a>
-                                </div>
-                                <div class="col-12 text-center  my-3">
-                                    <a class="fs-6 fw-bold" href="#">Migten web application</a>
-                                </div>
-                                <div class="col-12 text-center  my-3">
-                                    <a class="fs-6 fw-bold" href="#">Migten web application</a>
-                                </div>
-                                <div class="col-12 text-center  my-3">
-                                    <a class="fs-6 fw-bold" href="#">Migten web application</a>
-                                </div>
-                                <div class="col-12 text-center  my-3">
-                                    <a class="fs-6 fw-bold" href="#">Migten web application</a>
-                                </div>
-                                <div class="col-12">
-                                    <div class="first-place"></div>
-                                </div>
+                                <!-- PENDING PROJECTS ARE LOADING HERE -->
+                                <?php
+                                if ($pending_rs->num_rows > 0) {
+                                    while ($project = $pending_rs->fetch_assoc()) {
+                                ?>
+                                        <div class="col-12 text-center  my-3">
+                                            <a class="fs-6 fw-bold" href="#"><?php echo ($project["title"]) ?></a>
+                                        </div>
+                                    <?php
+                                    }
+                                } else {
+                                    ?>
+                                    <h2 class="col-12 h-100 text-center my-2 text-danger">No Pending Projects</h2>
+                                <?php
+                                }
+
+                                ?>
                             </div>
 
                         </div>
                     </div>
-
+                    <!-- LOAD COMPLETED PROJECTS -->
                     <div class="offset-1 offset-lg-2 col-10 col-lg-4 my-3 rounded-3 flyin zoom " style="background-color: #ffffff90;">
                         <div class="row g-1">
                             <div class="col-12 text-center">
@@ -139,26 +123,24 @@
                                 <hr>
                             </div>
                             <div class=" project " style="height: 150px;">
-                                <div class="col-12 text-center  my-3">
-                                    <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
-                                </div>
-                                <div class="col-12 text-center  my-3">
-                                    <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
-                                </div>
-                                <div class="col-12 text-center  my-3">
-                                    <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
-                                </div>
-                                <div class="col-12 text-center  my-3">
-                                    <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
-                                </div>
-                                <div class="col-12 text-center  my-3">
-                                    <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
-                                </div><div class="col-12 text-center  my-3">
-                                    <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
-                                </div>
-                                <div class="col-12">
-                                    <div class="first-place"></div>
-                                </div>
+                                <!-- PENDING PROJECTS ARE LOADING HERE -->
+                                <?php
+                                if ($completed_rs->num_rows > 0) {
+                                    while ($project = $completed_rs->fetch_assoc()) {
+                                ?>
+                                        <div class="col-12 text-center  my-3">
+                                            <a class="fs-6 fw-bold" href="#"><?php echo ($project["title"]) ?></a>
+                                        </div>
+                                    <?php
+                                    }
+                                } else {
+                                    ?>
+                                    <h2 class="col-12 h-100 text-center my-2 text-danger">No Any Completed Projects</h2>
+                                <?php
+                                }
+
+                                ?>
+
                             </div>
 
                         </div>
