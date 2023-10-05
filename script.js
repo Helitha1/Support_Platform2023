@@ -10,9 +10,6 @@ function signUp() {
     var g = document.getElementById("gender").value;
     var pr = document.getElementById("proffeshion").value;
    
-
-    // console.log(g.value);
-
     if(p != p2){
         alert("password are not matching");
     }else{
@@ -35,14 +32,15 @@ function signUp() {
         request.onreadystatechange = function () {
             if (request.readyState == 4) {
                 var text = request.responseText;
-                if (text == "1") {
-                    // alert("Done!");
-                    window.location = "signIn.php";
-                } else if(text == "2") {
-                    alert("User with same email already exist!");
-                }else{
-                    alert(text);
-                }
+                alert(text);
+                // if (text == "1") {
+                //     // alert("Done!");
+                //     window.location = "signIn.php";
+                // } else if(text == "2") {
+                //     alert("User with same email already exist!");
+                // }else{
+                //     alert(text);
+                // }
             }
         }
     

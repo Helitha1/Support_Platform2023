@@ -36,6 +36,9 @@ showError=(code)=>{
         case 11:
             return('this email alredy used');
             break;
+        case 12:
+            return('user not found');
+            break;
     
         default:
             break;
