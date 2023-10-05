@@ -46,7 +46,7 @@ if (isset($_POST["json"])) {
 
                 Database::iud("INSERT INTO `users` 
                 (`fname`,`lname`,`email`,`password`,`gender_id`,`date_register`,`profession_id`,`user_status_id`) VALUES 
-                ('" . $request_obj->fname . "','" . $request_obj->lname . "','" . $request_obj->email . "','" . $password_hash . "','" . $request_obj->gender . "','" . $date . "','" . $request_obj->profession_id . "','0')");
+                ('" . $request_obj->fname . "','" . $request_obj->lname . "','" . $request_obj->email . "','" . $password_hash . "','" . $request_obj->gender . "','" . $date . "','" . $request_obj->profession_id . "','1')");
 
                 $code =  100;
             }
