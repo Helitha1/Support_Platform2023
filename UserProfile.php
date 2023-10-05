@@ -223,7 +223,6 @@
                                         <input type="text" class="form-control" readonly value="<?php echo ($user_data["title"]) ?>" />
 =======
                                         <input type="text" class="form-control" readonly value="male" />
->>>>>>> e7efa66cc9f75dc4dbd8ba915f70b8595b1ff2e9
                                     </div>
 
                                     <!-- <div class="offset-2 offset-lg-4 col-8 col-lg-4 d-grid mt-3">
