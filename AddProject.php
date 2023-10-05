@@ -53,22 +53,23 @@
 
                                 <div class="col-12 mb-3">
                                     <label class="form-label fw-bold">Title</label>
-                                    <input type="text" class="form-control" value="helitha" id="lname" />
+                                    <input type="text" class="form-control" id="pt" />
                                 </div>
 
                                 <div class="col-12 mb-3">
                                     <label class="form-label fw-bold">Description</label>
-                                    <textarea name="Discription" class="form-control" id="" cols="20" rows="1"></textarea>
+                                    <input type="text" class="form-control"  id="pd" />
+
                                 </div>
 
                                 <div class="col-6 mb-3">
                                     <label class="form-label fw-bold">Start Date</label>
-                                    <input type="date" class="form-control" />
+                                    <input type="date" class="form-control" id="psd" />
                                 </div>
 
                                 <div class="col-6 mb-3">
                                     <label class="form-label fw-bold">End Date</label>
-                                    <input type="date" class="form-control" />
+                                    <input type="date" class="form-control" id="ped" />
                                 </div>
 
                                 <div class="col-12 mb-3">
@@ -82,22 +83,23 @@
 
                                         <div class="col-6 mb-3">
 
-                                            <label class="form-label fw-bold">Name</label>
-                                            <input type="text" class="form-control" />
+                                            <label class="form-label fw-bold">Title</label>
+                                            <input type="text" class="form-control" id="tt" />
 
 
                                             <label class="form-label fw-bold">Description</label>
-                                            <textarea name="Discription" class="form-control" id="" cols="20" rows="1"></textarea>
+                                            <input type="text" class="form-control" id="td" />
+
 
                                             <label class="form-label fw-bold">Start Date</label>
-                                            <input type="date" class="form-control" />
+                                            <input type="date" class="form-control" id="tsd"/>
 
                                             <label class="form-label fw-bold">End Date</label>
-                                            <input type="date" class="form-control" />
+                                            <input type="date" class="form-control" id="ted"/>
 
 
 
-                                            <button class="btn btn-outline-success fw-bold col-12 my-3" type="button">Add Tasks</button>
+                                            <button onclick="addProjectTask();" class="btn btn-outline-success fw-bold col-12 my-3" type="button">Add Task</button>
 
                                         </div>
 
@@ -105,14 +107,8 @@
 
                                             <div class="row g-1">
                                                 <div class="col-10 offset-1 my-2 project" style="height: 280px;">
-                                                    <ul>
-                                                        <li>gfxfxgd</li>
-                                                        <li>gfxfxgd</li>
-                                                        <li>gfxfxgd</li>
-                                                        <li>gfxfxgd</li>
-                                                        <li>gfxfxgd</li>
-                                                        <li>gfxfxgd</li>
-                                                        <li>gfxfxgd</li>
+                                                    <ul id="taskList">
+                                                        
                                                     </ul>
                                                 </div>
                                             </div>
@@ -136,7 +132,7 @@
 
             </div>
         </div>
-
+        <script src="script.js"></script>
 </body>
 
 </html>
