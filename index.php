@@ -116,55 +116,35 @@
                                     </div>
 
                                     <div class="col-6 col-lg-1 mb-2 mt-2 ms-2 mx-2 flyin zoom" style="width: 15rem; background-color: #f0c42845;">
-
                                         <div class="card-body ms-0 m-0 text-center">
                                             <div class="row">
                                                 <div class="col-12 rounded-1">
                                                     <i class="fa fa-cubes" style="height: 100px; font-size: 100px;  " aria-hidden="true"></i>
                                                 </div>
                                                 <div class="offset-1 col-10 my-2 d-flex" style="height: 110px;">
-
-
                                                     <h4 class="card-title text-black my-2">Seamless Project Management</h4>
-
-
-
                                                 </div>
                                             </div>
-
                                         </div>
-
                                     </div>
 
                                     <div class="col-6 col-lg-1 mb-2 mt-2 ms-2 mx-2 flyin zoom" style="width: 15rem; background-color: #f0c42845;">
-
                                         <div class="card-body ms-0 m-0 text-center">
                                             <div class="row">
                                                 <div class="col-12 rounded-1">
                                                     <i class="fa fa-comments" style="height: 100px; font-size: 100px;  " aria-hidden="true"></i>
                                                 </div>
                                                 <div class="offset-1 col-10 my-2 d-flex" style="height: 110px;">
-
-
                                                     <h4 class="card-title text-black my-2">friendly Commenting and Messaging</h4>
-
-
-
                                                 </div>
                                             </div>
-
                                         </div>
-
                                     </div>
-
-
 
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
 
@@ -177,20 +157,17 @@
                     <div class="col-12 col-lg-6 offset-lg-3 text-center text-white mb-5 shadow-lg rounded-4 bg-secondary">
                         <h1 class="fw-bold p-2">How dose the system work?</h1>
                     </div>
-
                     <div class="col-10 offset-1">
                         <div class="row">
                             <div class="col-12 text-center my-2 flyin left">
                                 <span class="fw-bold fs-3 mb-3">Sign In or Create an Account:</span>
                                 <p class="fs-4"> - Begin by signing in to your account. If you're new, create an account to get started.</p>
                             </div>
-
                             <div class="col-12 text-center my-2 flyin right">
                                 <span class="fw-bold fs-3 text-start mb-3 p-2">Dashboard Overview:</span>
                                 <p class="fs-4"> - Once logged in, you'll land on your personalized dashboard. Here, you'll find an overview of your tasks, projects, and upcoming deadlines.
                                 </p>
                             </div>
-
                             <div class="col-12 text-center my-2 flyin left">
                                 <span class="fw-bold fs-3 text-start mb-3">Create a Task:</span>
                                 <p class="fs-4"> - Click on "New Task" to create a task. Fill in details such as task name, description, due date, and assign it to a team member if needed.</p>
@@ -204,13 +181,11 @@
             </div>
 
             <hr style="height: 8px; background-color: blue;">
-
             <div class="col-10 offset-1 my-3">
                 <div class="row">
                     <div class="col-12 col-lg-6 offset-lg-3 text-center text-white mb-5 shadow-lg rounded-4 bg-secondary">
                         <h1 class="fw-bold p-2">About Us</h1>
                     </div>
-
                     <div class="col-10 offset-1">
                         <div class="row">
                             <div class="col-12 text-center my-2  flyin right">
@@ -218,8 +193,6 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
 
             </div>
@@ -231,6 +204,7 @@
     <?php
     include "footer.php"
     ?>
+    <script src="res/bootstrap.bundle.js"></script>
 
     <script>
         const flyin = document.querySelectorAll(".flyin");
