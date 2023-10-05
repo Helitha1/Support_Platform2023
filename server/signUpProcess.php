@@ -31,7 +31,7 @@ if (isset($_POST["json"])) {
         } else if ($request_obj->profession_id=="") {
             $code = 10;
         } else {
-            $rs = Database::search("SELECT * FROM `users` WHERE `email`='" . $email . "'");
+            $rs = Database::search("SELECT * FROM `users` WHERE `email`='" . $request_obj->email . "'");
 
             if ($rs->num_rows > 0) {
                 $code =  11;
