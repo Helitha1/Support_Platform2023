@@ -157,11 +157,18 @@ loadProject = (id) => {
     .then(res => res.json())
     .then(obj => {
       console.log(obj);
+      projectObject = obj.data;
+      fillData();
     })
     .catch(err => alert(err))
 
   fillData = () => {
-    
+    _('project-title').innerHTML = projectObject.title;
+    _('project-description').innerHTML = projectObject.description;
+    _('project-start_date').innerHTML = projectObject.start_date;
+    _('project-end-date').innerHTML = projectObject.end_date;
+    // 
+    // _('project-content').innerHTML = 
   }
 }
 
@@ -189,7 +196,6 @@ function addProjectTask() {
       endDate: taskEndDate,
       status: 1,
     };
-
     mainTasks.push(data);
     console.log(mainTasks);
     updateTaskList();

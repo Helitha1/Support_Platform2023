@@ -27,7 +27,7 @@ if (isset($_GET["pid"])) {
             // SET MAIN TASKS TO PROJECT
             $project_array["tasks"] = $main_task_array;
             // ASSIGN PROJECT OBJECT TO MAIN RESPONSE OBJECT
-            $response_obj->data = $project_array["tasks"];
+            $response_obj->data = $project_array;
         } else {
             $code = 20;
         }

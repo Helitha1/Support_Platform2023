@@ -112,21 +112,11 @@ if (!isset($_SESSION["user"])) {
                             <div class="container py-5">
                                 <div class="row">
                                     <div class="col-10 offset-1 collg10 offset-lg-2">
-                                        <div id="content">
+                                        <div id="project-content">
                                             <ul class="timeline-1 text-black">
                                                 <li class="event fs-3" data-date="2023-10-12">
                                                     <h4 class="mb-3">Registration</h4>
                                                     <p>Get here on time, it's first come first serve. Be late, get turned away.</p>
-                                                </li>
-                                                <li class="event fs-3" data-date="2023-10-12">
-                                                    <h4 class="mb-3 pt-3">Opening Ceremony</h4>
-                                                    <p>Get ready for an exciting event, this will kick off in amazing fashion with MOP &amp; Busta
-                                                        Rhymes as an opening show.</p>
-                                                </li>
-                                                <li class="event fs-3" data-date="2023-10-12">d-grid
-                                                    <h4 class="mb-3 pt-3">Main Event</h4>
-                                                    <p>This is where it all goes down. You will compete head to head with your friends and rivals. Get
-                                                        ready!</p>
                                                 </li>
                                             </ul>
                                         </div>
