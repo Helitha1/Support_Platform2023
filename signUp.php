@@ -52,8 +52,8 @@
                             <div class="col-12 col-lg-6">
                                 <label class="form-label fw-bold">Gender</label>
                                 <select class=" form-select " id="gender">
-                                    <option value="0">Male</option>
-                                    <option value="1">Female</option>
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
                                 </select>
 
 
@@ -63,9 +63,27 @@
                                
                             <div class="col-12 ">
                                 <label class="form-label fw-bold">Profession</label>
-                                <select class=" form-select " id="gender">
-                                    <option value="0">Ui/Ux</option>
-                                    <option value="1">Back End Developer</option>
+                                <select class=" form-select " id="profession">
+
+                                <?php
+
+                                require "server/connection.php";
+
+                                $profession_rs = Database::search("SELECT * FROM `profession`");
+                                $profession_num = $profession_rs->num_rows;
+
+                                for ($x = 0; $x < $profession_num; $x++) {
+                                    $profession_data = $profession_rs->fetch_assoc();
+                                ?>
+
+                                    <option value="<?php echo $profession_data["id"]; ?>"><?php echo $profession_data["title"]; ?></option>
+
+                                <?php
+                                }
+
+                                ?>
+                                    <!-- <option value="1">Ui/Ux</option>
+                                    <option value="2">Back End Developer</option> -->
                                 </select>
 
 
@@ -153,6 +171,6 @@
 
     <script src="bootstrap.bundle.js"></script>
     <script src="script.js"></script>
-</body>
+</body> 
 
 </html>
