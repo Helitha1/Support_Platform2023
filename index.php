@@ -10,7 +10,7 @@
     <link rel="icon" href="res/logo-sm.png" />
 </head>
 
-<body class="body3">
+<body>
     <?php
     include "header.php"
     ?>
@@ -20,11 +20,11 @@
     <div class="overflow-hidden bg-light">
         <div class="row">
 
-            <div class="col-12 d-none d-lg-block">
+            <div class="col-12 d-none d-lg-block body3">
                 <div class="row">
 
                     <div class="col-12">
-                        <img src="res/homeImg.jpg" class="d-block w-100 shadow-lg">
+                       
                     </div>
 
                 </div>
@@ -164,12 +164,12 @@
 
             <!-- 222 -->
 
-            <hr>
+            <hr style="height: 8px; background-color: blue;">
 
             <div class="col-10 offset-1 mt-3">
                 <div class="row">
-                    <div class="col-12 text-center mb-5">
-                        <h1 class="fw-bold">How dose the system work?</h1>
+                    <div class="col-12 col-lg-6 offset-lg-3 text-center text-white mb-5 shadow-lg rounded-4 bg-secondary">
+                        <h1 class="fw-bold p-2">How dose the system work?</h1>
                     </div>
 
                     <div class="col-10 offset-1">
@@ -197,18 +197,17 @@
 
             </div>
 
-            <hr>
+            <hr style="height: 8px; background-color: blue;">
 
-            <div class="col-10 offset-1 mt-3">
+            <div class="col-10 offset-1 my-3">
                 <div class="row">
-                    <div class="col-12 text-center mb-5">
-                        <h1 class="fw-bold">About Us</h1>
+                    <div class="col-12 col-lg-6 offset-lg-3 text-center text-white mb-5 shadow-lg rounded-4 bg-secondary">
+                        <h1 class="fw-bold p-2">About Us</h1>
                     </div>
 
                     <div class="col-10 offset-1">
                         <div class="row">
                             <div class="col-12 text-center my-2">
-                                <span class="fw-bold fs-3 mb-3">yuiytfi</span>
                                 <p class="fs-4">Welcome to our dedicated team of tech enthusiasts, where innovation meets expertise! We're a passionate group of developers committed to creating powerful web solutions that redefine the way teams collaborate.</p>
                             </div>
                         </div>
@@ -219,7 +218,7 @@
 
             </div>
 
-            
+            <hr style="height: 8px; background-color: blue;">
 
         </div>
     </div>
