@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="res/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="res/bootstrap.css" /> 
-    <title>Migten | User Profile </title> 
+    <link rel="stylesheet" href="res/bootstrap.css" />
+    <title>Migten | User Profile </title>
     <link rel="icon" href="res/logo-sm.png" />
 </head>
 
-<body  class=" body2">
+<body class=" body2">
 
     <div class="container-fluid">
         <div class="row">
@@ -71,8 +71,8 @@
                                                         <span class="fw-bold">helitha wijesooriya</span> <br>
                                                         <span class="fw-bold text-black-50">info@gmail.com</span><br>
                                                         <span class="fw-bold text-black-50"> Once logged in, you'll land on your personalized dashboard. Here, you'll find an overview of your tasks, projects, and upcoming deadlines.
-                                                        Once logged in, you'll land on your personalized dashboard. Here, you'll find an overview of your tasks, projects, and upcoming deadlines.
-</span><br>
+                                                            Once logged in, you'll land on your personalized dashboard. Here, you'll find an overview of your tasks, projects, and upcoming deadlines.
+                                                        </span><br>
 
 
 
@@ -128,15 +128,15 @@
                                 <label class="form-label fw-bold">Skils</label>
                                 <!-- <input type="text" class="form-control" readonly value="" /> -->
                                 <div class=" g-2" role="group" aria-label="Basic outlined example">
-                               
-  <button type="button" class="btn btn-outline-primary">Left</button>
-  <button type="button" class="btn btn-outline-primary">Middle</button>
-  <button type="button" class="btn btn-outline-primary">Right</button>
-  <button type="button" class="btn btn-outline-primary">Middle</button>
-  <button type="button" class="btn btn-outline-primary">Right</button>
 
-  <button class="btn btn-outline-secondary fw-bold" type="button">+</button>
-</div>
+                                    <button type="button" class="btn btn-outline-primary">Left</button>
+                                    <button type="button" class="btn btn-outline-primary">Middle</button>
+                                    <button type="button" class="btn btn-outline-primary">Right</button>
+                                    <button type="button" class="btn btn-outline-primary">Middle</button>
+                                    <button type="button" class="btn btn-outline-primary">Right</button>
+
+                                    <button class="btn btn-outline-secondary fw-bold" type="button">+</button>
+                                </div>
                             </div>
 
                             <div class="col-12 col-lg-6 mb-3">
@@ -157,12 +157,12 @@
                             <button class="btn btn-success" >Update My Profile</button>
 
                         </div> -->
-                        <div class="col-12 d-flex justify-content-end">
-                        <div class=" text-center text-lg-start text-end">
-                                                        <input type="file" class="d-none" id="profileimg6" accept="image/*" />
-                                                        <button for="profileimg6" class="btn btn-primary mt-5">Save</button>
-                                                    </div>
-                                                    </div>
+                            <div class="col-12 d-flex justify-content-end">
+                                <div class=" text-center text-lg-start text-end">
+                                    <input type="file" class="d-none" id="profileimg6" accept="image/*" />
+                                    <button for="profileimg6" class="btn btn-primary mt-5">Save</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
