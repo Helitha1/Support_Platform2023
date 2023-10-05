@@ -169,17 +169,17 @@
                         <h2 class="fw-bold">How dose the system work?</h2>
                     </div>
 
-                    <div class="col-10 offset-0 offset-lg-1 text-start">
+                    <div class="col-12 text-start m-5">
                         <span style="font-size: 20px;">Sign In or Create an Account:</span>
                         <p> - Begin by signing in to your account. If you're new, create an account to get started.</p>
                     </div>
 
-                    <div class="col-10 offset-0 offset-lg-1 text-end">
+                    <div class="col-12 text-end  m-5">
                         <span style="font-size: 20px;">Sign In or Create an Account:</span>
                         <p> - Begin by signing in to your account. If you're new, create an account to get started.</p>
                     </div>
 
-                    <div class="col-10 offset-0 offset-lg-1 text-text-start">
+                    <div class="col-12 text-text-start  m-5">
                         <span style="font-size: 20px;">Sign In or Create an Account:</span>
                         <p> - Begin by signing in to your account. If you're new, create an account to get started.</p>
                     </div>
