@@ -14,25 +14,24 @@ if (isset($_POST["json"])) {
         } else if (empty($req_object->lname)) {
             $code = 2;
         } else if (strlen($req_object->lname) > 50) {
-            $code =3;
+            $code = 3;
         } else if (empty($req_object->email)) {
             $code = 4;
         } else if (strlen($req_object->email) >= 100) {
             $code = 5;
         } else if (!filter_var($ereq_object->mail, FILTER_VALIDATE_EMAIL)) {
-            $code = 4;
+            $code = 6;
         } else if (empty($req_object->password)) {
-            $code = 4;
+            $code = 7;
         } else if (empty($req_object->addressLine1)) {
-            $code = 4;
+            $code = 8;
         } else if (strlen($req_object->password) < 5 || strlen($password) > 20) {
-            $code = 4;
+            $code = 9;
         } else {
             $rs = Database::search("SELECT * FROM `users` WHERE `email`='" . $email . "'");
-            $n = $rs->num_rows;
 
-            if ($n > 0) {
-                $code =  ("2");
+            if ($$rs->num_rows > 0) {
+                $code =  10;
             } else {
 
                 $d = new DateTime();
@@ -40,9 +39,11 @@ if (isset($_POST["json"])) {
                 $d->setTimezone($tz);
                 $date = $d->format("Y-m-d H:i:s");
 
+
+
                 Database::iud("INSERT INTO `users` 
-                (`fname`,`lname`,`email`,`mobile`,`line1`,`line2`,`password`,`gender_id`,`register_date`) VALUES 
-                ('" . $fname . "','" . $lname . "','" . $email . "','" . $mobile . "','" . $addressLine1 . "','" . $addressLine2 . "','" . $password . "','" . $gender . "','" . $date . "')");
+                (`fname`,`lname`,`email`,`password`,`gender_id`,`date_register`,`profession_id`) VALUES 
+                ('" . $req_object->fname . "','" . $req_object->lname . "','" . $req_object->email . "','" . $req_object->password . "','" . $req_object->gender . "','" . $req_object->date . "','".$req_object->profession_id."')");
 
                 $code =  100;
             }
