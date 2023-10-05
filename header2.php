@@ -43,6 +43,12 @@ if (isset($_SESSION["user"])) {
  <!DOCTYPE html>
  <html lang="en">
 
+ <meta charset="UTF-8">
+    <link rel="stylesheet" href="res/bootstrap.css" />
+    <link rel="stylesheet" href="res/style.css" />
+    <link rel="stylesheet" href="res/animation.css" />
+    <link rel="stylesheet" href="res/main.css" />
+
 <body>
     <div class="col-12 container-fluid">
         <div class="row">
