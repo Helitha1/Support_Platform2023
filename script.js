@@ -83,6 +83,8 @@ function signIn() {
                 let res = JSON.parse(t);
                 if(res.code==100){
                     window.location == 'index.php';
+                }else{
+                    console.log(res.code);
                 }
             }
         };
