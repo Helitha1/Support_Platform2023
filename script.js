@@ -150,7 +150,6 @@ resetPassword = () => {
   }
 };
 
-
 const mainTasks = [];
 
 function addProjectTask() {
@@ -173,6 +172,7 @@ function addProjectTask() {
       description: taskDescription,
       startDate: taskStartDate,
       endDate: taskEndDate,
+      status: 1,
     };
 
     mainTasks.push(data);
@@ -180,54 +180,72 @@ function addProjectTask() {
     updateTaskList();
   }
 }
-<<<<<<< HEAD
-
 
 function updateTaskList() {
-    const taskListElement = document.getElementById("taskList");
-  
-    taskListElement.innerHTML = "";
-  
-    mainTasks.forEach((task) => {
-      const listItem = document.createElement("li");
-      listItem.textContent = `${task.title}`;
-      taskListElement.appendChild(listItem);
+  const taskListElement = document.getElementById("taskList");
+
+  // Clear the existing content of the task list
+  taskListElement.innerHTML = "";
+
+  mainTasks.forEach((task) => {
+    const listItem = document.createElement("li");
+
+    // Create a button element
+    const button = document.createElement("button");
+    button.textContent = "Button Text"; // You can set your desired button text here
+
+    // Add a click event listener to the button if needed
+    button.addEventListener("click", () => {
+      // Handle button click event here
     });
-  }
+
+    // Append the button to the list item
+    listItem.appendChild(button);
+
+    // Append the task title to the list item
+    listItem.textContent += ` ${task.title}`;
+    listItem.classList.add("btn", "btn-outline-primary", "col-12", "my-1");
+
+    // Append the list item to the task list
+    taskListElement.appendChild(listItem);
+  });
+}
+
+
 
 function addNewProject() {
-  var projectTitle = document.getElementById("pt").value;
-  var projectDescription = document.getElementById("pd").value;
-  var projectStartDate = document.getElementById("psd").value;
-  var projectEndDate = document.getElementById("ped").value;
-
-  const project = {
-    title: projectTitle,
-    description: projectDescription,
-    startDate: projectStartDate,
-    endDate: projectEndDate
-  };
-
-  var form = new FormData();
-    form.append(
-      "json",
-      JSON.stringify({
-        project: project,
-        mainTasks: mainTasks,
-      })
-    );
-    fetch("server/addNewProjectProcess.php", {
-      method: "POST",
-      body: form,
-    })
-      .then((res) => res.json())
-      .then((obj) => {
-        console.log(obj.code);
-        if (obj.code == 100) {
-          window.location.reload();
-        } else {
-          showError(obj.code);
-        }
-      })
-      .catch((error) => console.log(error));
+    var projectTitle = document.getElementById("pt").value;
+    var projectDescription = document.getElementById("pd").value;
+    var projectStartDate = document.getElementById("psd").value;
+    var projectEndDate = document.getElementById("ped").value;
+  
+    const project = {
+      title: projectTitle,
+      description: projectDescription,
+      startDate: projectStartDate,
+      endDate: projectEndDate,
+      status: 1,
+    };
+  
+    var data = {
+      project: JSON.stringify(project),
+      mainTasks: JSON.stringify(mainTasks),
+    };
+  
+    console.log(data);
+    // Uncomment the XMLHttpRequest section
+    var xhr = new XMLHttpRequest();
+  
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4) {
+        var response = xhr.responseText;
+        console.log(response);
+      }
+    };
+  
+    xhr.open("POST", "server/addNewProjectProcess.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(JSON.stringify(data));
   }
+  
+  
