@@ -6,7 +6,8 @@ require "connection.php";
 
 if (isset($_POST["json"])) {
     $request_obj = json_decode($_POST["json"]);
-    if (isset($request_obj->email) && isset($request_obj->fname) && isset($request_obj->lname) && isset($request_obj->password) && isset($request_obj->gender) && isset($request_obj->profession)) {
+
+    if (isset($request_obj->email) && isset($request_obj->fname) && isset($request_obj->lname) && isset($request_obj->password) && isset($request_obj->gender) && isset($request_obj->profession_id)) {
 
 
         if (empty($req_object->fname)) {
