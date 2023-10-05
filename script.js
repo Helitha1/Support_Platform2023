@@ -248,4 +248,10 @@ function addNewProject() {
     xhr.send(JSON.stringify(data));
   }
   
+  // var mdl;
+  // function model(){
+  //   var m = document.getElementById("verificationModal");
+  // mdl = new bootstrap.Modal(m);
+  // mdl.show();
+  // }
   
