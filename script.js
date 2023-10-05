@@ -110,13 +110,13 @@ function forgotPassword() {
     })
         .then(res => res.json())
         .then(obj => {
-            if(obj.code==100){
+            if (obj.code == 100) {
                 alert("Verification code has sent to your email. Please check your inbox"
                 );
                 var m = document.getElementById("forgotPasswordModal");
                 bm = new bootstrap.Modal(m);
                 bm.show();
-            }else{
+            } else {
                 alert(obj.code);
             }
         })
