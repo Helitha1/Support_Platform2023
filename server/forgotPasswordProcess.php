@@ -14,7 +14,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 if (file_get_contents("php://input")) {
     // CHECK REQUEST
     $request = file_get_contents("php://input");
-    echo($request);
     // GET JSON OBJECT FROM REQUESR
     $object = json_decode($request);
     $email = $object->email;
@@ -41,15 +40,17 @@ if (file_get_contents("php://input")) {
         $mail->Subject = 'Your Forgot Password Verification Code';
         $bodyContent = '<h1 style="color:green">Your Verification code is ' . $code . '</h1>';
         $mail->Body    = $bodyContent;
-
-        if (!$mail->send()) {
-            echo 'Verification code sending failed';
-        } else {
-            echo 'Success';
-        }
+        // if (!$mail->send()) {
+        //     $code = 18;
+        // } else {
+        //     $code = 100;
+        // }
+        $code =100;
     } else {
-        echo ("Invalid Email address");
+        $code = 7;
     }
+}else{
+    $code = 99;
 }
 // ASSIGN CODE TO RESPONSE OBJECT 
 $response_obj->code = $code;

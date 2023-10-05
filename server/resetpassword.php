@@ -37,7 +37,11 @@ if (isset($_POST["json"])) {
                     $code = 17;
                }
           }
+     }else{
+          $code = 98;
      }
+}else{
+     $code = 99;
 }
 // ASSIGN CODE TO RESPONSE OBJECT
 $response_obj->code = $code;
