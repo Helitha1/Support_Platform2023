@@ -246,11 +246,3 @@ function addNewProject() {
   xhr.send(JSON.stringify(data));
 }
 
-// const selectedProduct = null;
-
-// function selectProduct(id) {
-//   selectProduct = id;
-// }
-
-
-
