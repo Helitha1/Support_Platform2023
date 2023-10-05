@@ -17,7 +17,7 @@
     <div class="overflow-hidden bg-light">
         <div class="row">
 
-            <div class="col-12">
+            <div class="col-12 d-none d-lg-block">
                 <div class="row">
 
                     <div class="col-12">
@@ -161,10 +161,27 @@
 
             <!-- 222 -->
 
+            <hr>
+
             <div class="col-12 mt-3">
                 <div class="row">
                     <div class="col-12 offset-1">
-                    <h2 class="fw-bold">How is work</h2>
+                        <h2 class="fw-bold">How dose the system work?</h2>
+                    </div>
+
+                    <div class="col-10 offset-0 offset-lg-1 text-start">
+                        <span style="font-size: 20px;">Sign In or Create an Account:</span>
+                        <p> - Begin by signing in to your account. If you're new, create an account to get started.</p>
+                    </div>
+
+                    <div class="col-10 offset-0 offset-lg-1 text-end">
+                        <span style="font-size: 20px;">Sign In or Create an Account:</span>
+                        <p> - Begin by signing in to your account. If you're new, create an account to get started.</p>
+                    </div>
+
+                    <div class="col-10 offset-0 offset-lg-1 text-text-start">
+                        <span style="font-size: 20px;">Sign In or Create an Account:</span>
+                        <p> - Begin by signing in to your account. If you're new, create an account to get started.</p>
                     </div>
                 </div>
 

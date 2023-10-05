@@ -42,6 +42,18 @@ showError=(code)=>{
         case 13:
             return('Invalid password, try again!');
             break;
+        case 14:
+            return('re enter your password!');
+            break;
+        case 15:
+            return('password dosent match!');
+            break;
+        case 16:
+            return('verification code empty!');
+            break;
+        case 17:
+            return('invalid email or verifiacation code!');
+            break;
     
         default:
             break;
