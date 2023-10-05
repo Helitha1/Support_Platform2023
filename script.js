@@ -124,9 +124,9 @@ function forgotPassword() {
 
 function resetPassword() {
     // var email = document.getElementById("e");
-    var np = document.getElementById("p1");
-    var rnp = document.getElementById("p2");
-    var vcode = document.getElementById("c");
+    var np = document.getElementById("p1").value;
+    var rnp = document.getElementById("p2").value;
+    var vcode = document.getElementById("c").value;
 
     if (email == "") {
         alert("Please enter your email and try again");
