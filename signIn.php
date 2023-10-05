@@ -82,7 +82,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Forgot Password</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                     </div>
                     <div class="modal-body">
 
@@ -129,7 +129,7 @@
 
     </div>
 
-    <script src="bootstrap.bundle.min.js"></script>
+    <script src="res/bootstrap.bundle.js"></script>
     <script src="script.js"></script>
 </body>
 

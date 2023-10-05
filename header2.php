@@ -1,16 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+ <?php
+    session_start();
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./res/logo-sm.png" />
-    <link rel="stylesheet" href="res/main.css" />
-    <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-    <link rel="stylesheet" href="cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./fontawsome/css/all.css" />
-</head>
+    if (isset($_SESSION["user"])) {
+        $user_button = '
+        <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+    ';
+    } else {
+        $user_button = '<a href="">Sign In</a>';
+    }
+    ?>
+ <!DOCTYPE html>
+ <html lang="en">
 
 <body>
     <div class="col-12 container-fluid">
@@ -74,5 +83,3 @@
     <script src="main.js"></script>
     <script src="res/bootstrap.bundle.js"></script>
 </body>
-
-</html>
