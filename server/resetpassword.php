@@ -1,40 +1,42 @@
 <?php
-
-   require "connection.php";
-
-   $email = $_POST["e"];
-   $np = $_POST["p1"];
-   $rnp = $_POST["p1"];
-   $vcode = $_POST["c"];
-
-   if(empty($email)){
-        echo("Missing Email Address");
-   }elseif(empty($np)){
-        echo("Please Enter Your New Password");
-   }elseif(strlen($np) < 5 || strlen($np) > 20){
-        echo("Password must be less than 20 and more that 5 charcters");
-   }elseif(empty($rnp)){
-        echo("Please Retype Your New Password");
-   }elseif($np != $rnp){
-        echo("Passwords are not matched");
-   }elseif(empty($vcode)){
-        echo("Please Enter Your Verification Code");
-   }else{
-     
-       $rs =  Database::search("SELECT * FROM `users` WHERE `email`='".$email."' AND
-       `verification_code`= '".$vcode."'");
-
-       $n = $rs->num_rows;
-
-       if($n == 1){
-
-            Database::iud("UPDATE `users` SET `password`='".$np."' WHERE `email`='".$email."'");
-            echo("Success");
-
-       }else{
-        echo("Invalid Email Or Verification Code");
-       }
-
-   }
-
-?>
+// RESPONSE OBJECT
+$response_obj = new stdClass();
+$code = 0;
+// DATABASE CONNECTION
+require "connection.php";
+// CHECK REQUEST OBJECT
+if (isset($_POST["json"])) {
+     // GET JSON OBJECT FROM REQUESR
+     $request_obj = json_decode($_POST["json"]);
+     // CHECK JSON PARAMETERS
+     if (isset($request_obj->email) && isset($request_obj->password) && isset($request_obj->password2) && isset($request_obj->vcode)) {
+          if ($request_obj->email=="") {
+               $code = 12;
+          } elseif ($request_obj->password=="") {
+               $code = 8;
+          } elseif (strlen($request_obj->password) < 5 || strlen($request_obj->password) > 20) {
+               $code = 9;
+          } elseif ($request_obj->password2=="") {
+               $code = 14;
+          } elseif ($request_obj->password != $request_obj->password2) {
+               $code =15;
+          } else if ($request_obj->vcode=="") {
+               $code =16;
+          } else {
+// SEARCH USER FROM DATABASE
+               $rs =  Database::search("SELECT * FROM `users` WHERE `email`='" . $request_obj->email . "' AND
+              `verification_code`= '" . $request_obj->vcode . "'");
+// CHECK USER IN DATABASE
+               if ($rs->num_rows == 1) {
+                    // UPDATE NEW PASSWORD
+                    Database::iud("UPDATE `users` SET `password`='" . $request_obj->password . "', `verification_code`='' WHERE `email`='" . $request_obj->email . "'");
+                    $code =100;
+               } else {
+                    $code = 17;
+               }
+          }
+     }
+}
+// RESPONSE OBJECT
+$response_obj->code = $code;
+echo (json_encode($response_obj));
