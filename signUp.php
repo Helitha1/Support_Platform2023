@@ -24,9 +24,9 @@
             <div class="col-12 ">
                 <div class="row p-3 ">
 
-                    <div class="col-6 d-none d-lg-block "></div>
+                   
 
-                    <div class="col-12 col-lg-6 border-dark shadow-lg bg-transparent rounded-4">
+                    <div class="col-12 col-lg-6 offset-lg-3 border-dark shadow-lg bg-transparent rounded-4">
                         <div class="row g-2 p-4">
 
 
@@ -41,18 +41,31 @@
 
                             <div class="col-12 col-lg-6 ">
                                 <label class="form-label fw-bold">Last Name</label>
-                                <input type="text" class="form-control" placeholder="ex:- john" id="lname" />
+                                <input type="text" class="form-control" placeholder="ex:- john" id="lname" /> 
                             </div>
                             <div class="col-12 col-lg-6 ">
                                 <label class="form-label fw-bold">Email</label>
                                 <input type="email" class="form-control" placeholder="ex:- john@" id="email" />
-                            </div>
+                            </div> 
+                    
                             
                             <div class="col-12 col-lg-6">
                                 <label class="form-label fw-bold">Gender</label>
                                 <select class=" form-select " id="gender">
                                     <option value="0">Male</option>
                                     <option value="1">Female</option>
+                                </select>
+
+
+
+                            </div> 
+
+                               
+                            <div class="col-12 ">
+                                <label class="form-label fw-bold">Profession</label>
+                                <select class=" form-select " id="gender">
+                                    <option value="0">Ui/Ux</option>
+                                    <option value="1">Back End Developer</option>
                                 </select>
 
 
@@ -140,6 +153,6 @@
 
     <script src="bootstrap.bundle.js"></script>
     <script src="script.js"></script>
-</body>
+</body> 
 
 </html>

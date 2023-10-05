@@ -2,9 +2,9 @@
 
 require "connection.php";
 
-require "emailProvider/SMTP.php";
-require "emailProvider/PHPMailer.php";
-require "emailProvider/Exception.php";
+require "email/SMTP.php";
+require "email/PHPMailer.php";
+require "email/Exception.php";
 
 use PHPMailer\PHPMailer\PHPMailer;
 
