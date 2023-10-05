@@ -74,7 +74,7 @@ signIn = () => {
             .then(res => res.json())
             .then(obj => {
                 if (obj.code == 100) {
-                    window.location = 'signIn.php';
+                    window.location = 'index.php';
                 } else {
                     showError(obj.code);
                 }
