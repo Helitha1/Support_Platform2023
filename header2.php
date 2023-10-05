@@ -73,7 +73,7 @@ if (isset($_SESSION["user"])) {
                 </div>
 
                 <!-- TOGGLE BUTTON -->
-                <div class="d-block d-sm-none navigation-toggler">
+                <div class="d-block d-md-none navigation-toggler">
                     <button class="btn btn-primary" onclick="toggleNavigation('nav-menu','navigation-toggler-icon')" id="navigation-toggler">
                         <i class="fa-solid fa-bars" id="navigation-toggler-icon"></i>
                     </button>
