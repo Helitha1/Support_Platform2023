@@ -98,28 +98,32 @@ function signIn() {
 var bm;
 var email;
 function forgotPassword() {
-    email = document.getElementById("email");
-
-    var r = new XMLHttpRequest();
-
-    r.onreadystatechange = function () {
-        if (r.readyState == 4) {
-            var t = r.responseText;
-            if (t == "Success") {
-                alert(
-                    "Verification code has sent to your email. Please check your inbox"
-                );
-                var m = document.getElementById("forgotPasswordModal");
+    alert("clicked");
+    var m = document.getElementById("forgotPasswordModal");
                 bm = new bootstrap.Modal(m);
                 bm.show();
-            } else {
-                alert(t);
-            }
-        }
-    };
+    // email = document.getElementById("email");
 
-    r.open("GET", "forgotPasswordProcess.php?e=" + email.value, true);
-    r.send();
+    // var r = new XMLHttpRequest();
+
+    // r.onreadystatechange = function () {
+    //     if (r.readyState == 4) {
+    //         var t = r.responseText;
+    //         if (t == "Success") {
+    //             alert(
+    //                 "Verification code has sent to your email. Please check your inbox"
+    //             );
+    //             var m = document.getElementById("forgotPasswordModal");
+    //             bm = new bootstrap.Modal(m);
+    //             bm.show();
+    //         } else {
+    //             alert(t);
+    //         }
+    //     }
+    // };
+
+    // r.open("GET", "server/forgotPasswordProcess.php?e=" + email.value, true);
+    // r.send();
 }
 
 function resetPassword() {
