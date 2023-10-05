@@ -64,8 +64,26 @@
                             <div class="col-12 ">
                                 <label class="form-label fw-bold">Profession</label>
                                 <select class=" form-select " id="profession">
-                                    <option value="1">Ui/Ux</option>
-                                    <option value="2">Back End Developer</option>
+
+                                <?php
+
+                                require "server/connection.php";
+
+                                $profession_rs = Database::search("SELECT * FROM `profession`");
+                                $profession_num = $profession_rs->num_rows;
+
+                                for ($x = 0; $x < $profession_num; $x++) {
+                                    $profession_data = $profession_rs->fetch_assoc();
+                                ?>
+
+                                    <option value="<?php echo $profession_data["id"]; ?>"><?php echo $profession_data["title"]; ?></option>
+
+                                <?php
+                                }
+
+                                ?>
+                                    <!-- <option value="1">Ui/Ux</option>
+                                    <option value="2">Back End Developer</option> -->
                                 </select>
 
 
