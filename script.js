@@ -82,6 +82,7 @@ function signIn() {
                 var t = r.responseText;
                 let res = JSON.parse(t);
                 if(res.code==100){
+                    alert('done');
                     window.location == 'index.php';
                 }else{
                     console.log(res.code);
