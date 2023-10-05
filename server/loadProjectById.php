@@ -6,7 +6,7 @@ $response_obj = new stdClass();
 
 if($_GET["pid"]){
 
-    $project_rs = Database::search("SELECT * FROM `projects` WHERE `id` = '" . $_GET["pid"] . "'");
+    $project_rs = Database::search("SELECT * FROM `projects` INNER JOIN `maintasks` ON projects.id = maintasks.projects_id ` WHERE `projects.id` = '" . $_GET["pid"] . "'");
     $project_num = $project_rs->num_rows;
 
     if ($project_num > 0) {
@@ -14,7 +14,6 @@ if($_GET["pid"]){
 
         $response_obj->projects = $project_data;
         echo (json_encode($response_obj));
-
         
     } else {
         echo ("invalid project id");
