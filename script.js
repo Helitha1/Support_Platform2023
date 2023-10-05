@@ -84,7 +84,7 @@ function signIn() {
             }
         };
 
-        r.open("POST", "signInProcess.php", true);
+        r.open("POST", "server/signInProcess.php", true);
         r.send(f);
     }
 }
