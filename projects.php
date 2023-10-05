@@ -44,15 +44,8 @@
             <div class="col-12 col-lg-2 d-none d-lg-block">
                 <div class="row">
                     <div class="col-12 rounded-bottom align-items-start bg-black vh-100 ">
-
                         <div class="row g-1 text-center ">
-
-
-
                             <div class="col-12 mt-3">
-
-
-
                                 <h3 class="text-white">Migten</h43>
 
                                     <hr class="border border-1 border-body" />
@@ -66,29 +59,15 @@
                                     <a class="btn btn-outline-secondary my-2" href="#">Create Projects</a>
                                     <br />
                                     <a class="btn btn-outline-secondary my-2" href="#">Manage Profile</a>
-
-
                                 </nav>
                             </div>
-                            <!-- <div class="col-12 mt-5">
-                                    <hr class="border border-1 border-dark" />
-                                    <h4 class="text-dark fw-bold">Check results</h4>
-                                    <hr class="border border-1 border-dark" />
-                                </div> -->
 
                             <div class=" col-12  mt-3 d-grid p-2 ">
                                 <div class="row ">
-
-
-
-
                                     <a href="#" class="btn btn-danger mt-2">Sign Out</a>
-
                                 </div>
-
                                 <hr class="border border-1 border-dark" />
                                 <hr class="border border-1 border-dark" />
-
                             </div>
                         </div>
                     </div>
@@ -96,8 +75,6 @@
             </div>
 
             <div class="col-12 d-block d-lg-none bg-dark">
-
-
                 <ul class="nav d-flex justify-content-center align-items-center my-3">
                     <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
                         <a class="nav-link ">
@@ -111,7 +88,7 @@
                     </li>
                     <li class="nav-item my-1 mx-1 changeView border-end  border-bottom rounded-5 border-white border-opacity-25">
                         <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = '###'">Create Projects</span>
+                            <span class="fs-6 text-white" onclick="window.location = ''">Create Projects</span>
                         </a>
                     </li>
                     <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
@@ -119,10 +96,7 @@
                             <span class="fs-6 text-white" onclick="window.location = '####'">Manage Profile</span>
                         </a>
                     </li>
-
                 </ul>
-
-
             </div>
 
             <div class=" col-12 col-lg-10">
@@ -145,36 +119,25 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-12 my-3">
                                 <div class="row">
-
                                     <?php
-
                                     require "server/connection.php";
-
                                     $project_rs = Database::search("SELECT * FROM `projects`");
                                     $project_num = $project_rs->num_rows;
-
                                     for ($x = 0; $x < $project_num; $x++) {
                                         $project_data = $project_rs->fetch_assoc();
                                     ?>
-
                                         <!-- <div class="col-10 offset-1 my-2">
                                             <button onclick='onselectProject(<?php echo $product_data["id"]; ?>);' class="btn btn-primary form-control" id="<?php echo $project_data["id"]; ?>"><?php echo $project_data["title"]; ?></button>
                                         </div> -->
                                         <div class="col-10 offset-1 my-2">
                                             <button onclick='selectProject(<?php echo $product_data["id"]; ?>);' class="btn btn-primary form-control" id="<?php echo $project_data["id"]; ?>"><?php echo $project_data["title"]; ?></button>
                                         </div>
-
-
-
                                     <?php
                                     }
 
                                     ?>
-
-
                                 </div>
                             </div>
 
@@ -184,7 +147,10 @@
                     <div class="col-10 offset-1 offset-lg-0 col-lg-7 bg-secondary bg-opacity-25 m-lg-3 project flyin zoom" style="height: 600px;">
                         <div class="row">
                             <div class="col-10 text-start">
-                                <span class="fs-3 text-white fw-bold m-2"><?php echo $project_data["title"] ?></span>
+
+                                <span class="fs-3 text-white fw-bold m-2" id="project-title">PROJECT TITLE HERE</span>
+
+
                             </div>
                             <div class="col-2 text-end ">
                                 <button onclick='window.location = `manageProject.php?pid=${$selectedProjectId}`' class="m-2 btn btn-secondary">Edit</button>
@@ -192,11 +158,13 @@
                             <hr>
                             <div class="col-12">
                                 <label class="form-label fw-bold fs-4">Description</label>
-                                <p class="form-control">esetn ydxr xdru d drudrysy xt sset eesetn ydxr xdru d drudrysy xt sset eesetn ydxr xdru d drudrysy xt sset eesetn ydxr xdru d drudrysy xt sset e</p>
+                                <p class="form-control" id="project-description">DESCRIPTION HERE</p>
                             </div>
                             <hr>
                             <div class="col-12">
                                 <label class="form-label fw-bold fs-4">Status</label>
+                                <!-- STATUS HERE -->
+                                <!-- 1 - warning, 2-warning, 3-success -->
                                 <i class="fa-solid fa-circle text-success"></i>
                             </div>
                             <hr>
@@ -204,16 +172,14 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <label class="form-label fw-bold fs-4">Start Date : &nbsp;</label>
-                                        <span class="fs-5">2023-10-05</span>
+                                        <span class="fs-5" id="project-start_date">START DATE HERE</span>
                                     </div>
                                     <div class="col-6">
                                         <label class="form-label fw-bold fs-4">End Date : &nbsp;</label>
-                                        <span class="fs-5">2023-12-05</span>
+                                        <span class="fs-5" id="project-end-date">PROJECT END DATE HERE</span>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
                         <hr>
                         <div class="col-12">
@@ -244,7 +210,6 @@
                                 </div>
                             </div>
                             <!-- timeline -->
-
                         </div>
                     </div>
                 </div>
@@ -252,17 +217,19 @@
         </div>
 
 
-
-
-
     </div>
-    </div>
+
     <script src="res/bootstrap.bundle.js"></script>
     <script src="res/jquery.min.js"></script>
     <script src="res/tilt.js"></script>
     <script src="script.js"></script>
 
+
+
+
     <script>
+        loadProject(3);
+
         // TILT (3D ANIMATION)
         const tilt = $('.js-tilt').tilt({
             scale: 1.05,
@@ -271,8 +238,7 @@
             reset: true
         });
         tilt.methods.destroy.call(tilt);
-    </script>
-    <script>
+
         const flyin = document.querySelectorAll(".flyin");
 
         const observe = new IntersectionObserver((entries) => {
