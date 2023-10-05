@@ -15,7 +15,7 @@ if (isset($_POST["json"])) {
           } else if ($request_obj->password == "") {
                $code = 8;
           } else if (strlen($request_obj->password) < 5 || strlen($request_obj->password) > 20) {
-               $code = 9;
+               $code = strlen($request_obj->password) ;
           } else if ($request_obj->password2 == "") {
                $code = 14;
           } else if ($request_obj->password != $request_obj->password2) {
