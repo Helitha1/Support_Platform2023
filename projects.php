@@ -157,19 +157,20 @@
 
                     <div class="col-10 offset-1 offset-lg-0 col-lg-7 bg-secondary bg-opacity-25 m-lg-3 project flyin zoom" style="height: 600px;">
                         <div class="row">
-                            <div class="col-12 text-start p-2 m-2">
-                                <span class="fs-3 text-white fw-bold">Migten mobile Application</span>
+                            <div class="col-12 text-start">
+                                <span class="fs-3 text-white fw-bold m-2">Migten mobile Application</span>
                             </div>
                             <hr>
                             <div class="col-12">
                                 <label class="form-label fw-bold fs-4">Description</label>
                                 <p class="form-control">esetn ydxr xdru d drudrysy xt sset eesetn ydxr xdru d drudrysy xt sset eesetn ydxr xdru d drudrysy xt sset eesetn ydxr xdru d drudrysy xt sset e</p>
                             </div>
+                            <hr>
                             <div class="col-12">
                                 <label class="form-label fw-bold fs-4">Status</label>
                                 <i class="fa-solid fa-circle text-success"></i>
                             </div>
-
+                            <hr>
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col-6">
@@ -184,8 +185,37 @@
 
                             </div>
 
+                            </div>
+                            <hr>
                             <div class="col-12">
                                 <label class="form-label fw-bold fs-4">TimeLine</label>
+                                <!-- timeline -->
+                                <div class="container py-5">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="content">
+                                                <ul class="timeline-1 text-black">
+                                                    <li class="event fs-3" data-date="2023-10-12">
+                                                        <h4 class="mb-3">Registration</h4>
+                                                        <p>Get here on time, it's first come first serve. Be late, get turned away.</p>
+                                                    </li>
+                                                    <li class="event fs-3" data-date="2023-10-12">
+                                                        <h4 class="mb-3 pt-3">Opening Ceremony</h4>
+                                                        <p>Get ready for an exciting event, this will kick off in amazing fashion with MOP &amp; Busta
+                                                            Rhymes as an opening show.</p>
+                                                    </li>
+                                                    <li class="event fs-3" data-date="2023-10-12">d-grid
+                                                        <h4 class="mb-3 pt-3">Main Event</h4>
+                                                        <p>This is where it all goes down. You will compete head to head with your friends and rivals. Get
+                                                            ready!</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- timeline -->
+
                             </div>
                         </div>
                     </div>
