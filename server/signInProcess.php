@@ -16,9 +16,9 @@ if (isset($_POST["json"])) {
     } else if (empty($json->password)) {
         $code = 8;
     } else {
-
+        // SEARCH USER DATA FROM DATABASE
         $rs = Database::search("SELECT * FROM `users` WHERE `email`='" . $email . "'");
-
+        // CHECK USER 
         if ($rs->num_rows == 1) {
             // FETCH USER DATA FROM DATABASE
             $user = $rs->fetch_assoc();
@@ -26,15 +26,18 @@ if (isset($_POST["json"])) {
             if (password_verify($json->password, $user["password"])) {
                 // ASSIGN USER DATA TO SESSION
                 $_SESSION["user"] = $user;
-
-                if ($rememberme == "true") {
+                // REMEMBER ME
+                if ($json->rememberme == "true") {
+                    // SET COOKIES
                     setcookie("email", $email, time() + (60 * 60 * 24 * 365));
                     setcookie("password", $password, time() + (60 * 60 * 24 * 365));
                 } else {
+                    // UNSET COOKIES
                     setcookie("email", "", -1);
                     setcookie("password", "", -1);
                 }
             } else {
+                $code = 13;
             }
         } else {
             $code = 12;
