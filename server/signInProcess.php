@@ -2,8 +2,6 @@
 // RESPONSE OBJECT
 $response_obj = new stdClass();
 $code = 0;
-// STATRING SESSION
-session_start();
 // DATABASE CONNECTION
 require_once "connection.php";
 // CHECKING REQUEST 
@@ -24,6 +22,8 @@ if (isset($_POST["json"])) {
             $user = $rs->fetch_assoc();
             // VALIDATE PASSWORD
             if (password_verify($json->password, $user["password"])) {
+                // STATRING SESSION
+                session_start();
                 // ASSIGN USER DATA TO SESSION
                 $_SESSION["user"] = $user;
                 // REMEMBER ME
@@ -36,7 +36,7 @@ if (isset($_POST["json"])) {
                     setcookie("email", "", -1);
                     setcookie("password", "", -1);
                 }
-                $code =100;
+                $code = 100;
             } else {
                 $code = 13;
             }
