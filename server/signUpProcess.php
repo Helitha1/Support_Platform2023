@@ -13,25 +13,27 @@ if (isset($_POST["json"])) {
             $code = 1;
         } else if (empty($req_object->lname)) {
             $code = 2;
-        } else if (strlen($req_object->lname) > 50) {
+        } else if (strlen($req_object->fname) > 45) {
             $code = 3;
-        } else if (empty($req_object->email)) {
+        } else if (strlen($req_object->lname) > 45) {
             $code = 4;
-        } else if (strlen($req_object->email) >= 100) {
+        } else if (empty($req_object->email)) {
             $code = 5;
-        } else if (!filter_var($ereq_object->mail, FILTER_VALIDATE_EMAIL)) {
+        } else if (strlen($req_object->email) >= 100) {
             $code = 6;
-        } else if (empty($req_object->password)) {
+        } else if (!filter_var($ereq_object->mail, FILTER_VALIDATE_EMAIL)) {
             $code = 7;
-        } else if (empty($req_object->addressLine1)) {
+        } else if (empty($req_object->password)) {
             $code = 8;
         } else if (strlen($req_object->password) < 5 || strlen($password) > 20) {
             $code = 9;
+        } else if (empty($req_object->profession_id)) {
+            $code = 10;
         } else {
             $rs = Database::search("SELECT * FROM `users` WHERE `email`='" . $email . "'");
 
-            if ($$rs->num_rows > 0) {
-                $code =  10;
+            if ($rs->num_rows > 0) {
+                $code =  11;
             } else {
 
                 $d = new DateTime();
