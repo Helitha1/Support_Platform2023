@@ -26,7 +26,7 @@ if (isset($_POST["json"])) {
             $code = 7;
         } else if (empty($request_obj->password)) {
             $code = 8;
-        } else if (strlen($request_obj->password) < 5 || strlen($password) > 20) {
+        } else if (strlen($request_obj->password) < 5 || strlen($request_obj->password) > 20) {
             $code = 9;
         } else if (empty($request_obj->profession_id)) {
             $code = 10;
