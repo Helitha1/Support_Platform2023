@@ -70,9 +70,9 @@ function signIn() {
 
         var f = new FormData();
         f.append("json", JSON.stringify({
-            email: email,
-            password: password,
-            rememberme: rememberme,
+            email: email.value,
+            password: password.value,
+            rememberme: rememberme.checked,
         }));
 
         var r = new XMLHttpRequest();
