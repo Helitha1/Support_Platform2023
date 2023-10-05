@@ -128,7 +128,7 @@
                             <div class="col-12 my-3">
                                 <div class="row">
 
-                                    <?php
+                                    <!-- <?php
 
                                     require "server/connection.php";
 
@@ -146,7 +146,7 @@
                                     <?php
                                     }
 
-                                    ?>
+                                    ?> -->
 
 
                                 </div>
