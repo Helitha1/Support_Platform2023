@@ -30,25 +30,20 @@
             <!-- MENI TEXTS -->
             <ul class="navigation-bar-text">
                 <li class="navigation-item"><a href="" class="active">Home</a></li>
-                <li class="navigation-item"><a href="">Courses</a></li>
+                <li class="navigation-item"><a href="">About</a></li>
                 <li class="navigation-item"><a href="">Contact Us</a></li>
                 <li class="navigation-item"><a href="">Other Services</a></li>
             </ul>
             <!-- MENU LOGOS -->
             <ul class="navigation-bar-logo">
-                <li class="navigation-item">
-                    <button><i class="fa-solid fa-swatchbook"></i></button>
-                </li>
-                <li class="navigation-item">
-                    <button><i class="fa-solid fa-heart"></i></button>
-                </li>
+                
                 <li class="navigation-item">
                     <button><i class="fa-solid fa-moon"></i></button>
                 </li>
                 <!-- USER ACCOUNT -->
                 <li class="navigation-item">
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa-solid fa-user"></i>
                         </button>
                         <ul class="dropdown-menu">
