@@ -22,7 +22,7 @@
 
         <!-- LOGO -->
         <div class="brand-logo">
-            <img src="resource/logo.png" alt="Migten Logo" class="" />
+            <img src="res/logo-sm.png" alt="Migten Logo" class="" />
         </div>
 
         <!-- NAVIGATION MENUE ITEMS AND OTHER MENU ICONS -->
