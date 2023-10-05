@@ -1,21 +1,16 @@
 <?php
-
-echo 'Success';
-
-
-return;
-
+// DATABASE CONNECTION
 require "connection.php";
-
+// SMTP SERVER LIBRARY
 require "email/SMTP.php";
 require "email/PHPMailer.php";
 require "email/Exception.php";
-
+// USE PHP PHPMAILER FROM SMTP
 use PHPMailer\PHPMailer\PHPMailer;
 
-if(isset($_GET["e"])){
+if(isset($_POST["e"])){
 
-    $email = $_GET["e"];
+    $email = $_POST["e"];
 
     $rs = Database::search("SELECT * FROM `users` WHERE `email`='".$email."'");
     $n = $rs->num_rows;

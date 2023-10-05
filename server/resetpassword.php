@@ -28,8 +28,10 @@ if (isset($_POST["json"])) {
               `verification_code`= '" . $request_obj->vcode . "'");
                // CHECK USER IN DATABASE
                if ($rs->num_rows == 1) {
-                    // UPDATE NEW PASSWORD
-                    Database::iud("UPDATE `users` SET `password`='" . $request_obj->password . "', `verification_code`='' WHERE `email`='" . $request_obj->email . "'");
+                    // PASSWORD HASH GENERATE
+                    $password_hash = password_hash($request_obj->password, 0);
+                    // UPDATE NEW PASSWORD TO DATABASE AND EMPTY THE VERIFICATION CODE 
+                    Database::iud("UPDATE `users` SET `password`='" . $password_hash. "', `verification_code`='' WHERE `email`='" . $request_obj->email . "'");
                     $code = 100;
                } else {
                     $code = 17;
@@ -37,6 +39,7 @@ if (isset($_POST["json"])) {
           }
      }
 }
-// RESPONSE OBJECT
+// ASSIGN CODE TO RESPONSE OBJECT
 $response_obj->code = $code;
+// ECHO RESPONSE OBJECT
 echo (json_encode($response_obj));

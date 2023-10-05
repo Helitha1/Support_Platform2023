@@ -99,6 +99,7 @@ var bm;
 var email;
 function forgotPassword() {
     email = document.getElementById("email");
+    
 
     var r = new XMLHttpRequest();
 
@@ -149,12 +150,6 @@ function resetPassword() {
             if (r.readyState == 4) {
                 var t = r.responseText;
                 console.log(t);
-                // if (t == "Success") {
-                //     bm.hide();
-                //     alert("Now you can Log In using new password");
-                // } else {
-                //     alert(t);
-                // }
             }
         };
 
