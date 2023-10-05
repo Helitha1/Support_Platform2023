@@ -148,7 +148,7 @@ function resetPassword() {
         r.onreadystatechange = function () {
             if (r.readyState == 4) {
                 var t = r.responseText;
-                alert(t);
+                console.log(t);
                 // if (t == "Success") {
                 //     bm.hide();
                 //     alert("Now you can Log In using new password");
