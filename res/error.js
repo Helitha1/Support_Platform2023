@@ -39,6 +39,9 @@ showError=(code)=>{
         case 12:
             return('user not found');
             break;
+        case 12:
+            return('Invalid password, try again!');
+            break;
     
         default:
             break;
