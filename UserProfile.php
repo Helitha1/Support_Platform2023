@@ -20,6 +20,7 @@
 
     if (isset($_GET["email"])) {
         session_start();
+<<<<<<< HEAD
     
         $user_email = $_GET["email"];
     
@@ -28,6 +29,16 @@
     
         if ($user_num > 0) {
             $user_data = $user_rs->fetch_assoc();
+=======
+
+
+        $user_rs = Database::search("SELECT * FROM `users` WHERE `email` = '" . $_GET["email"] . "'");
+        $user_num = $user_rs->num_rows;
+
+        if ($user_num > 0) {
+            $user_data = $user_rs->fetch_assoc();
+
+>>>>>>> e7efa66cc9f75dc4dbd8ba915f70b8595b1ff2e9
     ?>
 
             <div class="container-fluid">
@@ -166,14 +177,23 @@
                                             <?php
 
 
+<<<<<<< HEAD
                                             $skill_rs = Database::search("SELECT * FROM `users_has_skills` INNER JOIN `skills` ON skills.id = users_has_skills.skills_id  WHERE `users_email` = '" . $_SESSION["user"]["email"] . "'");
+=======
+                                            $skill_rs = Database::search("SELECT * FROM `users_has_skills` INNER JOIN `skills` ON skills.id = users_has_skills.skills_id ` WHERE `users_email` = '" . $_SESSION["user"]["email"] . "'");
+>>>>>>> e7efa66cc9f75dc4dbd8ba915f70b8595b1ff2e9
                                             $skill_num = $skill_rs->num_rows;
 
                                             for ($x = 0; $x < $skill_num; $x++) {
                                                 $skill_data = $skill_rs->fetch_assoc();
                                             ?>
 
+<<<<<<< HEAD
                                                 <button type="button" class="btn btn-outline-primary"><?php echo $skill_data["name"]?></button>
+=======
+                                                <option value="<?php echo $profession_data["id"]; ?>"><?php echo $skill_data["name"]; ?></option>
+                                                <button type="button" class="btn btn-outline-primary">Left</button>
+>>>>>>> e7efa66cc9f75dc4dbd8ba915f70b8595b1ff2e9
 
                                             <?php
                                             }
@@ -187,7 +207,11 @@
                                     <div class="col-12 col-lg-6 mb-3">
                                         <label class="form-label fw-bold">password</label>
                                         <div class="input-group ">
+<<<<<<< HEAD
                                             <input type="password" class="form-control" readonly id="npi" value="<?php echo ($user_data["password"]) ?>" />
+=======
+                                            <input type="password" class="form-control" readonly id="npi" value="4441244" />
+>>>>>>> e7efa66cc9f75dc4dbd8ba915f70b8595b1ff2e9
                                             <button class="btn btn-outline-secondary" type="button"><i id="e1" class="bi bi-eye-slash-fill"></i></button>
                                         </div>
                                     </div>
@@ -195,7 +219,11 @@
                                     <div class="col-12 col-lg-6 mb-3">
 
                                         <label class="form-label fw-bold">Gender</label>
+<<<<<<< HEAD
                                         <input type="text" class="form-control" readonly value="<?php echo ($user_data["title"]) ?>" />
+=======
+                                        <input type="text" class="form-control" readonly value="male" />
+>>>>>>> e7efa66cc9f75dc4dbd8ba915f70b8595b1ff2e9
                                     </div>
 
                                     <!-- <div class="offset-2 offset-lg-4 col-8 col-lg-4 d-grid mt-3">
