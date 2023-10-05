@@ -115,8 +115,8 @@
 
 
                             <div class="col-12 col-lg-6 mb-3">
-                                <label class="form-label">Phone number</label>
-                                <input type="text" class="form-control" readonly value="0787976543" />
+                                <label class="form-label">Profession</label>
+                                <input type="text" class="form-control" readonly value="UI/Ux" />
                             </div>
 
 
