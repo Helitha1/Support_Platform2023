@@ -52,7 +52,7 @@ if (isset($_POST["json"])) {
             }
         }
     } else {
-        $code = 99;
+        $code = 98;
     }
 }else{
     $code =99;
