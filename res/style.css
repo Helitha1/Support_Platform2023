@@ -35,7 +35,7 @@
    .body3{ 
        
     height: 100vh;
-    background-image:url("homeImg.jpg");    
+    background-image:url("homeImg.png");    
     background-attachment: fixed; 
     overflow-y:auto; 
     flex: 1;
