@@ -63,7 +63,7 @@ function signIn() {
     var rememberme = document.getElementById("rememberme");
 
     if (email.value == '') {
-        showError('First Name is required');
+        showError('Email is required');
     } else if (password.value == '') {
         showError('Password is Required');
     } else {

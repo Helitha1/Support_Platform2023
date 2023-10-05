@@ -17,7 +17,7 @@ if (isset($_POST["json"])) {
         $code = 8;
     } else {
         // SEARCH USER DATA FROM DATABASE
-        $rs = Database::search("SELECT * FROM `users` WHERE `email`='" . $email . "'");
+        $rs = Database::search("SELECT * FROM `users` WHERE `email`='" . $json->email . "'");
         // CHECK USER 
         if ($rs->num_rows == 1) {
             // FETCH USER DATA FROM DATABASE
@@ -29,8 +29,8 @@ if (isset($_POST["json"])) {
                 // REMEMBER ME
                 if ($json->rememberme == "true") {
                     // SET COOKIES
-                    setcookie("email", $email, time() + (60 * 60 * 24 * 365));
-                    setcookie("password", $password, time() + (60 * 60 * 24 * 365));
+                    setcookie("email", $json->email, time() + (60 * 60 * 24 * 365));
+                    setcookie("password", $json->password, time() + (60 * 60 * 24 * 365));
                 } else {
                     // UNSET COOKIES
                     setcookie("email", "", -1);
