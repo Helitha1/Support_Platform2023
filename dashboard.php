@@ -113,7 +113,23 @@
                     <div class="col-12">
                         <div class="row g-1">
 
-                            <div class="col-11  px-1 py-3 position-relative">
+                            <div class="col-8 offset-2  px-1 py-3 position-relative">
+                                <div class="row g-1">
+                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
+                                        <br />
+                                        <span class="fs-3 text-dark fw-bold">4</span>
+                                        <br />
+                                        <span class="fs-5 text-dark">PROJECT COUNT</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-8 offset-2 px-1 py-3 position-relative">
                                 <div class="row g-1">
                                     <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
                                         <br />
@@ -123,44 +139,6 @@
                                     </div>
                                 </div>
                             </div>
-                           
-                            <div class="col-11  px-1 py-3 position-relative">
-                                <div class="row g-1">
-                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
-                                        <br />
-                                        <span class="fs-3 text-dark fw-bold">4</span>
-                                        <br />
-                                        <span class="fs-5 text-dark">ADMINS</span>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                            <div class="col-11  px-1 py-3 position-relative">
-                                <div class="row g-1">
-                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
-                                        <br />
-                                        <span class="fs-3 text-dark fw-bold">4</span>
-                                        <br />
-                                        <span class="fs-5 text-dark">ADMINS</span>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                            <div class="col-11  px-1 py-3 position-relative">
-                                <div class="row g-1">
-                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
-                                        <br />
-                                        <span class="fs-3 text-dark fw-bold">4</span>
-                                        <br />
-                                        <span class="fs-5 text-dark">ADMINS</span>
-                                    </div>
-                                </div>
-                            </div>
-                           
-
-
-
-
                         </div>
                     </div>
 
@@ -189,7 +167,6 @@
             reset: true
         });
         tilt.methods.destroy.call(tilt);
-
     </script>
 
 </body>
