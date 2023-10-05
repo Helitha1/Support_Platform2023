@@ -1,0 +1,81 @@
+:root{ 
+
+    --primary: hsla(291, 81%, 75%, 0.45) ; 
+    --yellow: rgba(135, 208, 245, 0.45) ; 
+    --red: hsla(0, 92%, 44%, 0.53); 
+     
+   
+       
+   
+   }
+   .body{ 
+       
+       height: 100vh;
+       background: linear-gradient(130deg , var(--primary),var(--yellow)), url("resource/background2.jpg");    
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;  
+       
+       
+   } 
+   .body2{ 
+       
+       height: 100vh;
+       background: linear-gradient(130deg , var(--primary),var(--yellow)), url("resource/background2.jpg");    
+       background-attachment: fixed; 
+       overflow-y:auto; 
+       flex: 1;
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;  
+       
+       
+   }
+ 
+   
+   .logo{ 
+
+    background-image: url("resource/logo.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+  
+.logo2{ 
+
+    background-image: url("resource/logo2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+ 
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("font/Quicksand-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("font/Roboto-Regular.ttf");
+}
+
+*{
+    font-family: "Quicksand";
+    font-size: 14px;
+}
+
+.title01{
+    font-family: "Roboto";
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+.title02{
+    font-size: 25px;
+    font-weight: bold;
+}
+.courser{
+
+   cursor: pointer;
+ 
+}   
