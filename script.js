@@ -211,45 +211,46 @@ function updateTaskList() {
   });
 }
 
-
-
 function addNewProject() {
-    var projectTitle = document.getElementById("pt").value;
-    var projectDescription = document.getElementById("pd").value;
-    var projectStartDate = document.getElementById("psd").value;
-    var projectEndDate = document.getElementById("ped").value;
-  
-    const project = {
-      title: projectTitle,
-      description: projectDescription,
-      startDate: projectStartDate,
-      endDate: projectEndDate,
-      status: 1,
-    };
-  
-    var data = {
-      project: JSON.stringify(project),
-      mainTasks: JSON.stringify(mainTasks),
-    };
-  
-    console.log(data);
-    // Uncomment the XMLHttpRequest section
-    var xhr = new XMLHttpRequest();
-  
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState == 4) {
-        var response = xhr.responseText;
-        console.log(response);
-      }
-    };
-  
-    xhr.open("POST", "server/addNewProjectProcess.php", true);
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(JSON.stringify(data));
-  }
-  
-  
+  var projectTitle = document.getElementById("pt").value;
+  var projectDescription = document.getElementById("pd").value;
+  var projectStartDate = document.getElementById("psd").value;
+  var projectEndDate = document.getElementById("ped").value;
 
-  function onselectProject(id){
-    window.location = `manageProject.php?pid=${id}`;
-  }
+  const project = {
+    title: projectTitle,
+    description: projectDescription,
+    startDate: projectStartDate,
+    endDate: projectEndDate,
+    status: 1,
+  };
+
+  var data = {
+    project: JSON.stringify(project),
+    mainTasks: JSON.stringify(mainTasks),
+  };
+
+  console.log(data);
+  // Uncomment the XMLHttpRequest section
+  var xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4) {
+      var response = xhr.responseText;
+      console.log(response);
+    }
+  };
+
+  xhr.open("POST", "server/addNewProjectProcess.php", true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(JSON.stringify(data));
+}
+
+// const selectedProduct = null;
+
+// function selectProduct(id) {
+//   selectProduct = id;
+// }
+
+
+

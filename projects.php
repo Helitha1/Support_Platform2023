@@ -17,6 +17,27 @@
 
 <body class=" body2">
 
+
+    <?php
+
+    $selectedProjectId = "";
+
+    if ($selectedProjectId != "") {
+        require "server/connection.php";
+
+        $project_rs = Database::search("SELECT * FROM `projects` WHERE `id` = '" . $selectedProjectId . "'");
+        $project_num = $project_rs->num_rows;
+
+        if ($project_num > 0) {
+            $project_data = $project_rs->fetch_assoc();
+        } else {
+            echo ("invalid project id");
+        }
+    } else {
+    }
+
+    ?>
+
     <div class="container-fluid">
         <div class="row">
 
@@ -143,7 +164,7 @@
                                             <button onclick='onselectProject(<?php echo $product_data["id"]; ?>);' class="btn btn-primary form-control" id="<?php echo $project_data["id"]; ?>"><?php echo $project_data["title"]; ?></button>
                                         </div> -->
                                         <div class="col-10 offset-1 my-2">
-                                            <button onclick='window.location = `manageProject.php?pid=${<?php echo $project_data["id"]; ?>}`' class="btn btn-primary form-control" id="<?php echo $project_data["id"]; ?>"><?php echo $project_data["title"]; ?></button>
+                                            <button onclick='selectProject(<?php echo $product_data["id"]; ?>);' class="btn btn-primary form-control" id="<?php echo $project_data["id"]; ?>"><?php echo $project_data["title"]; ?></button>
                                         </div>
 
 
@@ -163,10 +184,10 @@
                     <div class="col-10 offset-1 offset-lg-0 col-lg-7 bg-secondary bg-opacity-25 m-lg-3 project flyin zoom" style="height: 600px;">
                         <div class="row">
                             <div class="col-10 text-start">
-                                <span class="fs-3 text-white fw-bold m-2">Migten mobile Application</span>
+                                <span class="fs-3 text-white fw-bold m-2"><?php echo $project_data["title"] ?></span>
                             </div>
                             <div class="col-2 text-end ">
-                                <button class="m-2 btn btn-secondary">Edit</button>
+                                <button onclick='window.location = `manageProject.php?pid=${$selectedProjectId}`' class="m-2 btn btn-secondary">Edit</button>
                             </div>
                             <hr>
                             <div class="col-12">
