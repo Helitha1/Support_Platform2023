@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Migten</title>
+    <title>Projects | Migten</title>
     <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
     <link rel="stylesheet" href="cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css" />
     <link rel="stylesheet" href="res/bootstrap.css" />
     <link rel="stylesheet" href="res/style.css" />
     <link rel="stylesheet" href="res/animation.css" />
+    <link rel="stylesheet" href="res/fontawsome/css/all.css" />
     <link rel="icon" href="res/logo-sm.png" />
 </head>
 
@@ -18,6 +19,18 @@
 
     <div class="container-fluid">
         <div class="row">
+
+
+        <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
 
             <div class="col-12 col-lg-2 d-none d-lg-block">
                 <div class="row">
@@ -37,9 +50,9 @@
                             </div>
                             <div class="nav flex-column nav-pills me-3 mt-3 " role="tablist" aria-orientation="vertical">
                                 <nav class="nav flex-column ">
-                                    <a class="btn btn-outline-secondary my-2" aria-current="page" href="#">Dashboard</a>
+                                    <a class="btn btn-outline-secondary my-2" aria-current="page" href="dashboard.php">Dashboard</a>
                                     <br />
-                                    <a class="btn btn-outline-secondary my-2" href="#">Projects</a>
+                                    <a class="btn btn-outline-secondary my-2" href="projects.php">Projects</a>
                                     <br />
                                     <a class="btn btn-outline-secondary my-2" href="#">Create Projects</a>
                                     <br />
@@ -79,22 +92,22 @@
                 <ul class="nav d-flex justify-content-center align-items-center my-3">
                     <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
                         <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = 'teacherhome.php'">Dashboard</span>
+                            <span class="fs-6 text-white" onclick="window.location = 'dashboard.php'">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
                         <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = 'studentDetails.php'">Projects </span>
+                            <span class="fs-6 text-white" onclick="window.location = 'projects.php'">Projects </span>
                         </a>
                     </li>
                     <li class="nav-item my-1 mx-1 changeView border-end  border-bottom rounded-5 border-white border-opacity-25">
                         <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = 'teachersClasses.php'">Create Projects</span>
+                            <span class="fs-6 text-white" onclick="window.location = '###'">Create Projects</span>
                         </a>
                     </li>
                     <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
                         <a class="nav-link ">
-                            <span class="fs-6 text-white" onclick="window.location = 'teacherProfile.php'">Manage Profile</span>
+                            <span class="fs-6 text-white" onclick="window.location = '####'">Manage Profile</span>
                         </a>
                     </li>
 
@@ -103,12 +116,60 @@
 
             </div>
 
-            <div class=" col-12 col-lg-4 d-flex">
-                <div class="row ">
+            <div class=" col-12 col-lg-10">
+                <div class="row">
                     <?php
                     include "header3.php"
                     ?>
-                    <div class="col-2 vh-100 bg-dark">fdgh</div>
+                    <div class="col-10 offset-1 offset-lg-0 col-lg-4 bg-dark p-4 m-lg-3 my-2 project  flyin zoom" style="height: 600px;">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row text-white">
+                                    <div class="col-3 text-start p-2">
+                                        <a href="dashboard.php"><i class="fa-solid fa-arrow-left text-light fs-3"></i></a>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <span class="fs-3">My Projects</span>
+                                    </div>
+                                    <div class="col-3 text-end p-2">
+                                        <a href="dashboard.php"><i class="fa-regular fa-circle-xmark text-white fs-3"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 my-3">
+                                <div class="row">
+                                    <div class="col-10 offset-1 my-2">
+                                        <button class="btn btn-primary form-control">Migten mobile Application</button>
+                                    </div>
+                                    <div class="col-10 offset-1 my-2">
+                                        <button class="btn btn-primary form-control">Migten mobile Application</button>
+                                    </div>
+                                    <div class="col-10 offset-1 my-2">
+                                        <button class="btn btn-primary form-control">Migten mobile Application</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-10 offset-1 offset-lg-0 col-lg-7 bg-secondary bg-opacity-25 m-lg-3  flyin zoom" style="height: 600px;">
+                        <div class="row">
+                            <div class="col-12 text-start p-2 m-2">
+                                <span class="fs-3 text-white fw-bold">Migten mobile Application</span>
+                            </div>
+                            <hr>
+                            <div class="col-12 mb-3">
+                                <label class="form-label fw-bold fs-4">Description</label>
+                                <p class="form-control">esetn ydxr xdru d drudrysy xt sset eesetn ydxr xdru d drudrysy xt sset eesetn ydxr xdru d drudrysy xt sset eesetn ydxr xdru d drudrysy xt sset e</p>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label fw-bold fs-4">Status</label>
+                                <i class="fa-solid fa-circle text-success"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
