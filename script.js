@@ -80,7 +80,10 @@ function signIn() {
         r.onreadystatechange = function () {
             if (r.readyState == 4) {
                 var t = r.responseText;
-                console.log(t);
+                let res = JSON.parse(t);
+                if(res.code==100){
+                    window.location == 'index.php';
+                }
             }
         };
 
