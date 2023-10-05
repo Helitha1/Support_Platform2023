@@ -14,11 +14,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 if (file_get_contents("php://input")) {
     // CHECK REQUEST
     $request = file_get_contents("php://input");
+    echo($request);
     // GET JSON OBJECT FROM REQUESR
     $object = json_decode($request);
     $email = $object->email;
     $rs = Database::search("SELECT * FROM `users` WHERE `email`='" . $email . "'");
-
     if ($rs->num_rows == 1) {
 
         $code = uniqid();
