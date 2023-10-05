@@ -5,7 +5,7 @@ function signUp() {
   var p = document.getElementById("password").value;
   var p2 = document.getElementById("password2").value;
   var g = document.getElementById("gender").value;
-  var pr = document.getElementById("proffeshion").value;
+  var pr = document.getElementById("profession").value;
 
   if (p != p2) {
     alert("password are not matching");
@@ -17,7 +17,7 @@ function signUp() {
         lname: l,
         password: p,
         gender: g,
-        proffeshion_id: pr,
+        profession_id: pr,
       };
 
     var form = new FormData();
