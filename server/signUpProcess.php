@@ -10,7 +10,7 @@ if (isset($_POST["json"])) {
     if (isset($request_obj->email) && isset($request_obj->fname) && isset($request_obj->lname) && isset($request_obj->password) && isset($request_obj->gender) && isset($request_obj->profession_id)) {
 
 
-        if (empty($req_object->fname)) {
+        if ($req_object->fname=="") {
             $code = 1;
         } else if (empty($req_object->lname)) {
             $code = 2;
