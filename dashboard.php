@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css" />
     <link rel="stylesheet" href="res/bootstrap.css" />
     <link rel="stylesheet" href="res/style.css" />
+    <link rel="stylesheet" href="res/animation.css" />
     <link rel="icon" href="res/logo-sm.png" />
 </head>
 
@@ -18,7 +19,7 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-12 col-lg-2 d-none d-lg-block ">
+            <div class="col-12 col-lg-2 d-none d-lg-block">
                 <div class="row">
                     <div class="col-12 rounded-bottom align-items-start  bg-dark vh-100 ">
 
@@ -36,13 +37,13 @@
                             </div>
                             <div class="nav flex-column nav-pills me-3 mt-3 " role="tablist" aria-orientation="vertical">
                                 <nav class="nav flex-column ">
-                                    <a class="btn btn-outline-secondary " aria-current="page" href="#">Dashboard</a>
+                                    <a class="btn btn-outline-secondary my-2" aria-current="page" href="#">Dashboard</a>
                                     <br />
-                                    <a class="btn btn-outline-secondary " href="#">Projects</a>
+                                    <a class="btn btn-outline-secondary my-2" href="#">Projects</a>
                                     <br />
-                                    <a class="btn btn-outline-secondary" href="#">Create Projects</a>
+                                    <a class="btn btn-outline-secondary my-2" href="#">Create Projects</a>
                                     <br />
-                                    <a class="btn btn-outline-secondary" href="#">Manage Profile</a>
+                                    <a class="btn btn-outline-secondary my-2" href="#">Manage Profile</a>
 
 
                                 </nav>
@@ -102,7 +103,7 @@
 
             </div>
 
-            <div class=" col-12 col-lg-10 ">
+            <div class=" col-12 col-lg-10">
                 <div class="row ">
 
 
@@ -110,61 +111,82 @@
                     include "header3.php"
                     ?>
 
-                    <div class="col-12">
+                    <div class="col-12 flyin zoom">
                         <div class="row g-1">
 
-                            <div class="col-11  px-1 py-3 position-relative">
+                            <div class="col-8 offset-2  px-1 py-3 position-relative">
                                 <div class="row g-1">
                                     <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
                                         <br />
                                         <span class="fs-3 text-dark fw-bold">4</span>
                                         <br />
-                                        <span class="fs-5 text-dark">ADMINS</span>
+                                        <span class="fs-5 text-dark">PROJECT COUNT</span>
                                     </div>
                                 </div>
                             </div>
-                           
-                            <div class="col-11  px-1 py-3 position-relative">
-                                <div class="row g-1">
-                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
-                                        <br />
-                                        <span class="fs-3 text-dark fw-bold">4</span>
-                                        <br />
-                                        <span class="fs-5 text-dark">ADMINS</span>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                            <div class="col-11  px-1 py-3 position-relative">
-                                <div class="row g-1">
-                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
-                                        <br />
-                                        <span class="fs-3 text-dark fw-bold">4</span>
-                                        <br />
-                                        <span class="fs-5 text-dark">ADMINS</span>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                            <div class="col-11  px-1 py-3 position-relative">
-                                <div class="row g-1">
-                                    <div class="col-12 bg-primary text-white text-center rounded js-tilt " style="height: 100px;">
-                                        <br />
-                                        <span class="fs-3 text-dark fw-bold">4</span>
-                                        <br />
-                                        <span class="fs-5 text-dark">ADMINS</span>
-                                    </div>
-                                </div>
-                            </div>
-                           
-
-
-
 
                         </div>
                     </div>
 
+                    <div class="offset-1 col-10 col-lg-4 my-3 rounded-3 bg-body flyin zoom project " style="height: 200px;">
+                        <div class="row g-1">
+                            <div class="col-12 text-center">
+                                <label class="form-label fs-4 fw-bold">Pending Projects</label>
+                                <hr>
+                            </div>
+                            <div class="col-12 text-center  my-3">
+                                <a class="fs-6 fw-bold" href="#">Migten web application</a>
+                            </div>
+                            <div class="col-12">
+                                <div class="first-place"></div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="offset-1 offset-lg-2 col-10 col-lg-4 my-3 rounded-3 bg-body flyin zoom project " style="height: 200px;">
+                        <div class="row g-1">
+                            <div class="col-12 text-center">
+                                <label class="form-label fs-4 fw-bold">Complete Projects</label>
+                                <hr>
+                            </div>
+                            <div class="col-12 text-center  my-3">
+                                <a class="fs-6 fw-bold" href="#">Migten mobile application</a>
+                            </div>
+                            <div class="col-12">
+                                <div class="first-place"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offset-1 col-10 my-3 rounded-3 bg-body flyin zoom project " style="height: 270px;">
+                        <div class="row g-1">
+                            <div class="col-12 text-center">
+                                <label class="form-label fs-4 fw-bold">Ongoin Task</label>
+                                <hr>
+                            </div>
+                            <div class="col-12  my-3">
+                                <span class="fs-6 text-center fw-bold">Migten web application</span><br />
+                                <span class="fs-6">Ui Ux design</span><br />
+                                <span class="fs-6">Backend</span><br />
+                                <span class="fs-6">MySql Database</span><br />
+                            </div>
+                            <div class="col-12  my-3">
+                                <span class="fs-6 text-center fw-bold">Migten web application</span><br />
+                                <span class="fs-6">Ui Ux design</span><br />
+                                <span class="fs-6">Backend</span><br />
+                                <span class="fs-6">MySql Database</span><br />
+                            </div>
+                            <div class="col-12  my-3">
+                                <span class="fs-6 text-center fw-bold">Migten web application</span><br />
+                                <span class="fs-6">Ui Ux design</span><br />
+                                <span class="fs-6">Backend</span><br />
+                                <span class="fs-6">MySql Database</span><br />
+                            </div>
+                            <div class="col-12">
+                                <div class="first-place"></div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -189,9 +211,26 @@
             reset: true
         });
         tilt.methods.destroy.call(tilt);
-
     </script>
+    <script>
+        const flyin = document.querySelectorAll(".flyin");
 
+        const observe = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                entry.target.classList.toggle("show", entry.isIntersecting);
+
+                if (entry.isIntersecting) {
+                    observe.unobserve(entry.target);
+                }
+            })
+        }, {
+            threshold: 0.6
+        })
+
+        flyin.forEach((fly) => {
+            observe.observe(fly);
+        })
+    </script>
 </body>
 
 </html>
