@@ -184,14 +184,33 @@ function addProjectTask() {
 function updateTaskList() {
   const taskListElement = document.getElementById("taskList");
 
+  // Clear the existing content of the task list
   taskListElement.innerHTML = "";
 
   mainTasks.forEach((task) => {
     const listItem = document.createElement("li");
-    listItem.textContent = `${task.title}`;
+
+    // Create a button element
+    const button = document.createElement("button");
+    button.textContent = "Button Text"; // You can set your desired button text here
+
+    // Add a click event listener to the button if needed
+    button.addEventListener("click", () => {
+      // Handle button click event here
+    });
+
+    // Append the button to the list item
+    listItem.appendChild(button);
+
+    // Append the task title to the list item
+    listItem.textContent += ` ${task.title}`;
+    listItem.classList.add("btn", "btn-outline-primary", "col-12", "my-1");
+
+    // Append the list item to the task list
     taskListElement.appendChild(listItem);
   });
 }
+
 
 
 function addNewProject() {
