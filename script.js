@@ -13,38 +13,44 @@ function signUp() {
 
     // console.log(g.value);
 
-    const arry = [
-        {
-            email:e,
-            fname:f,
-            lname:l,
-            password:p,
-            gender:g,
-            proffeshion_id:pr
-        }
-    ]
-
-    var form = new FormData;
-    form.append("json", JSON.parse(arry));
-
-    var request = new XMLHttpRequest();
-
-    request.onreadystatechange = function () {
-        if (request.readyState == 4) {
-            var text = request.responseText;
-            if (text == "1") {
-                // alert("Done!");
-                window.location = "signIn.php";
-            } else if(text == "2") {
-                alert("User with same email already exist!");
-            }else{
-                alert(text);
+    if(p != p2){
+        alert("password are not matching");
+    }else{
+        const arry = [
+            {
+                email:e,
+                fname:f,
+                lname:l,
+                password:p,
+                gender:g,
+                proffeshion_id:pr
+            }
+        ]
+    
+        var form = new FormData;
+        form.append("json", JSON.parse(arry));
+    
+        var request = new XMLHttpRequest();
+    
+        request.onreadystatechange = function () {
+            if (request.readyState == 4) {
+                var text = request.responseText;
+                if (text == "1") {
+                    // alert("Done!");
+                    window.location = "signIn.php";
+                } else if(text == "2") {
+                    alert("User with same email already exist!");
+                }else{
+                    alert(text);
+                }
             }
         }
+    
+        request.open("POST", "signUpProcess.php", true);
+        request.send(form);
     }
 
-    request.open("POST", "signUpProcess.php", true);
-    request.send(form);
+   
 
 }
 
