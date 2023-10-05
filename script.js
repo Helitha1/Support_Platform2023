@@ -103,24 +103,30 @@ function forgotPassword() {
 
     var r = new XMLHttpRequest();
 
-    r.onreadystatechange = function () {
-        if (r.readyState == 4) {
-            var t = r.responseText;
-            if (t == "Success") {
-                alert(
-                    "Verification code has sent to your email. Please check your inbox"
-                );
-                var m = document.getElementById("forgotPasswordModal");
-                bm = new bootstrap.Modal(m);
-                bm.show();
-            } else {
-                alert(t);
+    if (email.value == "") {
+        alert("Please enter your email and try again");
+    } else {
+        r.onreadystatechange = function () {
+            if (r.readyState == 4) {
+                var t = r.responseText;
+                if (t == "Success") {
+                    alert(
+                        "Verification code has sent to your email. Please check your inbox"
+                    );
+                    var m = document.getElementById("forgotPasswordModal");
+                    bm = new bootstrap.Modal(m);
+                    bm.show();
+                } else {
+                    alert(t);
+                }
             }
-        }
-    };
+        };
+    
+        r.open("GET", "server/forgotPasswordProcess.php?e=" + email.value, true);
+        r.send();
+    }
 
-    r.open("GET", "server/forgotPasswordProcess.php?e=" + email.value, true);
-    r.send();
+  
 }
 
 function resetPassword() {
@@ -129,12 +135,12 @@ function resetPassword() {
     var rnp = document.getElementById("p2").value;
     var vcode = document.getElementById("c").value;
 
-    if (email == "") {
+    if (email.value == "") {
         alert("Please enter your email and try again");
     } else {
         const arry =
             {
-                email: email,
+                email: email.value,
                 password: np,
                 password2: rnp,
                 vcode: vcode,
