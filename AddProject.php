@@ -20,11 +20,11 @@
 
 
 
-            <div class="col-12 mt-2">
+            <div class="col-12 mt-2 bg-white bg-opacity-50">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Add Project</li>
+                        <li class="breadcrumb-item active text-black" aria-current="page">Add Project</li>
                     </ol>
                 </nav>
             </div>

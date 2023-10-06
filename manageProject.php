@@ -15,7 +15,9 @@
 <body class=" body2">
 
     <?php
-
+if (!isset($_SESSION["user"])) {
+    header("Location:index.php");
+}
     if (isset($_GET["pid"])) {
 
         $projectId = $_GET["pid"];
