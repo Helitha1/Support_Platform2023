@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location:index.php");
+}
 require_once("server/connection.php");
 $project_rs = Database::search("SELECT COUNT(*) AS `count` FROM `projects` WHERE `owner_email`='" . $_SESSION["user"]["email"] . "'");
 $result = $project_rs->fetch_assoc();

@@ -20,6 +20,10 @@
     session_start();
 
     require "server/connection.php";
+
+    if (!isset($_SESSION["user"])) {
+        header("Location:index.php");
+    }
     ?>
 
     <div class="container-fluid">
