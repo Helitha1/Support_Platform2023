@@ -178,7 +178,7 @@ loadProject = (id) => {
     } else if (taskStatus == 3) {
       _('project-status-button').classList.add('text-success')
     }
-    _('project-edit-button').setAttribute('targetId', projectObject.id);
+    _('project-edit-button').setAttribute('data-target', projectObject.id);
 
     const taskArr = projectObject.tasks;
     let output = '';
@@ -194,8 +194,7 @@ loadProject = (id) => {
 }
 
 editPeoject = (e) => {
-
-  window.location = "manageProject.php?pid=" + this.getAttribute('');
+  window.location = "manageProject.php?pid=" + this.getAttribute('data-target');
 }
 
 const mainTasks = [];

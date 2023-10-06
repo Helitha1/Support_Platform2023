@@ -77,7 +77,7 @@ if (!isset($_SESSION["user"])) {
                                 <span class="fs-3 text-white fw-bold m-2" id="project-title">PROJECT TITLE HERE</span>
                             </div>
                             <div class="col-2 text-end ">
-                                <button class="m-2 btn btn-secondary" id="project-edit-button">Edit</button>
+                                <button class="m-2 btn btn-secondary" id="project-" onclick="editPeoject()">Edit</button>
                             </div>
                             <hr>
                             <div class="col-12">
