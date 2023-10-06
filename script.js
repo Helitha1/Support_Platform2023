@@ -341,14 +341,14 @@ showError = (code) => {
 document.querySelectorAll('.password-show-button').forEach(btn=>{
   btn.addEventListener('click',()=>{
     const target = btn.getAttribute('target');
+    if(_(target).type=="password"){
+      _(target).type = "text";
+    }else{
+      _(target).type = "password";
+    }
   })
 })
 
-// SHOW PASSWORD OPTION
-const showPasswordButton = () =>{
-
-
-}
 
 
 

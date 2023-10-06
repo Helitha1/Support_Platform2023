@@ -38,7 +38,7 @@
                                 <label class="form-label fw-bold">Password</label>
                                 <div class="input-group">
                                     <input type="password" class="form-control fw-bold" placeholder="ex:- ****" id="password" />
-                                    <span class="input-group-text btn btn-dark" id="basic-addon2">Show</span>
+                                    <span class="input-group-text btn btn-dark password-show-button" target="password" id="dfdfg" >Show</span>
                                 </div>
                             </div>
 
@@ -83,7 +83,7 @@
                                 <label class="form-label">Re-type Password</label>
                                 <div class="input-group mb-3">
                                     <input type="password" class="form-control" id="p2" />
-                                    <button class="btn btn-outline-secondary" type="button" id="rnpb" onclick="showPassword2();">Show</button>
+                                    <button class="btn btn-outline-secondary password-show-button" target="p2" type="button" id="rnpb" onclick="showPassword2();">Show</button>
                                 </div>
                             </div>
                             <div class="col-12">
