@@ -14,17 +14,16 @@
 
 <body>
 
-    <footer class="text-white pb-2 pt-2" style="background-color: #271140;">
+    <footer class="text-white pb-2 pt-2" style="background-color: #543c4f;">
 
         <div class="col-11 text-md-start">
 
             <div class="row text-sm-center text-md-start">
 
                 <div class="col-12 col-md-3 col-lg-4 mx-auto ">
-
+               
                     <h5 class="text-uppercase mt-4 fw-bold text-white text-uppercase">Migten</h5>
-                    <p class="text-white text-center">Here we CharityDonation.lk&trade; <br/>Your donation can make a world of difference. Join us in our mission to change lives and create a brighter future for those in need.</p>
-
+                    <p class="text-white text-center">A real-time collaborative task management system is an online tool that enables teams to efficiently create, assign, and track tasks together. It emphasizes instant updates and live communication, fostering seamless teamwork and boosting overall productivity.</p>
                     <br/>
                     <br/>
                     <br/>
