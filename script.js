@@ -354,7 +354,7 @@ document.querySelectorAll('.password-show-button').forEach(btn=>{
 
 
 
-var profession_id;
+var profession_id=0;
 
 
   var mdl;
@@ -391,7 +391,7 @@ var profession_id;
   f.append("d", description);
   f.append("sd",startDate);
   f.append("ed",endDate);
-  f.append("id",profession_id);
+  f.append("id",parseInt(profession_id));
 
   var r = new XMLHttpRequest();
 
