@@ -337,3 +337,18 @@ showError = (code) => {
       return (code)
   }
 }
+
+document.querySelectorAll('.password-show-button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const target = btn.getAttribute('target');
+  })
+})
+
+// SHOW PASSWORD OPTION
+const showPasswordButton = () =>{
+
+
+}
+
+
+

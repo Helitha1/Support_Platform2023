@@ -15,8 +15,6 @@
 
     <div class="container-fluid vh-100 d-flex justify-content-center">
         <div class="row align-content-center">
-
-
             <!-- content  -->
             <div class="col-12 ">
                 <div class="row p-3 ">
@@ -54,48 +52,33 @@
                                 <a href="#" class="link-dark fw-bold" onclick="forgotPassword();">Forgot Password?</a>
                             </div>
                             <div class="col-12 col-lg-6 d-grid my-3">
-                                <button class="btn text-white"  style="background-color: #543c4f;" onclick="signIn();">Sign In</button>
+                                <button class="btn text-white" style="background-color: #543c4f;" onclick="signIn();">Sign In</button>
                             </div>
                             <div class="col-12 col-lg-6 d-grid my-3">
                                 <button class="btn text-white" style="background-color: #f13451;" onclick="window.location = 'SignUp.php'">if you are new to this! Sign Up</button>
                             </div>
-
-
                         </div>
-
                     </div>
-
-
                 </div>
-
-
             </div>
-
-            <!-- content  -->
-
         </div>
-
         <!-- modal -->
-
         <div class="modal" tabindex="-1" id="forgotPasswordModal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Forgot Password</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-
                         <div class="row g-3">
-
                             <div class="col-6">
                                 <label class="form-label">New Password</label>
                                 <div class="input-group mb-3">
                                     <input type="password" class="form-control" id="p1" />
-                                    <button class="btn btn-outline-secondary" type="button" id="npb" onclick="showPassword();">Show</button>
+                                    <button class="btn btn-outline-secondary password-show-button" target="p1" type="button" id="npb" onclick="">Show</button>
                                 </div>
                             </div>
-
                             <div class="col-6">
                                 <label class="form-label">Re-type Password</label>
                                 <div class="input-group mb-3">
@@ -103,14 +86,11 @@
                                     <button class="btn btn-outline-secondary" type="button" id="rnpb" onclick="showPassword2();">Show</button>
                                 </div>
                             </div>
-
                             <div class="col-12">
                                 <label class="form-label">Verification Code</label>
                                 <input type="text" class="form-control" id="c" />
                             </div>
-
                         </div>
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -119,16 +99,8 @@
                 </div>
             </div>
         </div>
-
-        <!-- modal -->
-
-
-
     </div>
-
-
     </div>
-
     <script src="res/bootstrap.bundle.js"></script>
     <script src="script.js"></script>
 </body>
