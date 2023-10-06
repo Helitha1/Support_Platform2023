@@ -387,8 +387,8 @@ var profession_id;
   }else{
 
     var f = new FormData();
-  f.append("t", t);
-  f.append("d", d);
+  f.append("t", title);
+  f.append("d", description);
   f.append("sd",startDate);
   f.append("ed",endDate);
 
