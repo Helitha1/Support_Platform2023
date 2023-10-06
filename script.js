@@ -1,7 +1,3 @@
-// SHOW ERRORS
-showError = (err) => {
-  alert(err);
-};
 // GET ELEMENT BY ID (RETURN - ELEMENT)
 _ = (ele) => {
   return document.getElementById(ele);
@@ -15,19 +11,19 @@ ValidateEmail = (email) => {
 // USER SIGNUP FUNCTION
 signUp = () => {
   if (_("fname").value == "") {
-    showError("First Name is required");
+    alert("First Name is required");
   } else if (_("lname").value == "") {
-    showError("Last Name is required");
+    alert("Last Name is required");
   } else if (_("email").value == "") {
-    showError("Email is Required");
+    alert("Email is Required");
   } else if (!ValidateEmail(_("email").value)) {
-    showError("Invalid Email address");
+    alert("Invalid Email address");
   } else if (_("password").value == "") {
-    showError("Password is NULL");
+    alert("Password is NULL");
   } else if (_("password").value != _("password2").value) {
-    showError("password are not matching");
+    alert("password are not matching");
   } else if (_("profession").value == 0) {
-    showError("Please select your Profession");
+    alert("Please select your Profession");
   } else {
     var form = new FormData();
     form.append(
@@ -51,7 +47,7 @@ signUp = () => {
         if (obj.code == 100) {
           window.location = "signIn.php";
         } else {
-          showError(obj.code);
+          alert(showError(obj.code));
         }
       })
       .catch((error) => alert(error));
@@ -60,9 +56,9 @@ signUp = () => {
 // USER SIGNIN FUNCTION
 signIn = () => {
   if (_("email").value == "") {
-    showError("Email is required");
+    alert("Email is required");
   } else if (_("password").value == "") {
-    showError("Password is Required");
+    alert("Password is Required");
   } else {
     var form = new FormData();
     form.append(
@@ -85,7 +81,7 @@ signIn = () => {
         } else if (obj.code == 200) {
           window.location = "adminpanel.php";
         } else {
-          showError(obj.code);
+          alert(showError(obj.code));
         }
       })
       .catch((error) => alert(error));
@@ -293,3 +289,51 @@ function addNewProject() {
   xhr.send(JSON.stringify(data));
 }
 
+
+
+
+
+showError=(code)=>{
+  switch (code) {
+      case 99:
+          return('REQUEST JSON ERROR')
+      case 1:
+          return('First Name is null ')
+      case 2:
+          return('Last Name is null')
+      case 3:
+          return('first name must be less that 45 characters ')
+      case 4:
+          return('last name must be less that 45 characters ')
+      case 5:
+          return('email is null')
+      case 6:
+          return('email must be less that 100 characters ')
+      case 7:
+          return('invalid email')
+      case 8:
+          return('password is null')
+      case 9:
+          return('password must be more that 5 and less that 20 characters')
+      case 10:
+          return('profession not selected')
+      case 11:
+          return('this email alredy used');
+      case 12:
+          return('user not found');
+      case 13:
+          return('Invalid password, try again!');
+      case 14:
+          return('re enter your password!');
+      case 15:
+          return('password dosent match!');
+      case 16:
+          return('verification code empty!');
+      case 17:
+          return('invalid email or verifiacation code!');
+      case 18:
+          return('Verification Code sending Failed');
+      default:
+          return(code)
+  }
+}
