@@ -137,7 +137,7 @@
                                                 $profession_data = $profession_rs->fetch_assoc();
                                             ?>
 
-                                                <button class="btn btn-outline-dark fw-bold col-12 my-3" type="button" onclick="model();"><?php echo $profession_data["title"]; ?></button>
+                                                <button class="btn btn-outline-dark fw-bold col-12 my-3" type="button"   onclick='model(<?php echo $profession_data["id"]; ?>);'><?php echo $profession_data["title"]; ?></button>
 
 
                                             <?php
@@ -207,19 +207,19 @@
                                             </div>
                                             <div class="modal-body">
                                                 <label class="form-label">Title</label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control" id="t">
                                             </div>
                                             <div class="modal-body">
                                                 <label class="form-label">Description</label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control" id="d">
                                             </div>
                                             <div class="modal-body">
                                                 <label class="form-label">Start Date</label>
-                                                <input type="date" class="form-control">
+                                                <input type="date" class="form-control" id="sd">
                                             </div>
                                             <div class="modal-body">
                                                 <label class="form-label">End Date</label>
-                                                <input type="date" class="form-control">
+                                                <input type="date" class="form-control" id="ed">
                                             </div>
                                             <div class="col-12 mb-3 p-4">
                                                 <div class="row">

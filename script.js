@@ -352,3 +352,64 @@ document.querySelectorAll('.password-show-button').forEach(btn=>{
 
 
 
+
+
+var profession_id;
+
+
+  var mdl;
+  function model(id){
+    profession_id=id;
+    var m = document.getElementById("verificationModal");
+  mdl = new bootstrap.Modal(m);
+  mdl.show();
+  }
+  
+
+ function addProjectTask(){
+  var title = document.getElementById("t").value;
+  var description = document.getElementById("d").value;
+  var startDate = document.getElementById("sd").value;
+  var endDate = document.getElementById("ed").value;
+
+
+  if(title==""){
+    alert("please add title");
+  }
+  else if(description==""){
+    alert("please add description");
+  }
+  else if(startDate==""){
+    alert("please add start date");
+  }
+  else if(endDate==""){
+    alert("please add end date");
+  }else{
+
+    var f = new FormData();
+  f.append("t", t);
+  f.append("d", d);
+  f.append("sd",startDate);
+  f.append("ed",endDate);
+
+  var r = new XMLHttpRequest();
+
+  r.onreadystatechange = function () {
+    if (r.readyState == 4) {
+      var t = r.responseText;
+      if (t == "success") {
+        window.location = "home.php";
+      } else {
+        document.getElementById("msg2").innerHTML = t;
+      }
+    }
+  };
+
+  r.open("POST", "server/addtasksprocess.php", true);
+  r.send(f);
+    
+  }
+
+
+
+ }
