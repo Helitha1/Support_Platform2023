@@ -16,6 +16,12 @@
 
 <body class=" body2">
 
+    <?php
+    session_start();
+
+    require "server/connection.php";
+    ?>
+
     <div class="container-fluid">
         <div class="row">
 
@@ -39,7 +45,7 @@
 
                             <div class=" col-12  mt-3 d-grid p-2 ">
                                 <div class="row ">
-                                    <a href="signout.php" class="btn btn-danger mt-2">Sign Out</a>
+                                    <a href="signout.php" class="btn btn-danger mt-2" onclick="window.location = 'signout.php';">Sign Out</a>
                                 </div>
                             </div>
                         </div>
@@ -48,6 +54,7 @@
             </div>
 
             <div class="col-12 d-block d-lg-none bg-dark">
+
 
                 <ul class="nav d-flex justify-content-center align-items-center my-3">
                     <li class="nav-item my-1 mx-1 changeView border-end border-bottom rounded-5 border-white border-opacity-25">
@@ -75,6 +82,13 @@
                     include "header3.php"
                     ?>
 
+                    <?php
+                    $rs =  Database::search("SELECT * FROM `users`");
+                    $rs_num = $rs->num_rows;
+
+
+
+                    ?>
                     <div class="col-12">
                         <div class="row my-3 p-1 p-lg-4  d-flex justify-content-center align-content-center ">
 
@@ -88,12 +102,21 @@
                                         <hr />
 
                                         <div class="col-10 offset-1">
-                                            <span class="form-control  rounded-4 bg-success fs-2">1687</span>
+                                            <span class="form-control  rounded-4 bg-success fs-2"><?php echo($rs_num); ?></span>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
+
+                    <?php
+                    $prs =  Database::search("SELECT * FROM `projects`");
+                    $prs_num = $prs->num_rows;
+
+                    $prs1 =  Database::search("SELECT * FROM `projects` INNER JOIN `project_status` ON `projects`.`project_status_id` = `project_status`.`id` WHERE `project_status`.`id` = '3'");
+                    $prs1_num = $prs1->num_rows;
+
+                    ?>
                             <div class="col-10 offset-lg-0 col-lg-6 px-1 pe-lg-4 mt-2 mb-4 mb-lg-2  flyin zoom">
 
                                 <div class="row g-1">
@@ -104,7 +127,7 @@
                                         <hr />
 
                                         <div class="col-10 offset-1">
-                                            <span class="form-control  rounded-4 bg-primary fs-2">168997</span>
+                                            <span class="form-control  rounded-4 bg-primary fs-2"><?php echo($prs_num); ?></span>
                                         </div>
                                     </div>
                                 </div>
@@ -120,7 +143,7 @@
                                         <hr />
 
                                         <div class="col-10 offset-1">
-                                            <span class="form-control  rounded-4 bg-secondary fs-2">167</span>
+                                            <span class="form-control  rounded-4 bg-secondary fs-2"><?php echo($prs1_num); ?></span>
                                         </div>
                                     </div>
                                 </div>

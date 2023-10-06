@@ -82,7 +82,9 @@ signIn = () => {
       .then((obj) => {
         if (obj.code == 100) {
           window.location = "index.php";
-        } else {
+        } else if (obj.code == 200) {
+          window.location = "adminpanel.php";
+        }else {
           showError(obj.code);
         }
       })

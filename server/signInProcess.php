@@ -18,10 +18,12 @@ if (isset($_POST["json"])) {
         $rs = Database::search("SELECT * FROM `users` WHERE `email`='" . $json->email . "'");
         // CHECK USER 
         if ($rs->num_rows == 1) {
+
             // FETCH USER DATA FROM DATABASE
             $user = $rs->fetch_assoc();
             // VALIDATE PASSWORD
             if (password_verify($json->password, $user["password"])) {
+
                 // STATRING SESSION
                 session_start();
                 // ASSIGN USER DATA TO SESSION
@@ -36,7 +38,12 @@ if (isset($_POST["json"])) {
                     setcookie("email", "", -1);
                     setcookie("password", "", -1);
                 }
-                $code = 100;
+                //  CHECK USER TYPE
+                if ($user["user_type_id"] == 2) {
+                    $code = 200;
+                } else {
+                    $code = 100;
+                }
             } else {
                 $code = 13;
             }
