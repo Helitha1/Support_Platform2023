@@ -100,14 +100,18 @@
                                     <div class="col-12 ">
 
 
-                                        <div class="row">
+                                        <div class="row gap-2">
 
-                                            <div class="col-6">
+                                            <div class="col-5">
                                                 <button class="col-12 btn btn-warning">+Add Category</button>
                                             </div>
 
-                                            <div class="col-6">
+                                            <div class="col-5">
                                                 <button class="col-12 btn btn-warning">+Add Task</button>
+                                            </div>
+
+                                            <div class="col-5">
+                                                <button class="col-12 btn btn-warning">+Manage Team</button>
                                             </div>
 
                                         </div>
@@ -137,7 +141,7 @@
                                                 $profession_data = $profession_rs->fetch_assoc();
                                             ?>
 
-                                                <button class="btn btn-outline-dark fw-bold col-12 my-3" type="button"   onclick='model(<?php echo $profession_data["id"]; ?>);'><?php echo $profession_data["title"]; ?></button>
+                                                <button class="btn btn-outline-dark fw-bold col-12 my-3" type="button" onclick='model(<?php echo $profession_data["id"]; ?>);'><?php echo $profession_data["title"]; ?></button>
 
 
                                             <?php
@@ -249,6 +253,18 @@
 
             </div>
         </div>
+
+
+        <!-- MODEL FOR USER ADD TO TEAM -->
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="col-12">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+        </div>
+
 
         </div>
         </div>
