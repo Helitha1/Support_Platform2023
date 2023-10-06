@@ -84,7 +84,7 @@ signIn = () => {
           window.location = "index.php";
         } else if (obj.code == 200) {
           window.location = "adminpanel.php";
-        }else {
+        } else {
           showError(obj.code);
         }
       })
@@ -178,7 +178,8 @@ loadProject = (id) => {
     } else if (taskStatus == 3) {
       _('project-status-button').classList.add('text-success')
     }
-    _('project-edit-button').setAttribute('data-target', projectObject.id);
+
+    _('project-edit-button').setAttribute('target', projectObject.id);
 
     const taskArr = projectObject.tasks;
     let output = '';
@@ -193,8 +194,8 @@ loadProject = (id) => {
   }
 }
 
-editPeoject = (e) => {
-  window.location = "manageProject.php?pid=" + this.getAttribute('data-target');
+editProject = (id) => {
+  window.location = "manageProject.php?pid=" + _(id).getAttribute('target');
 }
 
 const mainTasks = [];

@@ -14,6 +14,9 @@
 
     <div class="container-fluid">
         <div class="row">
+            <?php
+            include('sidenav.php');
+            ?>
 
 
 
@@ -82,7 +85,7 @@
                                     <div class="row">
 
                                         <div class="col-6 mb-3 rounded-3 " style="background-color: #0080ff20;">
-                                            <br/>
+                                            <br />
 
                                             <label class="form-label fw-bold">Title</label>
                                             <input type="text" class="form-control" id="tt" />
@@ -90,7 +93,7 @@
                                             <label class="form-label fw-bold">Description</label>
                                             <input type="text" class="form-control" id="td" />
 
-                                          
+
                                             <label class="form-label fw-bold">Start Date</label>
                                             <input type="date" class="form-control" id="tsd" />
 
@@ -106,23 +109,23 @@
                                         <div class="col-6 mb-3 shadow">
 
                                             <div class="row g-1">
-                                                <div class="col-12  my-2 project " style="height: 280px;"> 
-
- 
-                                                <div class="col-11 mb-3">  
-
-                                                <div class="row">   
-
-                                                <ul id="taskList">
-
-                                                </ul>
+                                                <div class="col-12  my-2 project " style="height: 280px;">
 
 
-                                                </div>
+                                                    <div class="col-11 mb-3">
 
-                                                </div>
+                                                        <div class="row">
 
-                                                    
+                                                            <ul id="taskList">
+
+                                                            </ul>
+
+
+                                                        </div>
+
+                                                    </div>
+
+
                                                     <!-- <div class="col-12  my-2 project" style="height: 290px;">
                                                         <button type="button" class="btn btn-outline-primary  col-12 my-1">Database</button>
 
@@ -132,18 +135,18 @@
                                             </div>
 
 
-                                        </div> 
-
-
-                                        <div class="col-12 mb-3"> 
- 
-                                        <div class="row"> 
- 
-                                        
-                                                <button onclick="addNewProject();" class="btn btn-outline-info fw-bold col-12 my-3" type="button">Add Project</button>
-                                        
-
                                         </div>
+
+
+                                        <div class="col-12 mb-3">
+
+                                            <div class="row">
+
+
+                                                <button onclick="addNewProject();" class="btn btn-outline-info fw-bold col-12 my-3" type="button">Add Project</button>
+
+
+                                            </div>
 
                                         </div>
 
