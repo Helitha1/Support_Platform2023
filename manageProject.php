@@ -110,6 +110,10 @@
                                                 <button class="col-12 btn btn-warning">+Add Task</button>
                                             </div>
 
+                                            <div class="col-6">
+                                                <button class="col-12 btn btn-warning">+Manage Team</button>
+                                            </div>
+
                                         </div>
 
 
