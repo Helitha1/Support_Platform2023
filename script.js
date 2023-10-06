@@ -391,17 +391,19 @@ var profession_id;
   f.append("d", description);
   f.append("sd",startDate);
   f.append("ed",endDate);
+  f.append("id",profession_id);
 
   var r = new XMLHttpRequest();
 
   r.onreadystatechange = function () {
     if (r.readyState == 4) {
       var t = r.responseText;
-      if (t == "success") {
-        window.location = "home.php";
-      } else {
-        document.getElementById("msg2").innerHTML = t;
-      }
+      alert(t);
+      // if (t == "success") {
+      //   window.location = "home.php";
+      // } else {
+      //   document.getElementById("msg2").innerHTML = t;
+      // }
     }
   };
 
