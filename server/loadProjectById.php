@@ -15,7 +15,7 @@ if (isset($_GET["pid"])) {
         // SET DATA TO OBJECT
 
         // GET MAIN TASKS USING PROJECT ID
-        $main_task_rs = Database::search("SELECT * FROM `maintasks` WHERE `projects_id` = '" . $project_array["id"] . "'");
+        $main_task_rs = Database::search("SELECT * FROM `maintasks` WHERE `projects_id` = '" . $project_array["id"] . "' ORDER BY `startDate` DESC");
         // CHECK HAVE ANY MAIN TASKS
         if ($main_task_rs->num_rows > 0) {
             // MAIN TASK ARRAY

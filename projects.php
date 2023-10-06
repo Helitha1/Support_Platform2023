@@ -77,7 +77,7 @@ if (!isset($_SESSION["user"])) {
                                 <span class="fs-3 text-white fw-bold m-2" id="project-title">PROJECT TITLE HERE</span>
                             </div>
                             <div class="col-2 text-end ">
-                                <button onclick='window.location = `manageProject.php?pid=${$selectedProjectId}`' class="m-2 btn btn-secondary">Edit</button>
+                                <button class="m-2 btn btn-secondary" id="project-edit-button">Edit</button>
                             </div>
                             <hr>
                             <div class="col-12">
@@ -89,7 +89,7 @@ if (!isset($_SESSION["user"])) {
                                 <label class="form-label fw-bold fs-4">Status</label>
                                 <!-- STATUS HERE -->
                                 <!-- 1 - warning, 2-warning, 3-success -->
-                                <i class="fa-solid fa-circle text-success"></i>
+                                <i class="fa-solid fa-circle" id="project-status-button"></i>
                             </div>
                             <hr>
                             <div class="col-12">
@@ -112,12 +112,10 @@ if (!isset($_SESSION["user"])) {
                             <div class="container py-5">
                                 <div class="row">
                                     <div class="col-10 offset-1 collg10 offset-lg-2">
-                                        <div id="project-content">
-                                            <ul class="timeline-1 text-black">
-                                                <li class="event fs-3" data-date="2023-10-12">
-                                                    <h4 class="mb-3">Registration</h4>
-                                                    <p>Get here on time, it's first come first serve. Be late, get turned away.</p>
-                                                </li>
+                                        <div >
+                                            <!-- LOAD TASKS HERE -->
+                                            <ul class="timeline-1 text-black"  id="project-content">
+         
                                             </ul>
                                         </div>
                                     </div>

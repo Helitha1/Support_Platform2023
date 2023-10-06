@@ -167,9 +167,33 @@ loadProject = (id) => {
     _('project-description').innerHTML = projectObject.description;
     _('project-start_date').innerHTML = projectObject.start_date;
     _('project-end-date').innerHTML = projectObject.end_date;
-    // 
-    // _('project-content').innerHTML = 
+    //STATUS COLOR
+    const taskStatus = projectObject.project_status_id;
+    if (taskStatus == 1) {
+      _('project-status-button').classList.add('text-danger')
+    } else if (taskStatus == 2) {
+      _('project-status-button').classList.add('text-warning')
+    } else if (taskStatus == 3) {
+      _('project-status-button').classList.add('text-success')
+    }
+    _('project-edit-button').setAttribute('targetId', projectObject.id);
+
+    const taskArr = projectObject.tasks;
+    let output = '';
+    taskArr.forEach(task => {
+      output += `
+      <li class="event fs-3" data-date="${task.startDate}">
+      <h4 class="mb-3">${task.title}</h4>
+       <p>${task.description}</p>
+      </li>`
+    })
+    _('project-content').innerHTML = output;
   }
+}
+
+editPeoject = (e) => {
+
+  window.location = "manageProject.php?pid=" + this.getAttribute('');
 }
 
 const mainTasks = [];
