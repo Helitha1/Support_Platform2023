@@ -94,7 +94,7 @@
                                 <label class="form-label fw-bold">Password</label>
                                 <div class="input-group">
                                     <input type="password" class="form-control" placeholder="ex:- ****" id="password" />
-                                    <span class="input-group-text btn btn-dark" id="basic-addon2">Show</span>
+                                    <span class="input-group-text btn btn-dark password-show-button" target="password" id="basic-addon2">Show</span>
                                 </div>
 
                             </div>
@@ -102,7 +102,7 @@
                                 <label class="form-label fw-bold">Confirm Password</label>
                                 <div class="input-group">
                                     <input type="password" class="form-control" placeholder="ex:- ****" id="password2" />
-                                    <span class="input-group-text btn btn-dark" id="basic-addon2">Show</span>
+                                    <span class="input-group-text btn btn-dark password-show-button" target="password2" id="basic-addon2">Show</span>
                                 </div>
                             </div>
 
