@@ -141,7 +141,7 @@
                                                 $profession_data = $profession_rs->fetch_assoc();
                                             ?>
 
-                                                <button class="btn btn-outline-dark fw-bold col-12 my-3" type="button"   onclick='model(<?php echo $profession_data["id"]; ?>);'><?php echo $profession_data["title"]; ?></button>
+                                                <button class="btn btn-outline-dark fw-bold col-12 my-3" type="button" onclick='model(<?php echo $profession_data["id"]; ?>);'><?php echo $profession_data["title"]; ?></button>
 
 
                                             <?php
@@ -253,6 +253,18 @@
 
             </div>
         </div>
+
+
+        <!-- MODEL FOR USER ADD TO TEAM -->
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="col-12">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+        </div>
+
 
         </div>
         </div>
